@@ -1,36 +1,24 @@
-CC         = bcc32
-CPP32      = cpp32
-LIBRARIAN  = tlib
-LINKER     = ilink32
-RC         = brc32
+# Makefile for cpropep - MinGW64
+CC         = gcc
+CFLAGS     = -O2 -Wall -I../../../libraries -DGCC
 
-COPT = -3 -O2 -w-8012 -w-8004 -w-8057 -IC:\borland\bcc55\include
-LDOPT = -LC:\borland\bcc55\lib
-IDIR = -I..\..\libnum\ -I..\lib\ -I.
+OBJS       = cpropep.o
 
-LIB  =  compat.lib libnum.lib thermo.lib cpropep.lib
+LIBDIR     = -L../../../libraries/libcompat -L../../../libraries/libnum -L../../../libraries/libthermo -L../../../libraries/libcpropep
+LIBS       = -lthermo -lcpropep -lnum -lcompat -lm
 
-LIBDIR = -L..\..\libnum\ -L..\lib\
-
-DEF = -DBORLAND
-
-PROG = cpropep.exe
-OBJS = cpropep.obj getopt.obj 
-
-.SUFFIXES: .c
+PROG       = cpropep.exe
 
 all: $(PROG)
 
-.c.obj:
-        $(CC) $(COPT) $(IDIR) $(DEF) -c $*.c -o $*.obj
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(PROG): $(OBJS)
-        $(CC) $(LDOPT) $(LIBDIR) $(LIB) $(OBJS)
+	$(CC) $(OBJS) $(LIBDIR) $(LIBS) -o $@
 
 clean:
-        del *.obj
-        del *.bak
-	del *.tds
-	
+	del /f /q *.o
+
 deep-clean: clean
-        del $(PROG)
+	del /f /q $(PROG)
