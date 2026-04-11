@@ -1,0 +1,15 @@
+# Build Artifacts
+*.o
+*.obj
+*.a
+*.lib
+*.exe
+
+# Temporary files
+*~
+*.bak
+*.tds
+
+# Build directories
+/bin/
+/lib/
