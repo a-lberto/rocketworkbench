@@ -78,7 +78,7 @@ int load_thermo(char *filename)
 	if ((thermo_list = (thermo_t *)malloc (sizeof(thermo_t) * num_thermo)) ==
       NULL)
 	{
-		printf("\n\nMemory allocation error with thermo_t thermo_list[%ld], %ld bytes required", num_thermo, sizeof(thermo_t) * num_thermo);
+		printf("\n\nMemory allocation error with thermo_t thermo_list[%llu], %zu bytes required", (unsigned long long)num_thermo, sizeof(thermo_t) * num_thermo);
 		return ERR_MALLOC;
 	}
 
@@ -110,12 +110,12 @@ int load_thermo(char *filename)
 		}
 
 		/* Read in the name and the comments */
-		strncpy((thermo_list + i)->name, buf_ptr, 18);
+		snprintf((thermo_list + i)->name, 18, "%s", buf_ptr);
 		trim_spaces((thermo_list + i)->name, 18);
-        
-		strncpy((thermo_list + i)->comments, buf_ptr + 18, 55);
+
+		snprintf((thermo_list + i)->comments, 55, "%s", buf_ptr + 18);
 		trim_spaces((thermo_list + i)->comments, 55);
-      
+
 		/* Read in the next line and check for EOF */
 		if (!fgets(buf_ptr, 88, fd))
 		{
@@ -123,8 +123,8 @@ int load_thermo(char *filename)
 			free(thermo_list);
 			return ERR_EOF;
 		}
-      
-		strncpy(tmp_ptr, buf_ptr, 3);
+
+		snprintf(tmp_ptr, 4, "%.3s", buf_ptr);
 		(thermo_list + i)->nint = atoi(tmp_ptr);
       
 		strncpy((thermo_list + i)->id, buf_ptr + 3, 6);
@@ -366,7 +366,7 @@ int load_propellant(char *filename)
 	if ((propellant_list = (propellant_t *) malloc(sizeof(propellant_t) *
                                                  num_propellant)) == NULL)
 	{
-		printf ("\n\nMemory allocation error with propellant_t propellant_list[%ld], %ld bytes required", num_propellant, sizeof(propellant_t) * num_propellant);
+		printf ("\n\nMemory allocation error with propellant_t propellant_list[%llu], %zu bytes required", (unsigned long long)num_thermo, sizeof(thermo_t) * num_thermo);
 		return ERR_MALLOC;
 	}
 
@@ -401,8 +401,9 @@ int load_propellant(char *filename)
 		/* Check for a continued name */
 		while (*buf_ptr == '+')
 		{
-			/* A continued name found */
-			strncpy(tmp_ptr, buf_ptr + 9, 70);
+			/* Copy up to 70 chars and always add a null terminator */
+			/* Requirement: tmp_ptr must be at least 71 bytes large */
+			snprintf(tmp_ptr, 71, "%.70s", buf_ptr + 9);
 
  
 			/* Find the end of the whitespaces.  name_start + 1 is used to leave
