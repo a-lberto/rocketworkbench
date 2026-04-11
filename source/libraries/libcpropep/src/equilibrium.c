@@ -673,7 +673,7 @@ int fill_matrix(double *matrix, equilibrium_t *e, problem_t P)
   {
     matrix[idx_n + size * (i + idx_cond)] = 0.0;
   }
-  
+  (void)idx_T;
   return 0;
 }
 

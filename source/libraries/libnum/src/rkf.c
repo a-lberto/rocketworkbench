@@ -173,7 +173,7 @@ int NUM_rkf(int (*f)(int neq, double time, double *y, double *dy, void *data),
     }
     
   }
-
+  (void)status;
   return n+1;
 }
 

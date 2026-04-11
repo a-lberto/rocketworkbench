@@ -37,8 +37,14 @@ typedef enum
 
 #define STRCASECMP  strcasecmp
 #define STRNCASECMP	strncasecmp
-#define __min(a, b) ( (a) <= (b) ? (a) : (b))
-#define __max(a, b) ( (a) >= (b) ? (a) : (b))
+
+#ifndef __min
+#define __min(a, b) ((a) <= (b) ? (a) : (b))
+#endif
+
+#ifndef __max
+#define __max(a, b) ((a) >= (b) ? (a) : (b))
+#endif
 
 typedef enum
 {

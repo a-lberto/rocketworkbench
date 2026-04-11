@@ -143,6 +143,8 @@ int simpson(double *data, int n_point, int col, int off, double *integral);
 
 int create_spline(double *data, int n_point, double *spline);
 
+int eval_spline(double *data, double *spline, int n_point, double x, double *y);
+
 #endif
 
 
