@@ -1,0 +1,53 @@
+GNU GENERAL PUBLIC LICENSE  
+Version 2, June 1991  
+
+Copyright (C) 1991 Free Software Foundation, Inc.  
+51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA  
+
+Everyone is permitted to copy and distribute verbatim copies  
+of this license document, but changing it is not allowed.
+
+                       Preamble  
+
+The GNU General Public License is a free, copyleft license for software and other kinds of works.  
+
+When we speak of free software, we are referring to freedom, not price.  Our General Public Licenses are designed to make sure that you have the freedom to distribute copies of free software, that you receive source code or can get it if you want it, that you can change the software and use pieces of it in new free programs; and that you know you can do these things.
+
+To protect your rights, we need to make restrictions that forbid anyone to deny you these rights or to ask you to surrender the rights.  These restrictions translate to certain responsibilities for you if you distribute copies of the software, or if you modify it.
+
+For example, if you distribute copies of such a program, whether modified or verbatim, you must pass on the same freedoms to the recipients of the program.  You must make sure that you, too, receive the source code or can get it if you want it.  And you must show them these terms so they know their rights.
+
+We protect your rights with two steps: (1) copyright the software, and (2) offer you this license which gives you legal permission to copy, distribute and/or modify the software.
+
+Also, for each author's protection and ours, we want to make sure that everyone understands that there is no warranty for this free software.  If the software is modified by someone else and passed on, we want its recipients to know that what they have is not the original, so that any problems introduced by others will not reflect on the original authors' reputations.
+
+Finally, any free program is threatened constantly by software patent threats.  We wish to make sure that a company cannot sue you because it has modified the program and redistributed it to you.  Therefore, you also receive this license so that everyone else is also protected by patent lawsuits if you are.  
+
+This General Public License explains your rights with respect to using, distributing and modifying the software.  
+
+                      TERMS  
+
+0. This License applies to any program or other work which contains a notice placed by the copyright holder saying it can be distributed under the terms of this General Public License.  
+
+1. You may copy and distribute verbatim copies of the Program’s source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice and disclaimer of warranty; keep intact all the notices that refer to this License and to the absence of any warranty; and give any other recipients of the Program a copy of this License along with the Program.
+2. You may modify your copy or copies of the Program or any portion of it, thus forming a work based on the Program, and copy and distribute such modifications under the terms of this License, provided that you also meet all of these conditions:
+  a) You must cause the modified files to carry prominent notices stating that you changed the files and the date of any change.  
+  b) You must cause any work that you distribute or publish, that in whole or in part contains or is derived from the Program or any part thereof, to be licensed as a whole at no charge to all third parties under the terms of this License.
+3. You may copy and distribute the Program (or you may sell copies of the Program) as part of a larger distribution either on a shareware basis or for a fee, provided that you do not charge more than your costs of physically distributing the Program, and provided that you distribute the complete source code of the Program along with it.  
+
+4. You may not impose any further restrictions on the rights granted here.
+5. You may not propagate or distribute the Program except in compliance with this License.
+6. If you develop a modified version of the Program and you wish to make it available to the public, you must cause it, when you do so, to be licensed as a whole at no charge to all third parties under the terms of this License.
+7. The source code for this Program is available at source code locations or upon request.  
+
+8. This License shall be interpreted in accordance with the laws of the state of Massachusetts, and if that state is not applicable, the laws of the country of the copyright holder shall apply. 
+9. If you attempt to circumvent this License, your rights under it shall terminate.  
+10. Each time you redistribute the Program, or make a portion of it available to the public, you are responsible for ensuring that you have received the foregoing rights and comply with them.
+
+11. There is no warranty for the Program, and it is provided as is without any guarantees.  
+
+12. If you do not comply with this License, you are not allowed to make copies, distribute or modify the Program.
+13. This License constitutes the entire agreement between the parties regarding the software licensed herein.
+
+14. This License may be published by the Free Software Foundation, either in the form of a printed copy or in an electronic format.  
+If you have questions about this License, you can contact the Free Software Foundation.
