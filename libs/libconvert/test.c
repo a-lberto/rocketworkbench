@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 
-#include "libconvert/include/convert.h"
+#include "convert.h"
 
 int main(void)
 {

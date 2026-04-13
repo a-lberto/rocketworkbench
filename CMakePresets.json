@@ -49,5 +49,18 @@
       "name": "all",
       "configurePreset": "default"
     }
+  ],
+  "testPresets": [
+    {
+      "name": "all-tests",
+      "configurePreset": "default",
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error",
+        "stopOnFailure": false
+      }
+    }
   ]
 }

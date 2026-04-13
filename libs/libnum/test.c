@@ -10,8 +10,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-//#include <time.h>
-
 #include "num.h"
 
 FILE * errorfile;
@@ -187,6 +185,7 @@ int test_sysnewton(void)
 
 int test_lu(void)
 {
+  int i;
   double *matrix;
   double *solution;
   int size = 8;
@@ -231,7 +230,7 @@ int test_lu(void)
   matrix[62] =-3.06747e+01; matrix[70] =-4.63904e+01;
   matrix[63] = 4.68590e+05; matrix[71] = 2.37298e+05;
   
-  //NUM_matscale(matrix, size);
+  /*NUM_matscale(matrix, size);*/
   NUM_print_matrix(matrix, size);
 
   if (NUM_lu(matrix, solution, size))
@@ -239,7 +238,7 @@ int test_lu(void)
   else
     NUM_print_vec(solution, size);
 /*
-  for (int i = 0; i < size; i++)
+  for (i = 0; i < size; i++)
   {
     if (solution[i] != 1.0)
     {
@@ -257,11 +256,11 @@ int test_rk4(void)
 {
   int i, n;
   double *ans;
-  float *ic;
+  double *ic;
   
   printf("\nTesting the RK4 and RKF algorythm.\n");
   
-  ic = (float *) malloc(sizeof(float) * 4);
+  ic = (double *) malloc(sizeof(double) * 4);
   
   ic[0] = 0;
   ic[1] = 100;
@@ -269,14 +268,15 @@ int test_rk4(void)
   ic[3] = 10;
 
   /* it return the length of the answer vector */
-  //n = NUM_rk4 (function, 4, 0.1, 10, ic, &ans, NULL);
+  /*n = NUM_rk4 (function, 4, 0.1, 10, ic, &ans, NULL);*/
 
-  //for (i = 0; i < n; i++)
-  //{
-  //  printf("%f %f %f %f \n", ans[4*i], ans[1 + 4*i], ans[2+4*i], ans[3+4*i]);
-  //}
-
-  n = NUM_rkf(function, 4, 0.1, 20, ic, &ans, 1e-4, NULL);
+/*
+  for (i = 0; i < n; i++)
+  {
+    printf("%f %f %f %f \n", ans[4*i], ans[1 + 4*i], ans[2+4*i], ans[3+4*i]);
+  }
+*/
+  n = NUM_rkf (function, 4, 0.1, 20, ic, &ans, 1e-4, NULL);
 
   printf("n = %i\n", n);
 
