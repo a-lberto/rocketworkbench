@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
   double tmp2[2];
   
   double **ans;
-  double *ic; /* initial conditions */
+  float *ic; /* initial conditions */
 
   equilibrium_t *e;
 
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
   compute_density(&(e->propellant));
 
   
-  ic = (double *) malloc (sizeof(double) * NEQ);
+  ic = (float *) malloc (sizeof(float) * NEQ);
 
   if ( (ans = (double **) malloc (sizeof(double *) * (NPOINT+1))) == NULL)
   {

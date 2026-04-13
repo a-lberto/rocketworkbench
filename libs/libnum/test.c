@@ -256,11 +256,11 @@ int test_rk4(void)
 {
   int i, n;
   double *ans;
-  double *ic;
+  float *ic;
   
   printf("\nTesting the RK4 and RKF algorythm.\n");
   
-  ic = (double *) malloc(sizeof(double) * 4);
+  ic = (float *) malloc(sizeof(float) * 4);
   
   ic[0] = 0;
   ic[1] = 100;
