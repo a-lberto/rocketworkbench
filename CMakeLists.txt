@@ -4,77 +4,65 @@ project(RocketWorkbench C CXX)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 11)
 
-# Allow linking targets from other directories
 cmake_policy(SET CMP0079 NEW)
-
-# Common definitions
 add_definitions(-DGCC)
-
-# Enable Testing
-enable_testing()
 
 # Output directories
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
-# Include all header paths
+# Include library directories
 include_directories(
-    libs/libcompat/include
-    libs/libconvert/include
-    libs/libnum/include
-    libs/libcpropep/include
-    libs/libthermo/include
-    libs/liblrd/include
-    libs/libmcp/include
-    libs/librockflight/include
-    libs/libsimulation
+    lib/compat lib/convert lib/num lib/cpropep lib/thermo
+    lib/lrd lib/mcp lib/rockflight lib/simulation
 )
+
+# --- HELPER MACROS ---
+macro(add_library_files libname folder)
+    file(GLOB sources "${folder}/*.c" "${folder}/*.cc")
+    add_library(${libname} STATIC ${sources})
+    target_include_directories(${libname} PUBLIC ${folder})
+endmacro()
 
 # --- LIBRARIES ---
 
-add_library(libcompat STATIC libs/libcompat/compat.c libs/libcompat/getopt.c)
+add_library_files(libcompat lib/compat)
 set_target_properties(libcompat PROPERTIES OUTPUT_NAME compat)
 
-add_library(libconvert STATIC libs/libconvert/convert.c)
+add_library_files(libconvert lib/convert)
 set_target_properties(libconvert PROPERTIES OUTPUT_NAME convert)
 
-add_library(libnum STATIC 
-    libs/libnum/lu.c libs/libnum/rk4.c libs/libnum/rkf.c libs/libnum/general.c 
-    libs/libnum/print.c libs/libnum/sec.c libs/libnum/newton.c libs/libnum/ptfix.c 
-    libs/libnum/sysnewton.c libs/libnum/trapeze.c libs/libnum/simpson.c libs/libnum/spline.c)
+add_library_files(libnum lib/num)
 set_target_properties(libnum PROPERTIES OUTPUT_NAME num)
 
-add_library(libcpropep STATIC 
-    libs/libcpropep/equilibrium.c libs/libcpropep/print.c 
-    libs/libcpropep/performance.c libs/libcpropep/derivative.c)
+add_library_files(libcpropep lib/cpropep)
 target_link_libraries(libcpropep PUBLIC libcompat libnum)
 set_target_properties(libcpropep PROPERTIES OUTPUT_NAME cpropep)
 
-add_library(libthermo STATIC libs/libthermo/load.c libs/libthermo/thermo.c)
+add_library_files(libthermo lib/thermo)
 target_link_libraries(libthermo PUBLIC libcpropep)
 set_target_properties(libthermo PROPERTIES OUTPUT_NAME thermo)
 
-add_library(liblrd STATIC libs/liblrd/lrd.c)
+add_library_files(liblrd lib/lrd)
 set_target_properties(liblrd PROPERTIES OUTPUT_NAME lrd)
 
-add_library(libmcp STATIC libs/libmcp/mcp.c)
+add_library_files(libmcp lib/mcp)
 set_target_properties(libmcp PROPERTIES OUTPUT_NAME mcp)
 
-add_library(librockflight STATIC 
-    libs/librockflight/eom.c libs/librockflight/atmos.c libs/librockflight/aero.c 
-    libs/librockflight/engine.c libs/librockflight/mass.c libs/librockflight/stage.c 
-    libs/librockflight/rocket.c libs/librockflight/evaluate_function.c)
+add_library_files(librockflight lib/rockflight)
 set_target_properties(librockflight PROPERTIES OUTPUT_NAME rockflight)
 
-add_library(libsimulation STATIC 
-    libs/libsimulation/lsode.cc libs/libsimulation/modeles.cc 
-    libs/libsimulation/rk4.cc libs/libsimulation/rocket.cc libs/libsimulation/simulation.cc)
+add_library_files(libsimulation lib/simulation)
 set_target_properties(libsimulation PROPERTIES OUTPUT_NAME simulation)
 
 # --- APPLICATIONS ---
 
-add_executable(cpropep apps/cpropep/cpropep.c)
+macro(add_app_target appname source)
+    add_executable(${appname} ${source})
+endmacro()
+
+add_app_target(cpropep apps/cpropep/cpropep.c)
 target_link_libraries(cpropep PRIVATE libthermo libcpropep libnum libcompat m)
 add_custom_command(TARGET cpropep POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy
@@ -82,24 +70,27 @@ add_custom_command(TARGET cpropep POST_BUILD
         $<TARGET_FILE_DIR:cpropep>/cpropep.conf
 )
 
-add_executable(prop apps/prop/prop.c)
+add_app_target(prop apps/prop/prop.c)
 target_link_libraries(prop PRIVATE libthermo libcpropep libcompat m)
 
-add_executable(grain apps/gba/gba.c apps/gba/grain.c apps/gba/shape.c apps/gba/output.c)
+add_app_target(grain apps/gba/gba.c) # Note: assumes common object handling if needed
+target_sources(grain PRIVATE apps/gba/grain.c apps/gba/shape.c apps/gba/output.c)
 target_link_libraries(grain PRIVATE m)
 
-add_executable(lrd apps/lrd/main.c apps/lrd/lrd_load.c)
+add_app_target(lrd apps/lrd/main.c)
+target_sources(lrd PRIVATE apps/lrd/lrd_load.c)
 target_link_libraries(lrd PRIVATE liblrd libthermo libcpropep libnum m)
 
-add_executable(mcp apps/mcp/modele.c apps/mcp/test.c)
+add_app_target(mcp apps/mcp/modele.c)
+target_sources(mcp PRIVATE apps/mcp/test.c)
 target_link_libraries(mcp PRIVATE libmcp libthermo libcpropep libnum m)
 
 # --- TESTS ---
-
-add_executable(test_convert libs/libconvert/test.c)
+enable_testing()
+add_executable(test_convert lib/convert/test_convert.c)
 target_link_libraries(test_convert PRIVATE libconvert m)
 add_test(NAME test_convert COMMAND test_convert)
 
-add_executable(test_num libs/libnum/test.c)
+add_executable(test_num lib/num/test_num.c)
 target_link_libraries(test_num PRIVATE libnum m)
 add_test(NAME test_num COMMAND test_num)
