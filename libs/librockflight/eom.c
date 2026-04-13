@@ -100,7 +100,7 @@ int eom(int neq, double time, double *y, double *dy, void *data)
  
   /* euler angle equation */
   /* we have to check for division by zero */
-  if (abs(cos(theta)) > 0.001)
+  if (fabs(cos(theta)) > 0.001)
   {
     dy[9]  = s->P + sin(phi)*tan(theta)*s->Q + cos(phi)*tan(theta)*s->R;
     dy[10] =                 cos(phi)  *s->Q -          sin(phi)  *s->R;
