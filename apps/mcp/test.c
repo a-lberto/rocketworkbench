@@ -1,15 +1,15 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 
-#include "libnum/include/num.h"
-#include "libcpropep/include/equilibrium.h"
-#include "libthermo/include/thermo.h"
+#include "num.h"
+#include "equilibrium.h"
+#include "thermo.h"
 
-#include "libmcp/include/mcp.h"
-#include "libthermo/include/load.h"
-#include "libcpropep/include/print.h"
+#include "mcp.h"
+#include "load.h"
+#include "print.h"
 
 #define NEQ 2
 
@@ -140,3 +140,4 @@ double Vc(double s)
 
   return V;
 }
+

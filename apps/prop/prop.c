@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
@@ -7,12 +7,12 @@
 #include <unistd.h>
 #else
 */
-#include "libcompat/include/getopt.h"
+#include "getopt.h"
 /*
 #endif
 */
-#include "libthermo/include/thermo.h"
-#include "libthermo/include/load.h"
+#include "thermo.h"
+#include "load.h"
 
 #define MAX_LINE 500
 #define ARG_LENGTH 32
@@ -611,3 +611,4 @@ int main(int argc, char *argv[])
   }
   return 0;
 }
+

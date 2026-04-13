@@ -1,4 +1,4 @@
-
+﻿
 #include <stdlib.h>
 #include "rocket.h"
 
@@ -38,3 +38,4 @@ int set_stages (flight_t *flight, int stage, float dry_mass,
   flight->stages[stage].Isp = Isp;
   return 0;
 }
+

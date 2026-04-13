@@ -1,16 +1,16 @@
-/* Liquid rocket design */
+﻿/* Liquid rocket design */
 
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 
-#include "libcpropep/include/print.h"
-#include "libcpropep/include/type.h"
-#include "libthermo/include/thermo.h"
-#include "libcpropep/include/conversion.h"
+#include "print.h"
+#include "type.h"
+#include "thermo.h"
+#include "conversion.h"
 
-#include "liblrd/include/lrd.h"
+#include "lrd.h"
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
@@ -151,6 +151,4 @@ int LRD_print_design_information(motor_t *mf, motor_t *ms)
   
   return 0;
 }
-
-
 

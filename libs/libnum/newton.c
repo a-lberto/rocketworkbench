@@ -1,7 +1,7 @@
-#include <math.h>
+﻿#include <math.h>
 #include <stdio.h>
 
-#include "libnum/include/num.h"
+#include "num.h"
 
 int NUM_newton(double (*f)(double x), double (*df)(double x), double x0,
                int nmax, double eps, double *ans)
@@ -29,3 +29,4 @@ int NUM_newton(double (*f)(double x), double (*df)(double x), double x0,
   *ans = x1;
   return 0;
 }
+

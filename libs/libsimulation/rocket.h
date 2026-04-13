@@ -1,4 +1,4 @@
-/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
+﻿/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
 /* Copyright (C) 2000                                                  */
 /* Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                      */
 
@@ -152,8 +152,8 @@ class planete : public atmosphere
 class flight_program 
 {
  public:
-  double ta[MAXPROP]; //temps de l'allumage (depuis le largage du pr�c�dent)
-  double tl[MAXPROP]; //temps du largage (apr�s la fin de la combustion)
+  double ta[MAXPROP]; //temps de l'allumage (depuis le largage du prï¿½cï¿½dent)
+  double tl[MAXPROP]; //temps du largage (aprï¿½s la fin de la combustion)
   
   int set_prog(int stage, double allumage, double largage);
   
@@ -163,12 +163,4 @@ class flight_program
 
 
 #endif
-
-
-
-
-
-
-
-
 

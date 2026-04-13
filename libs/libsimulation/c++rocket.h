@@ -1,4 +1,4 @@
-/* c++rocket.h  -  Simulation of rocket flight                         */
+ï»¿/* c++rocket.h  -  Simulation of rocket flight                         */
 /* Copyright (C) 2000                                                  */
 /* Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                      */
 
@@ -31,7 +31,7 @@ class simulation;
 extern simulation *simptr;
 
 extern const double R; // Perfect gaz constant
-extern const double g; // Earth gravitational accélération
+extern const double g; // Earth gravitational accÃ©lÃ©ration
 extern const double G; // universal gravitational constant
 
 
@@ -43,9 +43,4 @@ typedef enum
 } Model_t;
 
 #endif
-
-
-
-
-
 

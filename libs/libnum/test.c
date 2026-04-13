@@ -1,4 +1,4 @@
-/* test.c - Testing the functionnality of the various method
+﻿/* test.c - Testing the functionnality of the various method
  * $Id$
  * Copyright (C) 2000
  *    Antoine Lefebvre <antoine.lefebvre@polymtl.ca>

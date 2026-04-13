@@ -1,15 +1,15 @@
-
+﻿
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
 
 
-#include "libthermo/include/load.h"
-#include "libcpropep/include/print.h"
-#include "libcpropep/include/type.h"
-#include "libthermo/include/thermo.h"
-#include "libcpropep/include/conversion.h"
+#include "load.h"
+#include "print.h"
+#include "type.h"
+#include "thermo.h"
+#include "conversion.h"
 
 #define THERMO_FILE     "../cpropep/data/thermo.dat"
 #define PROPELLANT_FILE "../cpropep/data/propellant.dat"

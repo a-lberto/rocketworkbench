@@ -1,4 +1,4 @@
-#ifndef analyser_h
+﻿#ifndef analyser_h
 #define analyser_h
 
 struct flags
@@ -49,3 +49,4 @@ int parse_datafile(char *datafile, double **data, int *ndata, format_t *f);
 
 
 #endif /* analyser_h */
+

@@ -1,4 +1,4 @@
-#ifndef COMPAT_H
+﻿#ifndef COMPAT_H
 #define COMPAT_H
 
 /*
@@ -72,3 +72,4 @@ typedef enum
     
 
 #endif	/* !defined(COMPAT_H) */
+

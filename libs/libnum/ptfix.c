@@ -1,7 +1,7 @@
-#include <math.h>
+﻿#include <math.h>
 #include <stdio.h>
 
-#include "libnum/include/num.h"
+#include "num.h"
 
 int NUM_ptfix(double (*f)(double x), double x0, double nmax,
               double epsilon, double *ans)
@@ -29,3 +29,4 @@ int NUM_ptfix(double (*f)(double x), double x0, double nmax,
   *ans = x1;
   return 0;
 }
+

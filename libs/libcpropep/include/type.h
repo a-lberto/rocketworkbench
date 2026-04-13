@@ -1,4 +1,4 @@
-#ifndef type_h
+﻿#ifndef type_h
 #define type_h
 
 #define MAX_PRODUCT 400 /* Maximum species in product */
@@ -6,7 +6,7 @@
 #define MAX_COMP     20 /* Maximum different ingredient in
                            composition */
 
-#include "libcompat/include/compat.h"
+#include "compat.h"
 
 /****************************************************************
 TYPE:  Enumeration of the possible state of a substance
@@ -159,3 +159,4 @@ typedef struct _new_equilibrium
 
 
 #endif
+

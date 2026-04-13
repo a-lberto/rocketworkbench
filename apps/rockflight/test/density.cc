@@ -1,4 +1,4 @@
-function rho = density(y)
+﻿function rho = density(y)
 
   P0 = 1.013e5;     # standard stmospheric pressure
   Ma = 0.0289644;   # atmosphere molar mass
@@ -12,3 +12,4 @@ function rho = density(y)
   rho = (P0*Ma/(Rg*T))*exp( ((Ma*G*Mt)/(Rg*T))*((1/(Rt+y))-(1/Rt)) );
 
 endfunction
+

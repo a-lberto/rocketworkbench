@@ -1,6 +1,6 @@
-#include <stdlib.h>
+﻿#include <stdlib.h>
 #include <math.h>
-#include "libnum/include/num.h"
+#include "num.h"
 
 
 int NUM_rk4(int (*f)(int neq, double time, double *y, double *dy, void *data), 

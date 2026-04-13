@@ -1,4 +1,4 @@
-
+﻿
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -412,9 +412,4 @@ int delete_next_point(point_t *p)
   free(ptr);
   return 0;
 }
-
-
-
-
-
 

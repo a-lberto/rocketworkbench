@@ -1,4 +1,4 @@
-
+﻿
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -80,5 +80,4 @@ int convert(double *val, char *from_units, char *to_units, double *newval)
   
   return 0;
 }
-
 

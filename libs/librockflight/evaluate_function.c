@@ -1,7 +1,7 @@
-#include <stdlib.h>
+﻿#include <stdlib.h>
 #include <stdio.h>
 
-#include "librockflight/include/state.h"
+#include "state.h"
 
 int interpolate(int n_point, float *x, float *y, double *ans, double xval);
 
@@ -73,3 +73,4 @@ int interpolate(int n_point, float *x, float *y, double *ans, double xval)
 
   return 0;
 }
+

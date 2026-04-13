@@ -1,4 +1,4 @@
-/* num.h - Library of numerical method
+﻿/* num.h - Library of numerical method
  * $Id$
  * Copyright (C) 2000
  *    Antoine Lefebvre <antoine.lefebvre@polymtl.ca>
@@ -146,6 +146,4 @@ int create_spline(double *data, int n_point, double *spline);
 int eval_spline(double *data, double *spline, int n_point, double x, double *y);
 
 #endif
-
-
 

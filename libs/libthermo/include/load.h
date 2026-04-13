@@ -1,4 +1,4 @@
-#ifndef load_h
+﻿#ifndef load_h
 #define load_h
 
 /***************************************************************
@@ -47,10 +47,4 @@ void trim_spaces(char *str, unsigned int len);
 
 
 #endif
-
-
-
-
-
-
 

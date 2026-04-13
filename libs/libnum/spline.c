@@ -1,4 +1,4 @@
-/* spline.c  -  Cubic spline interpolation
+﻿/* spline.c  -  Cubic spline interpolation
  * $Id$
  * Copyright (C) 2000
  *    Antoine Lefebvre <antoine.lefebvre@polymtl.ca>
@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include "libnum/include/num.h"
+#include "num.h"
 
 #define OUT_OF_RANGE -1
 
@@ -104,5 +104,4 @@ int eval_spline(double *data, double *spline, int n_point, double x, double *y)
   
   return 0;
 }
-
 

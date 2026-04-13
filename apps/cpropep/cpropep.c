@@ -1,4 +1,4 @@
-/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
+﻿/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
 /* $Id$ */
 /* Copyright (C) 2000                                                  */
 /*    Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                   */
@@ -17,21 +17,21 @@
 #include <unistd.h>
 #else
 */
-#include "libcompat/include/getopt.h"
+#include "getopt.h"
 /*#endif
 */
 
-#include "libthermo/include/load.h"
-#include "libthermo/include/thermo.h"
+#include "load.h"
+#include "thermo.h"
 
-#include "libcpropep/include/equilibrium.h"
-#include "libcpropep/include/performance.h"
-#include "libcpropep/include/derivative.h"
-#include "libcpropep/include/print.h"
-#include "libcpropep/include/conversion.h"
-#include "libcpropep/include/return.h"
+#include "equilibrium.h"
+#include "performance.h"
+#include "derivative.h"
+#include "print.h"
+#include "conversion.h"
+#include "return.h"
 
-#include "libcompat/include/compat.h"
+#include "compat.h"
 
 #define version "1.1"
 #define date    "25/10/2001"
@@ -774,3 +774,4 @@ int main(int argc, char *argv[])
   return 0;
 
 }
+

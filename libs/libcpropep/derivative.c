@@ -1,4 +1,4 @@
-/* derivative.c  -  Fill the mattrix to compute thermochemical derivative
+﻿/* derivative.c  -  Fill the mattrix to compute thermochemical derivative
                     relative to logarithm of pressure and temperature */
 /* $Id$ */
 /* Copyright (C) 2000                                                  */
@@ -12,17 +12,17 @@
 #include <stdio.h>
 #include <math.h>
 
-#include "libnum/include/num.h"
+#include "num.h"
 
-#include "libcpropep/include/derivative.h"
-#include "libcpropep/include/equilibrium.h"
-#include "libcpropep/include/performance.h"
+#include "derivative.h"
+#include "equilibrium.h"
+#include "performance.h"
 
-#include "libcpropep/include/print.h"
-#include "libcpropep/include/return.h"
+#include "print.h"
+#include "return.h"
 
-#include "libcompat/include/compat.h"
-#include "libthermo/include/thermo.h"
+#include "compat.h"
+#include "thermo.h"
 
 int fill_temperature_derivative_matrix(double *matrix, equilibrium_t *e);
 int fill_pressure_derivative_matrix(double *matrix, equilibrium_t *e);
@@ -231,12 +231,4 @@ int fill_pressure_derivative_matrix(double *matrix, equilibrium_t *e)
   
   return 0;
 }
-
-
-
-
-
-
-
-
 

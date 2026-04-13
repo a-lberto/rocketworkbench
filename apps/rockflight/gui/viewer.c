@@ -1,4 +1,4 @@
-
+﻿
 #include <X11/Xlib.h> // Every Xlib program must include this
 #include <linux/mc146818rtc.h>
 #include <sys/ioctl.h>
@@ -452,3 +452,4 @@ int main(int argc, char *argv[])
 
   return 0;
 }
+

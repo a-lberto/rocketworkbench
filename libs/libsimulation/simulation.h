@@ -1,4 +1,4 @@
-/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
+﻿/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
 /* Copyright (C) 2000                                                  */
 /* Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                      */
 
@@ -66,9 +66,4 @@ class simulation : public flight_program,
 };
 
 #endif
-
-
-
-
-
 

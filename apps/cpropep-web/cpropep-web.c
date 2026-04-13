@@ -1,4 +1,4 @@
-/*
+﻿/*
     cgitest.c - Testprogram for cgi.o
     Copyright (c) 1998,9 by Martin Schulze <joey@infodrom.north.de>
 
@@ -27,12 +27,12 @@
 #include <cgi.h>
 
 
-#include "libcpropep/include/equilibrium.h"
-#include "libcpropep/include/performance.h"
-#include "libthermo/include/thermo.h"
+#include "equilibrium.h"
+#include "performance.h"
+#include "thermo.h"
 
-#include "libthermo/include/load.h"
-#include "libcpropep/include/print.h"
+#include "load.h"
+#include "print.h"
 
 
 s_cgi *cgi;

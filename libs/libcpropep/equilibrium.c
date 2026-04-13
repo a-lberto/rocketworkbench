@@ -1,4 +1,4 @@
-/* equilibrium.c  -  Responsible of the chemical equilibrium          */
+﻿/* equilibrium.c  -  Responsible of the chemical equilibrium          */
 /* $Id$ */
 /* Copyright (C) 2000                                                  */
 /*    Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                   */
@@ -12,15 +12,15 @@
 #include <math.h>
 #include <ctype.h>
 
-#include "libnum/include/num.h" /* matrix solution */
+#include "num.h" /* matrix solution */
 
-#include "libcpropep/include/print.h"
-#include "libcpropep/include/equilibrium.h"
-#include "libcpropep/include/conversion.h"
-#include "libcpropep/include/return.h"
+#include "print.h"
+#include "equilibrium.h"
+#include "conversion.h"
+#include "return.h"
 
-#include "libcompat/include/compat.h"
-#include "libthermo/include/thermo.h" /* thermodynamics function */
+#include "compat.h"
+#include "thermo.h" /* thermodynamics function */
 
 /* Initial temperature estimate for problem with not-fixed temperature */
 #define ESTIMATED_T 3800
@@ -1253,5 +1253,4 @@ int equilibrium(equilibrium_t *equil, problem_t P)
   
   return SUCCESS;
 }
-
 

@@ -1,7 +1,7 @@
-#ifndef lrd_h
+﻿#ifndef lrd_h
 #define lrd_h
 
-#include "libcpropep/include/type.h"
+#include "type.h"
 
 typedef struct _design_param_t
 {
@@ -70,3 +70,4 @@ int LRD_print_design_criteria(design_param_t *c);
 int LRD_print_design_information(motor_t *mf, motor_t *ms);
 
 #endif
+

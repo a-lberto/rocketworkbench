@@ -1,18 +1,18 @@
-#include <string.h>
+﻿#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <cgi.h>
 
 
-#include "libcpropep/include/equilibrium.h"
-#include "libcpropep/include/performance.h"
-#include "libthermo/include/thermo.h"
-#include "libcpropep/include/conversion.h"
+#include "equilibrium.h"
+#include "performance.h"
+#include "thermo.h"
+#include "conversion.h"
 
-#include "libthermo/include/load.h"
-#include "libcpropep/include/print.h"
+#include "load.h"
+#include "print.h"
 
-#include "liblrd/include/lrd.h"
+#include "lrd.h"
 
 s_cgi *cgi;
 
@@ -260,6 +260,4 @@ int main (int argc, char **argv, char **env)
   destroy();
   return 0;
 }
-
-
 

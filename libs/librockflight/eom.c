@@ -1,12 +1,12 @@
-
+﻿
 #include <stdlib.h>
 #include <math.h>
 #include <stdio.h>
 
 #include "aero.h"
 
-#include "librockflight/include/rockflight.h"
-#include "librockflight/include/state.h"
+#include "rockflight.h"
+#include "state.h"
 #include "atmos.h"
 #include "engine.h"
 #include "mass.h"
@@ -216,15 +216,4 @@ int set_state(rocket_t *rocket, double *y, double *time)
 
   return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
 

@@ -1,4 +1,4 @@
-
+﻿
 #ifndef __state_h__
 #define __state_h__
 
@@ -161,9 +161,4 @@ typedef struct solution
 } solution_t;
 
 #endif /* __state_h__ */
-
-
-
-
-
 

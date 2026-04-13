@@ -1,4 +1,4 @@
-/* rk4.h   -  Simulation of rocket flight                              */
+﻿/* rk4.h   -  Simulation of rocket flight                              */
 /* Copyright (C) 2000                                                  */
 /* Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                      */
 
@@ -61,3 +61,4 @@ class rk4_solver
 
 
 #endif
+

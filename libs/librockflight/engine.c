@@ -1,9 +1,9 @@
-
+﻿
 
 #include <stdio.h>
 #include <math.h>
 
-#include "librockflight/include/state.h"
+#include "state.h"
 #include "engine.h"
 
 int evaluate_function(function_t *f, state_t *s, double time, double *ans);

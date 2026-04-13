@@ -1,4 +1,4 @@
-#include <stdlib.h>
+﻿#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -6,13 +6,13 @@
 #include <math.h>
 
 /* Numerical method library */
-#include "libnum/include/num.h"
+#include "num.h"
 /* Config file parser library */
 #include "gpcp/src/gpcp.h"
 /* Conversion library */
-#include "libconvert/include/convert.h"
+#include "convert.h"
 
-#include "libcompat/include/getopt.h"
+#include "getopt.h"
 
 #include "analyser.h"
 

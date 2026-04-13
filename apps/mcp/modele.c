@@ -1,14 +1,14 @@
-
+﻿
 #include <math.h>
 #include <stdio.h>
 
-#include "libmcp/include/mcp.h"
+#include "mcp.h"
 
-#include "libcpropep/include/equilibrium.h"
-#include "libcpropep/include/performance.h"
+#include "equilibrium.h"
+#include "performance.h"
 
-#include "libcpropep/include/conversion.h"
-#include "libcpropep/include/const.h"
+#include "conversion.h"
+#include "const.h"
 
 int modele(int neq, double time, double *y, double *dy, void *data)
 {
@@ -55,3 +55,4 @@ int modele(int neq, double time, double *y, double *dy, void *data)
   return 0;
 
 }
+

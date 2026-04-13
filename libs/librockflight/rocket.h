@@ -41,5 +41,3 @@ typedef struct flight
 
 #endif /* __stage_h__ */
 
-
-

@@ -1,13 +1,13 @@
-#include <stdlib.h>
+﻿#include <stdlib.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
 
-#include "libcompat/include/getopt.h"
+#include "getopt.h"
 
-#include "librockflight/include/state.h"
-#include "librockflight/include/rockflight.h"
-#include "libnum/include/num.h"
+#include "state.h"
+#include "rockflight.h"
+#include "num.h"
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
@@ -127,7 +127,4 @@ void usage(void)
   printf("-d      \t Debug mode\n");
   printf("-h      \t Print help\n\n");
 }
-
-
-
 

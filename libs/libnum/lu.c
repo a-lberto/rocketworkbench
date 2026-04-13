@@ -1,4 +1,4 @@
-/* lu.c  -  PA = LU factorisation with pivoting
+﻿/* lu.c  -  PA = LU factorisation with pivoting
  * $Id$
  * Copyright (C) 2000
  *    Antoine Lefebvre <antoine.lefebvre@polymtl.ca>
@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include "libnum/include/num.h"
+#include "num.h"
 
 /*
   
@@ -170,3 +170,4 @@ int NUM_matscale(double *matrix, int neq)
   return 0;
 
 }
+

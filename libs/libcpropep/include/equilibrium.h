@@ -1,4 +1,4 @@
-#ifndef equilibrium_h
+﻿#ifndef equilibrium_h
 #define equilibrium_h
 /* equilibrium.h  -  Calculation of Complex Chemical Equilibrium       */
 /* $Id$ */
@@ -8,7 +8,7 @@
 /*                                                                     */
 /* Licensed under the GPLv2                                            */
 
-#include "libcompat/include/compat.h"
+#include "compat.h"
 #include "type.h"
 
 #define GRAM_TO_MOL(g, sp)   g/propellant_molar_mass(sp)
@@ -145,12 +145,4 @@ int equilibrium(equilibrium_t *equil, problem_t P);
 double product_molar_mass(equilibrium_t *e);
 
 #endif
-
-
-
-
-
-
-
-
 

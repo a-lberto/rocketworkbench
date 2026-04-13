@@ -1,4 +1,4 @@
-/* getopt.h   from Don Libes "Obfuscated C" (extended by PRW) */
+﻿/* getopt.h   from Don Libes "Obfuscated C" (extended by PRW) */
 #ifndef GETOPT_H
 #define GETOPT_H
 extern int   getopt(int argc, char **argv, char *opts);

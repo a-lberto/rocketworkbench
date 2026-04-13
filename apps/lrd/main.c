@@ -1,13 +1,13 @@
-#include <stdlib.h>
+﻿#include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 
-#include "libthermo/include/load.h"
-#include "libcpropep/include/print.h"
-#include "libthermo/include/thermo.h"
+#include "load.h"
+#include "print.h"
+#include "thermo.h"
 
 #include "lrd_load.h"
-#include "liblrd/include/lrd.h"
+#include "lrd.h"
 
 #define THERMO_FILE     "../../data/thermo.dat"
 #define PROPELLANT_FILE "../../data/propellant.dat"
@@ -90,3 +90,4 @@ int main(int argc, char *argv[])
   
   return 0;
 }
+

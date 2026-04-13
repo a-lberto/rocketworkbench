@@ -1,4 +1,4 @@
-/* rk4.cc  -  Simulation of rocket flight                              */
+﻿/* rk4.cc  -  Simulation of rocket flight                              */
 /* Copyright (C) 2000                                                  */
 /* Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                      */
 
@@ -115,3 +115,4 @@ void rk4_solver::export_octave(char *filename)
     out << endl;
   }
 }
+

@@ -1,5 +1,5 @@
-
-#include "libnum/include/num.h"
+﻿
+#include "num.h"
 
 int Round(double a)
 {
@@ -30,3 +30,4 @@ double epsilon(void)
   return (epsilon * 2.0);
 
 }
+

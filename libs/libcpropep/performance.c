@@ -1,4 +1,4 @@
-/* performance.c  -  Compute performance caracteristic of a motor
+﻿/* performance.c  -  Compute performance caracteristic of a motor
                      considering equilibrium                      */
 /* $Id$ */
 /* Copyright (C) 2000                                                  */
@@ -11,15 +11,15 @@
 #include <stdio.h>
 #include <math.h>
 
-#include "libcpropep/include/performance.h"
-#include "libcpropep/include/derivative.h"
-#include "libcpropep/include/print.h"
-#include "libcpropep/include/equilibrium.h"
-#include "libcpropep/include/const.h"
-#include "libcpropep/include/return.h"
+#include "performance.h"
+#include "derivative.h"
+#include "print.h"
+#include "equilibrium.h"
+#include "const.h"
+#include "return.h"
 
-#include "libcompat/include/compat.h"
-#include "libthermo/include/thermo.h"
+#include "compat.h"
+#include "thermo.h"
 
 #define TEMP_ITERATION_MAX  8
 #define PC_PT_ITERATION_MAX 5
@@ -557,8 +557,4 @@ int shifting_performance(equilibrium_t *e, exit_condition_t exit_type,
   
   return SUCCESS;
 }
-
-
-
-
 

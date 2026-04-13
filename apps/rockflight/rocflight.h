@@ -1,4 +1,4 @@
-#ifndef __rocflight_h__
+﻿#ifndef __rocflight_h__
 #define __rocflight_h__
 
 
@@ -15,3 +15,4 @@
 #define EARTH_RAD    6.3567668e6
 
 #endif __rocflight_h__
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
     cgitest.c - Testprogram for cgi.o
     Copyright (c) 1998,9 by Martin Schulze <joey@infodrom.north.de>
 

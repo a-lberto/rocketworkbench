@@ -1,14 +1,14 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-#include "libcpropep/include/equilibrium.h"
+#include "equilibrium.h"
 
-#include "libthermo/include/load.h"
-#include "libthermo/include/thermo.h"
+#include "load.h"
+#include "thermo.h"
 
-#include "libcpropep/include/conversion.h"
-#include "libcpropep/include/return.h"
+#include "conversion.h"
+#include "return.h"
 
 
 /***************************************************************************
@@ -520,3 +520,4 @@ void trim_spaces(char *str, unsigned int len)
   }
   *(str + 1) = '\0';
 }
+

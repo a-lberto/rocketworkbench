@@ -1,4 +1,4 @@
-
+﻿
 #include <math.h>
 
 int simpson(double *data, int n_point, int col, int off, double *integral)
@@ -47,3 +47,4 @@ int simpson(double *data, int n_point, int col, int off, double *integral)
   *integral = val;
   return 0;
 }
+

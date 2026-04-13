@@ -1,9 +1,9 @@
-#include <stdlib.h>
+﻿#include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
 #include "gpcp.h"
-#include "libcompat/include/getopt.h"
+#include "getopt.h"
 
 #include "profiler.h"
 
@@ -524,9 +524,4 @@ int profile_body(rocket_t *r)
   
   return 0;
 }
-
-
-
-
-
 

@@ -1,4 +1,4 @@
-#include <cmath>
+﻿#include <cmath>
 #include <iostream>
 #include <cstdlib>
 #include "lsode.h"
@@ -181,3 +181,4 @@ char *error_msg(State s)
   }
   
 }
+

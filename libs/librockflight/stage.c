@@ -1,9 +1,9 @@
-
+﻿
 
 #include <stdio.h>
 #include <math.h>
 
-#include "librockflight/include/state.h"
+#include "state.h"
 #include "stage.h"
 
 

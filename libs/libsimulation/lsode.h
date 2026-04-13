@@ -1,4 +1,4 @@
-#if !defined (lsode_h)
+﻿#if !defined (lsode_h)
 #define lsode_h 1
 
 #include "c++rocket.h"
@@ -86,3 +86,4 @@ typedef enum
  
 
 #endif
+

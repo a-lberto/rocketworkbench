@@ -1,4 +1,4 @@
-/* thermo.c  -  Compute thermodynamic properties of individual
+﻿/* thermo.c  -  Compute thermodynamic properties of individual
                 species and composition of species           */
 /* $Id$ */
 /* Copyright (C) 2000                                                  */
@@ -14,9 +14,9 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-#include "libthermo/include/thermo.h"
-#include "libcompat/include/compat.h"
-#include "libcpropep/include/conversion.h"
+#include "thermo.h"
+#include "compat.h"
+#include "conversion.h"
 
 /**************************************************************
 These variables hold the number of records for propellant and thermo data
@@ -561,3 +561,4 @@ double propellant_mass(equilibrium_t *e)
   }
   return mass;
 }
+

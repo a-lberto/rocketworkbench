@@ -1,4 +1,4 @@
-
+﻿
 #ifndef __state_h__
 #define __state_h__
 
@@ -60,9 +60,4 @@ typedef struct state
 } state_t;
 
 #endif /* __state_h__ */
-
-
-
-
-
 

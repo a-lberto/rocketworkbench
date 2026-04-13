@@ -1,4 +1,4 @@
-/* -*- Mode: C; c-file-style: "k&r"; -*-*/
+﻿/* -*- Mode: C; c-file-style: "k&r"; -*-*/
 
 /* rocket.c
  *    sample program for parsing a rocket propellant simulator config.
@@ -378,8 +378,4 @@ int print_info(prop_t *p, int n)
      }
      return 0;
 }
-
-
-
-
 

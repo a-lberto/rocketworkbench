@@ -1,8 +1,8 @@
-#include <stdlib.h>
+﻿#include <stdlib.h>
 #include <math.h>
 #include <float.h>
 
-#include "libnum/include/num.h"
+#include "num.h"
 
 /* neq:      number of equations
  * step:     initial time step

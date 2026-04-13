@@ -1,4 +1,4 @@
-/* file getopt.c                                                   */
+﻿/* file getopt.c                                                   */
 /*                Author: Peter Wilson                             */
 /*                        Catholic University and NIST             */
 /*                        pwilson@cme.nist.gov                     */
@@ -77,7 +77,4 @@ int getopt(int argc, char **argv, char *opts) /* opts: option string */
   return(optopt); /* return current flag character found */
 }
    
-
-
-
 

@@ -1,7 +1,7 @@
-#include <stdlib.h>
+﻿#include <stdlib.h>
 #include <stdio.h>
 
-#include "librockflight/include/state.h"
+#include "state.h"
 
 extern int stage(rocket_t *r, double *t);
 extern int mass(rocket_t *r, double *t);
@@ -38,3 +38,4 @@ int check(rocket_t *r, double tf, double dt)
 
   return 0;
 }
+

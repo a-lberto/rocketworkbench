@@ -1,4 +1,4 @@
-/* rocket.c
+﻿/* rocket.c
  *    sample program for parsing a rocket propellant simulator config.
  *
  * $Id$
@@ -13,7 +13,7 @@
 #include <ctype.h>
 
 #include "gpcp.h"
-#include "librockflight/include/state.h"
+#include "state.h"
 
 int get_point_value(char *name, float *point);
 int load_data(char *file, float **x, float **y, int *n, parameter_t *p);
@@ -636,3 +636,4 @@ int load_function_data(function_t *f, char *constant_name, char *table_name)
 
   return 0;
 }
+

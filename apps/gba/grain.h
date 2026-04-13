@@ -1,4 +1,4 @@
-#ifndef grain_h
+﻿#ifndef grain_h
 #define grain_h
 
 
@@ -34,3 +34,4 @@ int properties(point_t *h, double *perimeter, double *surface);
 
 
 #endif
+

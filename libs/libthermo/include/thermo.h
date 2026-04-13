@@ -1,8 +1,8 @@
-#ifndef thermo_h
+﻿#ifndef thermo_h
 #define thermo_h
 
-#include "libcpropep/include/equilibrium.h"
-#include "libcpropep/include/const.h"
+#include "equilibrium.h"
+#include "const.h"
 
 /* MACRO: Number of symbol in the symbol table */
 #define N_SYMB      102
@@ -216,3 +216,4 @@ double propellant_mass(equilibrium_t *e);
 
 
 #endif
+

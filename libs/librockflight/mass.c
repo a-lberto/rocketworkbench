@@ -1,9 +1,9 @@
-
+﻿
 
 #include <stdio.h>
 #include <math.h>
 
-#include "librockflight/include/state.h"
+#include "state.h"
 #include "mass.h"
 
 
@@ -67,3 +67,4 @@ int mass(rocket_t *r, double *t)
   
   return 0;
 }
+

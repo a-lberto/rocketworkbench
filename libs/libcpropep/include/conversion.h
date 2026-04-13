@@ -1,4 +1,4 @@
-#ifndef conversion_h
+﻿#ifndef conversion_h
 #define conversion_h
 
 
@@ -58,3 +58,4 @@ enum
 #define LBF_TO_N         4.4482216
 
 #endif
+

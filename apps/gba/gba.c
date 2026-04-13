@@ -1,4 +1,4 @@
-
+﻿
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -143,8 +143,4 @@ int output_info(grain_info_t *info, int n, char *filename)
 
   return 0;
 }
-
-
-
-
 

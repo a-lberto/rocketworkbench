@@ -1,4 +1,4 @@
-#ifndef print_h
+﻿#ifndef print_h
 #define print_h
 
 #include "type.h"
@@ -67,3 +67,4 @@ int print_propellant_composition(equilibrium_t *e);
 int print_performance_information(equilibrium_t *e, short npt);
 
 #endif
+

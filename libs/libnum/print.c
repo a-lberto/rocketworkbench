@@ -1,4 +1,4 @@
-/* print.c
+﻿/* print.c
  * $Id$
  * Copyright (C) 2000
  *    Antoine Lefebvre <antoine.lefebvre@polymtl.ca>
@@ -7,7 +7,7 @@
  */
 
 #include <stdio.h>
-#include "libnum/include/num.h"
+#include "num.h"
 
 int NUM_print_square_matrix(double *matrix, int neq)
 {
@@ -47,8 +47,4 @@ int NUM_print_vec(double *vec, int neq)
   printf("\n");
   return 0;
 }
-
-
-
-
 

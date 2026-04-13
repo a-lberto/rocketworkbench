@@ -1,4 +1,4 @@
-#include <stdlib.h>
+﻿#include <stdlib.h>
 
 #include "gpcp.h"
 #include "profiler.h"
@@ -366,3 +366,4 @@ int read_value(Data *d, rocket_t *r)
   }
   return 0;
 }
+

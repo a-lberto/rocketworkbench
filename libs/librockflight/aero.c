@@ -1,4 +1,4 @@
-
+﻿
 
 #include <stdio.h>
 #include <math.h>
@@ -6,7 +6,7 @@
 #include "aero.h"
 
 #include "atmos.h"
-#include "librockflight/include/state.h"
+#include "state.h"
 
 #define EARTH_RAD    6.3567668e6
 #define AIR_GAS_CONSTANT 287.0
@@ -116,7 +116,4 @@ int aero(rocket_t *r, double *y, double *t)
   
   return 0;
 }
-
-
-
 

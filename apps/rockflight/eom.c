@@ -1,4 +1,4 @@
-
+﻿
 #include <stdlib.h>
 #include <math.h>
 #include <stdio.h>
@@ -151,18 +151,4 @@ int eom(int neq, double time, double *y, double *dy, void *data)
   
   return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

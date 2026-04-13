@@ -1,4 +1,4 @@
-#include <math.h>
+﻿#include <math.h>
 #include <stdio.h>
 
 typedef struct _star
@@ -130,3 +130,4 @@ double torad(double deg)
 {
   return deg*2*M_PI/360;
 }
+

@@ -1,4 +1,4 @@
-#ifndef const_h
+﻿#ifndef const_h
 #define const_h
 
 /* molar gaz constant in J/(mol K)*/
@@ -9,3 +9,4 @@
 
 
 #endif
+

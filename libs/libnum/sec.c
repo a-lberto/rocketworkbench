@@ -1,7 +1,7 @@
-#include <math.h>
+﻿#include <math.h>
 #include <stdio.h>
 
-#include "libnum/include/num.h"
+#include "num.h"
 
 /* Resolution of non-linear equation of the for
    f(x) = 0 with the secante method which is a modified
@@ -31,3 +31,4 @@ int NUM_sec(double (*f)(double x), double x0, double x1, int nmax,
   *ans = x2;
   return 0;
 }
+

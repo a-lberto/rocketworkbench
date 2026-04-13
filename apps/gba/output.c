@@ -1,4 +1,4 @@
-
+﻿
 #include <stdio.h>
 #include "grain.h"
 
@@ -27,3 +27,4 @@ int output_matlab(point_t *h, char *filename, int id)
   fclose(fd);
   return 0;
 }
+

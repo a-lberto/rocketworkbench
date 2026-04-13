@@ -1,4 +1,4 @@
-/* modeles.cc  -  Simulation of rocket flight                              */
+﻿/* modeles.cc  -  Simulation of rocket flight                              */
 /* Copyright (C) 2000                                                  */
 /* Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                      */
 
@@ -218,17 +218,4 @@ int model_2(int neq, double time,
   
   return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

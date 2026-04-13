@@ -1,4 +1,4 @@
-#ifndef __profiler_h__
+﻿#ifndef __profiler_h__
 #define __profiler_h__
 
 #ifndef M_PI
@@ -137,5 +137,4 @@ typedef struct _rocket_t
 } rocket_t;
 
 #endif  __profiler_h__
-
 

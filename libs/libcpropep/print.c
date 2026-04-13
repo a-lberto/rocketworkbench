@@ -1,4 +1,4 @@
-/* print.c  -  Output functions           */
+﻿/* print.c  -  Output functions           */
 /* $Id$ */
 /* Copyright (C) 2000                                                  */
 /*    Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                   */
@@ -8,13 +8,13 @@
 
 #include <stdio.h>
 
-#include "libcpropep/include/print.h"
-#include "libcpropep/include/performance.h"
-#include "libcpropep/include/equilibrium.h"
-#include "libcpropep/include/conversion.h"
-#include "libcpropep/include/const.h"
+#include "print.h"
+#include "performance.h"
+#include "equilibrium.h"
+#include "conversion.h"
+#include "const.h"
 
-#include "libthermo/include/thermo.h"
+#include "thermo.h"
 
 char header[][32] = {
   "CHAMBER",
@@ -426,3 +426,4 @@ int print_product_properties(equilibrium_t *e, short npt)
   fprintf(outputfile, "\n");
   return 0;
 }
+

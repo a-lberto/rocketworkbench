@@ -1,4 +1,4 @@
-/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
+﻿/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
 /* Copyright (C) 2000                                                  */
 /* Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                      */
 
@@ -311,3 +311,4 @@ int flight_program::set_prog(int stage, double allumage, double largage)
   
   return 0;
 }
+

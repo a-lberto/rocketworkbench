@@ -1,4 +1,4 @@
-#ifndef RETURN_H
+﻿#ifndef RETURN_H
 #define RETURN_H
 
 /* Codes used in some functions by Antoine Lefebvre */
@@ -20,3 +20,4 @@
 #define ERR_RATIO_TYPE       -8
 
 #endif	/* !defined(RETURN_H) */
+

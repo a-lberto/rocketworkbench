@@ -1,11 +1,11 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
 #include <unistd.h>
 
-#include "libthermo/include/thermo.h"
-#include "libthermo/include/load.h"
+#include "thermo.h"
+#include "load.h"
 
 
 int global_verbose = 0;
@@ -332,3 +332,4 @@ int main(int argc, char *argv[])
   return 0;
   
 }
+

@@ -1,4 +1,4 @@
-
+﻿
 int trapeze(double *data, int n_point, int col, int off, double *integral)
 {
   int i;
@@ -14,3 +14,4 @@ int trapeze(double *data, int n_point, int col, int off, double *integral)
 
   return 0;
 }
+

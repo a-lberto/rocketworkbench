@@ -1,4 +1,4 @@
-
+﻿
 
 #include <stdio.h>
 #include <math.h>
@@ -100,5 +100,4 @@ int aero(double *y, state_t *s)
   
   return 0;
 }
-
 

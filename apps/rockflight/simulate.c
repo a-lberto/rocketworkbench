@@ -1,9 +1,9 @@
-#include <math.h>
+﻿#include <math.h>
 
-#include "libnum/include/num.h"
+#include "num.h"
 
-#include "librockflight/include/state.h"
-#include "librockflight/include/rockflight.h"
+#include "state.h"
+#include "rockflight.h"
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
@@ -97,3 +97,4 @@ int simulate(rocket_t *r, solution_t *sol, float *ic, double **ans)
                sol->precision, r);
   return n;
 }
+

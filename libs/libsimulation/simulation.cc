@@ -1,4 +1,4 @@
-/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
+﻿/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
 /* Copyright (C) 2000                                                  */
 /* Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                      */
 
@@ -41,3 +41,4 @@ simulation::~simulation()
   delete [] sim_name;
   cout << "Destroying simulation\n";
 };
+

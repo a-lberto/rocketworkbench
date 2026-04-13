@@ -1,11 +1,11 @@
-
+﻿
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
-#include "libcpropep/include/conversion.h"
+#include "conversion.h"
 
-#include "liblrd/include/lrd.h"
+#include "lrd.h"
 
 int load_input(char *filename, design_param_t *d, liquid_propellant_t *p)
 {
@@ -179,3 +179,4 @@ int load_input(char *filename, design_param_t *d, liquid_propellant_t *p)
   
   return 0;
 }
+

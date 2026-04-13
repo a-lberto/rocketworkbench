@@ -1,4 +1,4 @@
-/* sysnewton.c - Solve system of non-linear equations with newton's method
+﻿/* sysnewton.c - Solve system of non-linear equations with newton's method
  * $Id$
  * Copyright (C) 2000
  *    Antoine Lefebvre <antoine.lefebvre@polymtl.ca>
@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include "libnum/include/num.h"
+#include "num.h"
 
 
 double norme(double *x, int n);
@@ -84,3 +84,4 @@ double norme(double *x, int n)
   }
   return sqrt(a);
 }
+

@@ -1,7 +1,7 @@
-#ifndef mcp_h
+﻿#ifndef mcp_h
 #define mcp_h
 
-#include "libcpropep/include/type.h"
+#include "type.h"
 
 /* We assume a cylindrical motor */
 typedef struct _motor_t
@@ -39,3 +39,4 @@ typedef struct _data_
 
 
 #endif
+
