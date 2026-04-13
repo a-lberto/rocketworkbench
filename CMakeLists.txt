@@ -10,6 +10,9 @@ cmake_policy(SET CMP0079 NEW)
 # Common definitions
 add_definitions(-DGCC)
 
+# Enable Testing
+enable_testing()
+
 # Output directories
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -90,3 +93,13 @@ target_link_libraries(lrd PRIVATE liblrd libthermo libcpropep libnum m)
 
 add_executable(mcp apps/mcp/modele.c apps/mcp/test.c)
 target_link_libraries(mcp PRIVATE libmcp libthermo libcpropep libnum m)
+
+# --- TESTS ---
+
+add_executable(test_convert libs/libconvert/test.c)
+target_link_libraries(test_convert PRIVATE libconvert m)
+add_test(NAME test_convert COMMAND test_convert)
+
+add_executable(test_num libs/libnum/test.c)
+target_link_libraries(test_num PRIVATE libnum m)
+add_test(NAME test_num COMMAND test_num)
