@@ -1,0 +1,112 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            platform: Linux
+            extension: tar.gz
+          - os: windows-latest
+            platform: Windows
+            extension: zip
+          - os: macos-latest
+            platform: macOS
+            extension: tar.gz
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up CMake
+        uses: jwlawson/actions-setup-cmake@v2
+
+      - name: Configure CMake (Windows MinGW)
+        if: runner.os == 'Windows'
+        run: cmake -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
+
+      - name: Configure CMake (Linux/macOS)
+        if: runner.os != 'Windows'
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build --config Release
+
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
+
+      - name: Package
+        shell: bash
+        run: |
+          mkdir -p staging
+          APPS=("cpropep" "prop" "grain" "lrd" "mcp")
+          
+          for app in "${APPS[@]}"; do
+            APP_DIR="staging/$app"
+            mkdir -p "$APP_DIR"
+            
+            # Copy binary
+            if [ "${{ runner.os }}" == "Windows" ]; then
+              if [ -f "build/bin/$app.exe" ]; then
+                cp "build/bin/$app.exe" "$APP_DIR/"
+              fi
+            else
+              if [ -f "build/bin/$app" ]; then
+                cp "build/bin/$app" "$APP_DIR/"
+              fi
+            fi
+            
+            # Apps that need thermo/propellant data
+            if [[ "$app" =~ ^(cpropep|prop|lrd|mcp)$ ]]; then
+              if [ -d "data" ]; then
+                cp -r data "$APP_DIR/"
+              fi
+            fi
+            
+            # App specific config
+            if [ "$app" == "cpropep" ] && [ -f "apps/cpropep/cpropep.conf" ]; then
+              cp apps/cpropep/cpropep.conf "$APP_DIR/"
+            fi
+            
+            # Create archive
+            ARCHIVE_NAME="rocketworkbench-${app}-${{ matrix.platform }}"
+            if [ "${{ runner.os }}" == "Windows" ]; then
+              cd "$APP_DIR" && 7z a "../../${ARCHIVE_NAME}.zip" * && cd ../..
+            else
+              tar -czvf "${ARCHIVE_NAME}.tar.gz" -C "$APP_DIR" .
+            fi
+          done
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: binaries-${{ matrix.platform }}
+          path: rocketworkbench-*-${{ matrix.platform }}.${{ matrix.extension }}
+
+  release:
+    name: Create Release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    permissions:
+      contents: write
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: rocketworkbench-*
+          generate_release_notes: true
