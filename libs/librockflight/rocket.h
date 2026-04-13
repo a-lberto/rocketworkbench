@@ -1,4 +1,4 @@
-#ifndef __stage_h__
+﻿#ifndef __stage_h__
 #define __stage_h__
 
 typedef struct stage
@@ -39,6 +39,7 @@ typedef struct flight
   
 } flight_t;
 
-#endif __stage_h__
+#endif /* __stage_h__ */
+
 
 

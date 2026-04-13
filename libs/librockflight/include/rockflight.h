@@ -1,4 +1,4 @@
-#ifndef __rockflight_h__
+﻿#ifndef __rockflight_h__
 #define __rockflight_h__
 
 
@@ -14,4 +14,5 @@
 /* earth radius */
 #define EARTH_RAD    6.3567668e6
 
-#endif __rockflight_h__
+#endif /* __rockflight_h__ */
+

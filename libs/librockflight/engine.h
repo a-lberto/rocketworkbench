@@ -1,4 +1,4 @@
-
+﻿
 #ifndef __engine_h__
 #define __engine_h__
 
@@ -6,4 +6,5 @@
 
 int engine(rocket_t *r, double *t);
 
-#endif __engine_h__
+#endif /* __engine_h__ */
+
