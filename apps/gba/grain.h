@@ -28,6 +28,7 @@ int merge_point       (point_t *p);
 int delete_next_point (point_t *p);
 
 int create_list(point_t **h, int nb);
+int dealloc_list(point_t **h);
 int burn_surface(point_t **h, double qt, double radius);
 int properties(point_t *h, double *perimeter, double *surface);
 
