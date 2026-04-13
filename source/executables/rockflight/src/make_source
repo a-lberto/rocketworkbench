@@ -1,3 +1,0 @@
-LIB  = -lrockflight -lgpcp -lnum -lm
-PROG = rockflight
-OBJS = parser.o print.o simulate.o check.o rockflight.o

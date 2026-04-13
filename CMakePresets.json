@@ -1,0 +1,53 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 19,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "Default MinGW",
+      "description": "Default configuration for MinGW-w64",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++",
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "cpropep",
+      "configurePreset": "default",
+      "targets": ["cpropep"]
+    },
+    {
+      "name": "prop",
+      "configurePreset": "default",
+      "targets": ["prop"]
+    },
+    {
+      "name": "grain",
+      "configurePreset": "default",
+      "targets": ["grain"]
+    },
+    {
+      "name": "lrd",
+      "configurePreset": "default",
+      "targets": ["lrd"]
+    },
+    {
+      "name": "mcp",
+      "configurePreset": "default",
+      "targets": ["mcp"]
+    },
+    {
+      "name": "all",
+      "configurePreset": "default"
+    }
+  ]
+}

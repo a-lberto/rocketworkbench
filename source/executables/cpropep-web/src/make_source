@@ -1,4 +1,0 @@
-LIB  = -lcpropep -lthermo -lm -lnum -lcgi 
-DEF  = -DGCC -DSOURCEFORGE 
-PROG = cpropep-web.cgi
-OBJS = cpropep-web.o

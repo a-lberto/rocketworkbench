@@ -1,3 +1,0 @@
-LIB  = -lcpropep -lthermo -llrd -lm -lnum -lcgi
-PROG = lrd.cgi
-OBJS = lrdcgi.o

@@ -11,5 +11,4 @@
 *.tds
 
 # Build directories
-/bin/
-/lib/
+build/

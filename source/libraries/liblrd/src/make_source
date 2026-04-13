@@ -1,2 +1,0 @@
-LIBNAME = liblrd.a
-LIBOBJS = lrd.o 

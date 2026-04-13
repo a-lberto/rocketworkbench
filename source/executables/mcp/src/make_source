@@ -1,3 +1,0 @@
-LIB   = -lmcp -lcpropep -lthermo -lnum -lm
-PROG  = mcp
-OBJS1 = modele.o test.o 

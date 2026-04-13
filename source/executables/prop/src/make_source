@@ -1,3 +1,0 @@
-LIB  = -lthermo -lm 
-PROG = prop
-OBJS = prop.o 
