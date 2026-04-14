@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.19)
+﻿cmake_minimum_required(VERSION 3.19)
 project(RocketWorkbench C CXX)
 
 # This generates build/compile_commands.json
@@ -32,13 +32,10 @@ enable_testing()
 
 # --- LIBRARIES ---
 
-add_library_files(libcompat lib/compat)
-set_target_properties(libcompat PROPERTIES OUTPUT_NAME compat)
-
-add_library_files(libconvert lib/convert)
+add_subdirectory(lib/compat)
+add_subdirectory(lib/convert)
 set_target_properties(libconvert PROPERTIES OUTPUT_NAME convert)
-
-add_library_files(libnum lib/num)
+add_subdirectory(lib/num)
 set_target_properties(libnum PROPERTIES OUTPUT_NAME num)
 
 add_library_files(libcpropep lib/cpropep)
@@ -91,10 +88,10 @@ target_link_libraries(rockflight PRIVATE librockflight libgpcp libnum libcpropep
 
 # --- TESTS ---
 
-add_executable(test_convert lib/convert/test.c)
-target_link_libraries(test_convert PRIVATE libconvert m)
-add_test(NAME test_convert COMMAND test_convert)
 
-add_executable(test_num lib/num/test.c)
-target_link_libraries(test_num PRIVATE libnum m)
-add_test(NAME test_num COMMAND test_num)
+
+
+
+
+
+

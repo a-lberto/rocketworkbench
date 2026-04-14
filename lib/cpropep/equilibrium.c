@@ -12,7 +12,7 @@
 #include <math.h>
 #include <ctype.h>
 
-#include "num.h" /* matrix solution */
+#include <num/num.h> /* matrix solution */
 
 #include "print.h"
 #include "equilibrium.h"

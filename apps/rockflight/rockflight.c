@@ -7,7 +7,7 @@
 
 #include "state.h"
 #include "rockflight.h"
-#include "num.h"
+#include <num/num.h>
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846

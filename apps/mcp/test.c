@@ -3,7 +3,7 @@
 #include <math.h>
 
 
-#include "num.h"
+#include <num/num.h>
 #include "equilibrium.h"
 #include "thermo.h"
 

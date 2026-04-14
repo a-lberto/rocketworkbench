@@ -2,7 +2,7 @@
 #include <math.h>
 #include <float.h>
 
-#include "num.h"
+#include <num/num.h>
 
 /* neq:      number of equations
  * step:     initial time step

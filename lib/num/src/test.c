@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#include "num.h"
+#include <num/num.h>
 
 FILE * errorfile;
 FILE * outputfile;

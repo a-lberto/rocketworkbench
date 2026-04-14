@@ -13,7 +13,7 @@
 #include <errno.h>
 
 #include "rockflight.h"
-#include "num.h"
+#include <num/num.h>
 #include "state.h"
 
 

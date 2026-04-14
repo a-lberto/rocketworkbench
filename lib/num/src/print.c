@@ -7,7 +7,7 @@
  */
 
 #include <stdio.h>
-#include "num.h"
+#include <num/num.h>
 
 int NUM_print_square_matrix(double *matrix, int neq)
 {

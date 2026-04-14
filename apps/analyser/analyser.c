@@ -6,11 +6,11 @@
 #include <math.h>
 
 /* Numerical method library */
-#include "num.h"
+#include <num/num.h>
 /* Config file parser library */
 #include <gpcp/gpcp.h>
 /* Conversion library */
-#include "convert.h"
+#include <convert/convert.h>
 
 #include "getopt.h"
 

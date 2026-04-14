@@ -1,6 +1,6 @@
 ﻿#include <math.h>
 
-#include "num.h"
+#include <num/num.h>
 
 #include "state.h"
 #include "rockflight.h"
