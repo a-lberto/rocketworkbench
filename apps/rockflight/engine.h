@@ -4,5 +4,5 @@
 
 int engine(double *y, state_t *s);
 
-#endif __engine_h__
+#endif /* __engine_h__ */
 

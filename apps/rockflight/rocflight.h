@@ -14,5 +14,5 @@
 /* earth radius */
 #define EARTH_RAD    6.3567668e6
 
-#endif __rocflight_h__
+#endif /* __rocflight_h__ */
 

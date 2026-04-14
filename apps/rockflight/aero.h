@@ -5,5 +5,5 @@
 
 int aero(double *y, state_t *s);
 
-#endif __aero_h__
+#endif /* __aero_h__ */
 

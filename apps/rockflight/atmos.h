@@ -11,5 +11,5 @@ typedef struct
 
 int atmosphere (AIR *a, double altitude);
 
-#endif __atmos_h__
+#endif /* __atmos_h__ */
 
