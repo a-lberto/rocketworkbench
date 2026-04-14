@@ -102,18 +102,35 @@ Defining vector component in $F_B$
 
 $$
 \begin{align*}
-\vec{v}^E_B = \begin{bmatrix}u \\ v \\ w\end{bmatrix}
+\vec{v}^E_B =
+\begin{bmatrix}
+u \\
+v \\
+w
+\end{bmatrix}
 \end{align*}
 $$
 $$
 \begin{align*}
-\vec{\omega}^B_B = \begin{bmatrix}p \\ q \\ r\end{bmatrix}
+\vec{\omega}^B_B =
+\begin{bmatrix}
+p \\
+q \\
+r
+\end{bmatrix}
 \end{align*}
 $$
 $$
 \begin{align*}
-\vec{\omega}^E_B = \begin{bmatrix}p^E_B \\ q^E_B \\ r^E_B\end{bmatrix} =
-L_{BV}\begin{pmatrix}\cos{\lambda} \\ 0 \\ -\sin{\lambda}\end{pmatrix}\omega^E
+\vec{\omega}^E_B =
+\begin{bmatrix}
+p^E_B \\
+q^E_B \\
+r^E_B
+\end{bmatrix} =
+L_{BV}\begin{pmatrix}\cos{\lambda} \\
+0 \\
+-\sin{\lambda}\end{pmatrix}\omega^E
 \end{align*}
 $$
 
@@ -122,14 +139,20 @@ and matrix notation of angular velocity
 $$
 \begin{align*}
 \tilde{\omega}^B_B =
-\begin{bmatrix}0&-r&q \\ r&0&-p \\ q&p&0\end{bmatrix}
+\begin{bmatrix}0&-r&q \\
+r&0&-p \\
+q&p&0
+\end{bmatrix}
 \end{align*}
 $$
 
 $$
 \begin{align*}
 \tilde{\omega}^E_B =
-\begin{bmatrix}0&-r^E_B&q^E_B \\ r^E_B&0&-p^E_B \\ q^E_B&p^E_B&0\end{bmatrix}
+\begin{bmatrix}0&-r^E_B&q^E_B \\
+r^E_B&0&-p^E_B \\
+q^E_B&p^E_B&0
+\end{bmatrix}
 \end{align*}
 $$
 
@@ -155,7 +178,7 @@ $$
 $$
 \begin{align*}
 \vec{a}_{rel} = & (\ddot{r} - r\dot{\lambda}^2 -
-                  r\dot{\mu}^2\cos^2{\lambda})\vec{e}_r+\\ 
+                  r\dot{\mu}^2\cos^2{\lambda})\vec{e}_r+\\
                 &  ((2\dot{r}\dot{\mu} + r\ddot{\mu})\cos{\lambda} -
                   2r\dot{\mu}\dot{\lambda}\sin{\lambda})\vec{e}_\mu+\\
                 &  (2\dot{r}\dot{\lambda} + r\ddot{\lambda} +
@@ -213,7 +236,7 @@ $$
 \begin{align*}
 \vec{a}_C = &   (\ddot{r} - r\dot{\lambda}^2 -
                 r\dot{\mu}^2\cos^2{\lambda} - 2\omega
-                r\dot{\mu}\cos^2{\lambda} - \omega^2r\cos^2{\lambda})\vec{e}_r\\ 
+                r\dot{\mu}\cos^2{\lambda} - \omega^2r\cos^2{\lambda})\vec{e}_r\\
             & + ((2\dot{r}\dot{\mu} + r\ddot{\mu})\cos{\lambda} -
                 2r\dot{\mu}\dot{\lambda}\sin{\lambda}
               + 2\omega\cos{\lambda}(\dot{r}-r\dot{\lambda})\vec{e}_\mu\\
@@ -228,7 +251,7 @@ which simplify to:
 $$
 \begin{align*}
 \vec{a}_C = &   (\ddot{r} - r\dot{\lambda}^2 -
-            r(\omega+\dot{\mu})^2\cos^2{\lambda})\vec{e}_r\\ 
+            r(\omega+\dot{\mu})^2\cos^2{\lambda})\vec{e}_r\\
             & + ((2\dot{r}\dot{\mu} + r\ddot{\mu})\cos{\lambda} -
                 2r\dot{\mu}\dot{\lambda}\sin{\lambda}
               + 2\omega\cos{\lambda}(\dot{r}-r\dot{\lambda})\vec{e}_\mu\\
@@ -244,7 +267,9 @@ $F_V$.
 
 $$
 \begin{align*}
-L_{BV} = \begin{bmatrix} \cos{\theta}\cos{\psi}&
+L_{BV} =
+\begin{bmatrix}
+ \cos{\theta}\cos{\psi}&
                          \cos{\theta}\sin{\psi}& -\sin{\theta}\\
                          \sin{\phi}\sin{\theta}\cos{\psi}-\cos{\phi}\sin{\psi}&
                          \sin{\phi}\sin{\theta}\sin{\psi}+\cos{\phi}\cos{\psi}&
@@ -252,6 +277,7 @@ L_{BV} = \begin{bmatrix} \cos{\theta}\cos{\psi}&
                          \cos{\phi}\sin{\theta}\cos{\psi}+\sin{\phi}\sin{\psi}&
                          \cos{\phi}\sin{\theta}\sin{\psi}-\sin{\phi}\cos{\psi}&
                          \cos{\phi}\cos{\theta}
+
          \end{bmatrix}
 \end{align*}
 $$
@@ -262,19 +288,34 @@ $$
               & = L_{BV}(\vec{\omega}\times(\vec{\omega}\times\vec{r})
                 + 2\vec{\omega}\times\vec{v}_{rel} + \vec{a}_{rel})\\
               & = L_{BV}\begin{bmatrix}r\cos{\lambda}\sin{\lambda}\\ 0\\
-                  -r\cos^2{\lambda}\end{bmatrix}\omega^2  +
+                  -r\cos^2{\lambda}
+                  \end{bmatrix}\omega^2  +
                 2\vec{\omega}^E_B\times\vec{v}_{rel_B} +
                 \vec{a}_{rel_B} + (\vec{\omega}^B -
                 \vec{\omega}^E)_B\times\vec{v}^E_B \\
               & =  L_{BV}\begin{bmatrix}r\cos{\lambda}\sin{\lambda}\\ 0\\
-                  -r\cos^2{\lambda}\end{bmatrix}\omega^2  +
+                  -r\cos^2{\lambda}
+                  \end{bmatrix}\omega^2  +
                 \vec{a}_{rel_B} + (\vec{\omega}^B +
                 \vec{\omega}^E)_B\times\vec{v}^E_B\\
-              & = \begin{bmatrix}\dot{u} \\ \dot{v} \\ \dot{w}\end{bmatrix} + 
-                  \begin{bmatrix}c_x \\ c_y \\ c_z\end{bmatrix} + 
-                  \begin{bmatrix}(q + q^E_B)w - (r + r^E_B)v\\
+              & =
+              \begin{bmatrix}
+              \dot{u} \\
+              \dot{v} \\
+              \dot{w}
+              \end{bmatrix} +
+
+                 \begin{bmatrix}
+                 c_x \\
+                 c_y \\
+                 c_z
+                 \end{bmatrix} +
+
+                 \begin{bmatrix}
+                 (q + q^E_B)w - (r + r^E_B)v\\
                                  (r + r^E_B)u - (p + p^E_B)w\\
-                                 (p + p^E_B)v - (q + q^E_B)u\end{bmatrix}
+                                 (p + p^E_B)v - (q + q^E_B)u
+                                 \end{bmatrix}
 \end{align*}
 $$
 
@@ -334,41 +375,85 @@ $$
 
 $$
 \begin{align*}
-\begin{bmatrix}\dot{\phi} \\ \dot{\theta} \\ \dot{\psi}\end{bmatrix} = 
-  \begin{bmatrix}1&\sin{\phi}\tan{\theta}&\cos{\phi}\tan{\theta}\\
+\begin{bmatrix}\dot{\phi} \\
+\dot{\theta} \\
+\dot{\psi}
+\end{bmatrix} =
+
+ \begin{bmatrix}
+ 1&\sin{\phi}\tan{\theta}&\cos{\phi}\tan{\theta}\\
                  0&\cos{\phi}&-\sin{\phi}\\
-                 0&\sin{\phi}\sec{\theta}&\cos{\phi}\sec{\theta}\end{bmatrix}
-  \begin{bmatrix}P \\ Q \\ R\end{bmatrix}
+                 0&\sin{\phi}\sec{\theta}&\cos{\phi}\sec{\theta}
+                 \end{bmatrix}
+
+ \begin{bmatrix}
+ P \\
+ Q \\
+ R
+ \end{bmatrix}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-\begin{bmatrix}P \\ Q \\ R\end{bmatrix} =
-  \begin{bmatrix}p \\ q \\ r\end{bmatrix} - 
-  L_{BV}\begin{bmatrix}(\omega^E -
- \dot{\mu})\cos{\lambda} \\ -\dot{\lambda}\\
- -(\omega^E + \dot{\mu})\sin{\lambda}\end{bmatrix}
+\begin{bmatrix}
+P \\
+Q \\
+R
+\end{bmatrix}
+=
+\begin{bmatrix}
+p \\
+q \\
+r
+\end{bmatrix}
+- L_{BV}
+\begin{bmatrix}
+(\omega^E - \dot{\mu})\cos{\lambda} \\
+-\dot{\lambda}\\
+-(\omega^E + \dot{\mu})\sin{\lambda}
+\end{bmatrix}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-\begin{bmatrix}r\dot{\lambda} \\ r\dot{\mu}\cos{\lambda} \\ \dot{r}
-  \end{bmatrix} = L_{VB}\begin{bmatrix}u \\ v \\ w\end{bmatrix}
+\begin{bmatrix}r\dot{\lambda} \\
+r\dot{\mu}\cos{\lambda} \\
+\dot{r}
+\end{bmatrix}
+= L_{VB}
+\begin{bmatrix}
+u \\
+v \\
+w
+\end{bmatrix}
 \end{align*}
 $$
 
 $$
 \begin{align*}
-\vec{\omega}^E_B = \begin{bmatrix}p^E_B \\ q^E_B \\ r^E_B\end{bmatrix} =
-L_{BV}\begin{pmatrix}\cos{\lambda} \\ 0 \\ -\sin{\lambda}\end{pmatrix}\omega^E
+\vec{\omega}^E_B =
+\begin{bmatrix}
+p^E_B \\
+q^E_B \\
+r^E_B
+\end{bmatrix}
+= L_{BV}
+\begin{pmatrix}
+\cos{\lambda} \\
+0 \\
+-\sin{\lambda}
+\end{pmatrix}
+\omega^E
 \end{align*}
 $$
 
 $$
 \begin{align*}
-L_{VB} = \begin{bmatrix}\cos{\theta}\cos{\psi}&
+L_{VB} =
+\begin{bmatrix}
+\cos{\theta}\cos{\psi}&
              \sin{\phi}\sin{\theta}\cos{\psi} - \cos{\phi}\sin{\psi}&
              \cos{\phi}\sin{\theta}\cos{\psi} + \sin{\phi}\sin{\psi}\\
              \cos{\theta}\sin{\psi}&
@@ -376,6 +461,7 @@ L_{VB} = \begin{bmatrix}\cos{\theta}\cos{\psi}&
              \cos{\phi}\sin{\theta}\sin{\psi} - \sin{\phi}\cos{\psi}\\
              -\sin{\theta}&
              \sin{\phi}\cos{\theta}&
-             \cos{\phi}\cos{\theta}\end{bmatrix}
+             \cos{\phi}\cos{\theta}
+\end{bmatrix}
 \end{align*}
 $$
