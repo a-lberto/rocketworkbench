@@ -8,11 +8,13 @@
  *
  */
 
+#include "gpcp.h"
+
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
-#include "gpcp.h"
+#include <stdio.h>
 #include "state.h"
 
 int get_point_value(char *name, float *point);
