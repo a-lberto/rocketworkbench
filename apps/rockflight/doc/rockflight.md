@@ -413,7 +413,7 @@ R
 p \\
 q \\
 r
-\end{bmatrix} - 
+\end{bmatrix} -
 L_{BV}
 \begin{bmatrix}
 (\omega^E - \dot{\mu})\cos{\lambda} \\
