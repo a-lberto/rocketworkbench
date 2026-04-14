@@ -96,7 +96,13 @@ add_custom_command(TARGET analyser POST_BUILD
         $<TARGET_FILE_DIR:analyser>/test.conf
 )
 
+add_app_target(rockflight apps/rockflight/rockflight.c)
+target_sources(rockflight PRIVATE apps/rockflight/aero.c apps/rockflight/atmos.c apps/rockflight/check.c apps/rockflight/engine.c apps/rockflight/eom.c apps/rockflight/parser.c apps/rockflight/print.c apps/rockflight/simulate.c)
+target_include_directories(rockflight PRIVATE apps/rockflight lib/rockflight)
+target_link_libraries(rockflight PRIVATE librockflight libgpcp libnum libcpropep libcompat m)
+
 # --- TESTS ---
+
 enable_testing()
 add_executable(test_convert lib/convert/test_convert.c)
 target_link_libraries(test_convert PRIVATE libconvert m)
@@ -105,3 +111,7 @@ add_test(NAME test_convert COMMAND test_convert)
 add_executable(test_num lib/num/test_num.c)
 target_link_libraries(test_num PRIVATE libnum m)
 add_test(NAME test_num COMMAND test_num)
+
+add_executable(test_gpcp lib/gpcp/test.c)
+target_link_libraries(test_gpcp PRIVATE libgpcp m)
+add_test(NAME test_gpcp COMMAND test_gpcp)

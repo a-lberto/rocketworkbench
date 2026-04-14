@@ -51,6 +51,11 @@
       "targets": ["analyser"]
     },
     {
+      "name": "rockflight",
+      "configurePreset": "default",
+      "targets": ["rockflight"]
+    },
+    {
       "name": "all",
       "configurePreset": "default"
     }
