@@ -248,6 +248,7 @@ $$
 $$
 
 which simplify to:
+
 $$
 \begin{align*}
 \vec{a}_C = &   (\ddot{r} - r\dot{\lambda}^2 -
