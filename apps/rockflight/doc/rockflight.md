@@ -1,14 +1,16 @@
-# Inertial acceleration of the vehicle mass center in body reference frame
+# Rockflight
+
+## Inertial acceleration of the vehicle mass center in body reference frame
 
 Generally, the absolute acceleration of a particle $A$ in a moving
 reference frame of center B is:
 
 $$
-\begin{equation*}
+\begin{align*}
 \vec{a}_A = \vec{a}_B + \vec{\alpha}\times\vec{r} +
 \vec{\omega}\times(\vec{\omega}\times\vec{r})
 +2\vec{\omega}\times\vec{v}_{rel} + \vec{a}_{rel}
-\end{equation*}
+\end{align*}
 $$
 
 Choosing an earth centered reference frame with constant angular
@@ -16,10 +18,10 @@ velocity ($\vec{\omega}^E$) and no acceleration yield to the simpler
 form
 
 $$
-\begin{equation*}
+\begin{align*}
 \vec{a}_{A_E} = \vec{\omega}^E_E\times(\vec{\omega}^E_E\times\vec{r}^E_E)
 +2\vec{\omega}^E_E\times\vec{v}^{rel}_E + \vec{a}^{rel}_E
-\end{equation*}
+\end{align*}
 $$
 
 where the subscript $E$ indicate that the vector are expressed in the
@@ -30,108 +32,108 @@ the angular velocity of $F_B$ relative to $F_E$ is
 $\vec{\omega}^B - \vec{\omega}^E$ yield to:
 
 $$
-\begin{equation*}
+\begin{align*}
 \vec{a}_{A_E} = \tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E
 +2\tilde{\omega}^E_E\vec{v}^{rel}_E + \vec{a}^{rel}_E
-\end{equation*}
+\end{align*}
 $$
 
-We could now expressed this equation in term of component in the body
+We could now expressed this align in term of component in the body
 fixed reference frame.
 
 $$
-\begin{equation*}
+\begin{align*}
 \vec{a}_{A_B} = L_{BE}\vec{a}_{A_E} =
 L_{BE}(\tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E
 +2\tilde{\omega}^E_E\vec{v}^{rel}_E + \vec{a}^{rel}_E)
-\end{equation*}
+\end{align*}
 $$
 
 $$
-\begin{equation*}
+\begin{align*}
 = L_{BE}\tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E +
 2L_{BE}\tilde{\omega}^E_E\vec{v}^{rel}_E + (\tilde{\omega}^B -
 \tilde{\omega}^E)_B\vec{v}^{rel}_B + \vec{a}^{rel}_B
-\end{equation*}
+\end{align*}
 $$
 
 We could then transform
 
 $$
-\begin{equation*}
+\begin{align*}
 L_{BE}\tilde{\omega}^E_E\vec{v}^{rel}_E = (L_{BE}\tilde{\omega}^E_E
 L_{EB})(L_{BE}\vec{v}^{rel}_E) = \tilde{\omega}^E_B\vec{v}^{rel}_B
-\end{equation*}
+\end{align*}
 $$
 
 and
 
 $$
-\begin{equation*}
+\begin{align*}
 L_{BE}\tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E =
 (L_{BE}\tilde{\omega}^E_E L_{EB})(L_{BE}\tilde{\omega}^E_E
 L_{EB})(L_{BE}\vec{r}^E_E) =
 \tilde{\omega}^E_B\tilde{\omega}^E_B\vec{r}^E_B
-\end{equation*}
+\end{align*}
 $$
 
 We now have
 
 $$
-\begin{equation*}
+\begin{align*}
 \vec{a}_{A_B} = \vec{a}^{rel}_B + (\tilde{\omega}^B -
 \tilde{\omega}^E)_B\vec{v}^E_B +
 \tilde{\omega}^E_B\tilde{\omega}^E_B\vec{r}^E_B +
 2\tilde{\omega}^E_B\vec{v}^{rel}_B
-\end{equation*}
+\end{align*}
 $$
 
 which simplify to
 
 $$
-\begin{equation*}
+\begin{align*}
 \vec{a}_{A_B} = \vec{a}^{rel}_B + (\tilde{\omega}^B +
 \tilde{\omega}^E)_B\vec{v}^E_B +
 \tilde{\omega}^E_B\tilde{\omega}^E_B\vec{r}^E_B
-\end{equation*}
+\end{align*}
 $$
 
 Defining vector component in $F_B$
 
 $$
-\begin{equation*}
+\begin{align*}
 \vec{v}^E_B = \begin{bmatrix}u \\ v \\ w\end{bmatrix}
-\end{equation*}
+\end{align*}
 $$
 $$
-\begin{equation*}
+\begin{align*}
 \vec{\omega}^B_B = \begin{bmatrix}p \\ q \\ r\end{bmatrix}
-\end{equation*}
+\end{align*}
 $$
 $$
-\begin{equation*}
+\begin{align*}
 \vec{\omega}^E_B = \begin{bmatrix}p^E_B \\ q^E_B \\ r^E_B\end{bmatrix} =
 L_{BV}\begin{pmatrix}\cos{\lambda} \\ 0 \\ -\sin{\lambda}\end{pmatrix}\omega^E
-\end{equation*}
+\end{align*}
 $$
 
 and matrix notation of angular velocity
 
 $$
-\begin{equation*}
+\begin{align*}
 \tilde{\omega}^B_B =
 \begin{bmatrix}0&-r&q \\ r&0&-p \\ q&p&0\end{bmatrix}
-\end{equation*}
+\end{align*}
 $$
 
 $$
-\begin{equation*}
+\begin{align*}
 \tilde{\omega}^E_B =
 \begin{bmatrix}0&-r^E_B&q^E_B \\ r^E_B&0&-p^E_B \\ q^E_B&p^E_B&0\end{bmatrix}
-\end{equation*}
+\end{align*}
 $$
 
-# Acceleration of vehicle mass center espressed in a spherical coordinate system relative to rotating earth
+## Acceleration of vehicle mass center espressed in a spherical coordinate system relative to rotating earth
 
 The spherical coordinate system is compose of the three vector
 ($\vec{e}_r$, $\vec{e}_\lambda$, $\vec{e}_\mu$), where $\vec{e}_r$ point
@@ -145,9 +147,9 @@ $\vec{e}_r$ and the equator. We could then define the relative velocity
 and acceleration of the point C relative to earth by:
 
 $$
-\begin{equation*}
+\begin{align*}
 \vec{v}_{rel} = \dot{r}\vec{e}_r+ r\dot{\mu}\cos{\lambda}\vec{e}_\mu+ r\dot{\lambda}\vec{e}_\lambda
-\end{equation*}
+\end{align*}
 $$
 
 $$
@@ -174,11 +176,11 @@ $$
 $$
 
 $$
-\begin{equation*}
+\begin{align*}
 \vec{a}_C = \vec{a}_O + \vec{\alpha}\times\vec{r} +
               \vec{\omega}\times(\vec{\omega}\times\vec{r})
               +2\vec{\omega}\times\vec{v}_{rel} + \vec{a}_{rel}
-\end{equation*}
+\end{align*}
 $$
 
 Each term will be evaluate separatly:
@@ -222,8 +224,8 @@ $$
 \end{align*}
 $$
 
-which simplify to: $$
-\begin{equatio
+which simplify to:
+$$
 \begin{align*}
 \vec{a}_C = &   (\ddot{r} - r\dot{\lambda}^2 -
             r(\omega+\dot{\mu})^2\cos^2{\lambda})\vec{e}_r\\ 
@@ -241,7 +243,7 @@ euler angle which define the angular position of $F_B$ relative to
 $F_V$.
 
 $$
-\begin{equation*}
+\begin{align*}
 L_{BV} = \begin{bmatrix} \cos{\theta}\cos{\psi}&
                          \cos{\theta}\sin{\psi}& -\sin{\theta}\\
                          \sin{\phi}\sin{\theta}\cos{\psi}-\cos{\phi}\sin{\psi}&
@@ -251,7 +253,7 @@ L_{BV} = \begin{bmatrix} \cos{\theta}\cos{\psi}&
                          \cos{\phi}\sin{\theta}\sin{\psi}-\sin{\phi}\cos{\psi}&
                          \cos{\phi}\cos{\theta}
          \end{bmatrix}
-\end{equation*}
+\end{align*}
 $$
 
 $$
@@ -276,7 +278,7 @@ $$
 \end{align*}
 $$
 
-We will also use the moment equation:
+We will also use the moment align:
 
 $$
 \begin{align*}
@@ -286,9 +288,9 @@ N & = I_z\dot{r} - (I_x - I_y)pq
 \end{align*}
 $$
 
-# System of equation
+## System of align
 
-## Independant variable
+### Independant variable
 
 $$
 \begin{align*}
@@ -303,23 +305,23 @@ expressed in $F_B$}
 \end{align*}
 $$
 
-## List of equations
+### List of aligns
 
 $$
-\begin{equation*}
+\begin{align*}
 X - mg\sin{\theta} = m(\dot{u} + c_x + (q^E_B+q)w - (r^E_B+r)v)
-\end{equation*}
+\end{align*}
 $$
 $$
-\begin{equation*}
+\begin{align*}
 Y + mg\cos{\theta}\sin{\phi} = m(\dot{v} + c_y + (r^E_B+r)u - (p^E_B+p)w)
-\end{equation*}
+\end{align*}
 $$
 $$
-\begin{equation*}
+\begin{align*}
 Z + mg\cos{\theta}\cos{\phi} = m(\dot{w} + c_z + (p^E_B+pvw -
 (q^E_B+q)u)
-\end{equation*}
+\end{align*}
 $$
 
 $$
@@ -331,41 +333,41 @@ N & = I_z\dot{r} - (I_x - I_y)pq
 $$
 
 $$
-\begin{equation*}
+\begin{align*}
 \begin{bmatrix}\dot{\phi} \\ \dot{\theta} \\ \dot{\psi}\end{bmatrix} = 
   \begin{bmatrix}1&\sin{\phi}\tan{\theta}&\cos{\phi}\tan{\theta}\\
                  0&\cos{\phi}&-\sin{\phi}\\
                  0&\sin{\phi}\sec{\theta}&\cos{\phi}\sec{\theta}\end{bmatrix}
   \begin{bmatrix}P \\ Q \\ R\end{bmatrix}
-\end{equation*}
+\end{align*}
 $$
 
 $$
-\begin{equation*}
+\begin{align*}
 \begin{bmatrix}P \\ Q \\ R\end{bmatrix} =
   \begin{bmatrix}p \\ q \\ r\end{bmatrix} - 
   L_{BV}\begin{bmatrix}(\omega^E -
  \dot{\mu})\cos{\lambda} \\ -\dot{\lambda}\\
  -(\omega^E + \dot{\mu})\sin{\lambda}\end{bmatrix}
-\end{equation*}
+\end{align*}
 $$
 
 $$
-\begin{equation*}
+\begin{align*}
 \begin{bmatrix}r\dot{\lambda} \\ r\dot{\mu}\cos{\lambda} \\ \dot{r}
   \end{bmatrix} = L_{VB}\begin{bmatrix}u \\ v \\ w\end{bmatrix}
-\end{equation*}
+\end{align*}
 $$
 
 $$
-\begin{equation*}
+\begin{align*}
 \vec{\omega}^E_B = \begin{bmatrix}p^E_B \\ q^E_B \\ r^E_B\end{bmatrix} =
 L_{BV}\begin{pmatrix}\cos{\lambda} \\ 0 \\ -\sin{\lambda}\end{pmatrix}\omega^E
-\end{equation*}
+\end{align*}
 $$
 
 $$
-\begin{equation*}
+\begin{align*}
 L_{VB} = \begin{bmatrix}\cos{\theta}\cos{\psi}&
              \sin{\phi}\sin{\theta}\cos{\psi} - \cos{\phi}\sin{\psi}&
              \cos{\phi}\sin{\theta}\cos{\psi} + \sin{\phi}\sin{\psi}\\
@@ -375,5 +377,5 @@ L_{VB} = \begin{bmatrix}\cos{\theta}\cos{\psi}&
              -\sin{\theta}&
              \sin{\phi}\cos{\theta}&
              \cos{\phi}\cos{\theta}\end{bmatrix}
-\end{equation*}
+\end{align*}
 $$
