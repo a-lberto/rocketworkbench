@@ -5,7 +5,7 @@
 
 #include "aero.h"
 
-#include "rocflight.h"
+#include "rockflight.h"
 #include "state.h"
 #include "atmos.h"
 #include "engine.h"

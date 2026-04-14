@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <errno.h>
 
-#include "rocflight.h"
+#include "rockflight.h"
 #include "num.h"
 #include "state.h"
 
