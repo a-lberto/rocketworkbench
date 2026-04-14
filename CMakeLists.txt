@@ -105,11 +105,11 @@ target_link_libraries(rockflight PRIVATE librockflight libgpcp libnum libcpropep
 
 # --- TESTS ---
 
-add_executable(test_convert lib/convert/test_convert.c)
+add_executable(test_convert lib/convert/test.c)
 target_link_libraries(test_convert PRIVATE libconvert m)
 add_test(NAME test_convert COMMAND test_convert)
 
-add_executable(test_num lib/num/test_num.c)
+add_executable(test_num lib/num/test.c)
 target_link_libraries(test_num PRIVATE libnum m)
 add_test(NAME test_num COMMAND test_num)
 
