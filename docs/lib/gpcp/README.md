@@ -7,6 +7,7 @@ GPCP is a C library designed to parse hierarchical configuration files. It provi
 Configuration files parsed by GPCP use a simple key-value assignment syntax with support for hierarchical nesting and comments.
 
 ### Syntax Rules
+
 - **Assignments**: `key = value`
 - **Nesting**: `section = ( key1 = value1, key2 = value2 )`
 - **Lists**: Multiple sections can have the same key (e.g., `stage = (...)`).
@@ -15,6 +16,7 @@ Configuration files parsed by GPCP use a simple key-value assignment syntax with
 - **Comments**: Any text following a `#` is ignored until the end of the line.
 
 ### Example: `test.conf`
+
 ```config
 datafile = "test2.txt"
 format = (
@@ -31,6 +33,7 @@ motor = (
 ```
 
 ### Example: `sample.sim`
+
 ```config
 simulation = (
     initial_conditions = (
@@ -57,6 +60,7 @@ simulation = (
 While GPCP parses the *structure* of a configuration, many applications use it to point to external data files (e.g., `datafile = "test2.txt"`). These data files are typically raw column-based ASCII files.
 
 ### Example: `test2.txt`
+
 ```text
 # time (s) thrust (lbf)
 0       4
@@ -72,6 +76,7 @@ While GPCP parses the *structure* of a configuration, many applications use it t
 Integrating GPCP into your application involves four main steps.
 
 ### 1. Define Option Types
+
 Define an array of `Options` to map keys to their expected types. This allows GPCP to handle type conversion automatically.
 
 ```c
@@ -89,6 +94,7 @@ Options my_options[] = {
 ```
 
 ### 2. Register and Read
+
 Register the options and read the file into a `Data` structure.
 
 ```c
@@ -102,6 +108,7 @@ if (GPCP_ReadFile("my_config.conf", &config) != 0) {
 ```
 
 ### 3. Navigate and Extract
+
 Use `GPCP_EnterLevel` to dive into nested sections and `GPCP_GetValue` to retrieve values.
 
 ```c
@@ -129,6 +136,7 @@ if (GPCP_EnterLevel("format", 0) == 0) {
 ```
 
 ### 4. Handling Lists (Multiple Parents)
+
 If a configuration has multiple sections with the same name (like `stage` in a rocket simulation), use `GPCP_NumParent` to count them and loop through them.
 
 ```c
@@ -141,6 +149,7 @@ for (int i = 0; i < num_stages; i++) {
 ```
 
 ### 5. Cleanup
+
 Always free the data structure when finished.
 
 ```c
@@ -152,6 +161,7 @@ GPCP_FreeData(&config);
 ## Implementation Reference
 
 For real-world examples in this codebase, refer to:
+
 - **`apps/analyser/analyser.c`**: Demonstrates deep nesting for motor and propellant data.
 - **`apps/profiler/parser.c`**: Shows how to handle units and rocket body parts (ogive nose, tubes, etc.).
 - **`lib/gpcp/test.c`**: A minimal test suite showing basic usage.
