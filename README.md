@@ -19,7 +19,7 @@ Geoff O'Callaghan <geoff@starbiz.com.au>
 - `analyser`
 - `rockflight`
 
-## Goals
+## Roadmap
 
 - [x] Recover source code history from legacy CVS. See [RECOVERY.md](docs/RECOVERY.md).
 - [x] Restructure project folder to compile with modern CMake.
@@ -27,7 +27,7 @@ Geoff O'Callaghan <geoff@starbiz.com.au>
 - [x] Implement my own `gpcp` since original dependency can't be found. See [lib/gpcp](lib/gpcp/).
 - [x] Document tools usage instruction (minimal).
 - [x] Document libraries logic and development (minimal).
-- [ ] Move static docs and example files from source folders into `docs/<app>/`
+- [x] Move static docs and example files from source folders into `docs/<app>/`.
 - [ ] Move local app source files to local include subdir or promote to lib, except endpoint.
 - [ ] Check if libs should be downgraded to local includes.
 - [ ] Add [`cgilib`](https://www.infodrom.org/projects/cgilib/) dependency via `CPM.cmake`.
