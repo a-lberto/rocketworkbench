@@ -100,18 +100,18 @@ Defining vector component in $F_B$
 
 $$
 \begin{equation*}
-\vec{v}^E_B = \begin{bmatrix}u\\v\\w\end{bmatrix}
+\vec{v}^E_B = \begin{bmatrix}u \\ v \\ w\end{bmatrix}
 \end{equation*}
 $$
 $$
 \begin{equation*}
-\vec{\omega}^B_B = \begin{bmatrix}p\\q\\r\end{bmatrix}
+\vec{\omega}^B_B = \begin{bmatrix}p \\ q \\ r\end{bmatrix}
 \end{equation*}
 $$
 $$
 \begin{equation*}
-\vec{\omega}^E_B = \begin{bmatrix}p^E_B\\q^E_B\\r^E_B\end{bmatrix} =
-L_{BV}\begin{pmatrix}\cos{\lambda}\\0\\-\sin{\lambda}\end{pmatrix}\omega^E
+\vec{\omega}^E_B = \begin{bmatrix}p^E_B \\ q^E_B \\ r^E_B\end{bmatrix} =
+L_{BV}\begin{pmatrix}\cos{\lambda} \\ 0 \\ -\sin{\lambda}\end{pmatrix}\omega^E
 \end{equation*}
 $$
 
@@ -120,14 +120,14 @@ and matrix notation of angular velocity
 $$
 \begin{equation*}
 \tilde{\omega}^B_B =
-\begin{bmatrix}0&-r&q\\r&0&-p\\q&p&0\end{bmatrix}
+\begin{bmatrix}0&-r&q \\ r&0&-p \\ q&p&0\end{bmatrix}
 \end{equation*}
 $$
 
 $$
 \begin{equation*}
 \tilde{\omega}^E_B =
-\begin{bmatrix}0&-r^E_B&q^E_B\\r^E_B&0&-p^E_B\\q^E_B&p^E_B&0\end{bmatrix}
+\begin{bmatrix}0&-r^E_B&q^E_B \\ r^E_B&0&-p^E_B \\ q^E_B&p^E_B&0\end{bmatrix}
 \end{equation*}
 $$
 
@@ -280,8 +280,8 @@ $$
                   -r\cos^2{\lambda}\end{bmatrix}\omega^2  +
                 \vec{a}_{rel_B} + (\vec{\omega}^B +
                 \vec{\omega}^E)_B\times\vec{v}^E_B\\
-              & = \begin{bmatrix}\dot{u}\\\dot{v}\\\dot{w}\end{bmatrix} + 
-                  \begin{bmatrix}c_x\\c_y\\c_z\end{bmatrix} + 
+              & = \begin{bmatrix}\dot{u} \\ \dot{v} \\ \dot{w}\end{bmatrix} + 
+                  \begin{bmatrix}c_x \\ c_y \\ c_z\end{bmatrix} + 
                   \begin{bmatrix}(q + q^E_B)w - (r + r^E_B)v\\
                                  (r + r^E_B)u - (p + p^E_B)w\\
                                  (p + p^E_B)v - (q + q^E_B)u\end{bmatrix}
@@ -351,35 +351,35 @@ $$
 
 $$
 \begin{equation*}
-\begin{bmatrix}\dot{\phi}\\\dot{\theta}\\\dot{\psi}\end{bmatrix} = 
+\begin{bmatrix}\dot{\phi} \\ \dot{\theta} \\ \dot{\psi}\end{bmatrix} = 
   \begin{bmatrix}1&\sin{\phi}\tan{\theta}&\cos{\phi}\tan{\theta}\\
                  0&\cos{\phi}&-\sin{\phi}\\
                  0&\sin{\phi}\sec{\theta}&\cos{\phi}\sec{\theta}\end{bmatrix}
-  \begin{bmatrix}P\\Q\\R\end{bmatrix}
+  \begin{bmatrix}P \\ Q \\ R\end{bmatrix}
 \end{equation*}
 $$
 
 $$
 \begin{equation*}
-\begin{bmatrix}P\\Q\\R\end{bmatrix} =
-  \begin{bmatrix}p\\q\\r\end{bmatrix} - 
+\begin{bmatrix}P \\ Q \\ R\end{bmatrix} =
+  \begin{bmatrix}p \\ q \\ r\end{bmatrix} - 
   L_{BV}\begin{bmatrix}(\omega^E -
- \dot{\mu})\cos{\lambda}\\-\dot{\lambda}\\
+ \dot{\mu})\cos{\lambda} \\ -\dot{\lambda}\\
  -(\omega^E + \dot{\mu})\sin{\lambda}\end{bmatrix}
 \end{equation*}
 $$
 
 $$
 \begin{equation*}
-\begin{bmatrix}r\dot{\lambda}\\r\dot{\mu}\cos{\lambda}\\\dot{r}
-  \end{bmatrix} = L_{VB}\begin{bmatrix}u\\v\\w\end{bmatrix}
+\begin{bmatrix}r\dot{\lambda} \\ r\dot{\mu}\cos{\lambda} \\ \dot{r}
+  \end{bmatrix} = L_{VB}\begin{bmatrix}u \\ v \\ w\end{bmatrix}
 \end{equation*}
 $$
 
 $$
 \begin{equation*}
-\vec{\omega}^E_B = \begin{bmatrix}p^E_B\\q^E_B\\r^E_B\end{bmatrix} =
-L_{BV}\begin{pmatrix}\cos{\lambda}\\0\\-\sin{\lambda}\end{pmatrix}\omega^E
+\vec{\omega}^E_B = \begin{bmatrix}p^E_B \\ q^E_B \\ r^E_B\end{bmatrix} =
+L_{BV}\begin{pmatrix}\cos{\lambda} \\ 0 \\ -\sin{\lambda}\end{pmatrix}\omega^E
 \end{equation*}
 $$
 
