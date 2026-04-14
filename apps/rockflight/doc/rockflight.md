@@ -64,16 +64,13 @@ Defining vector component in $F_B$
 
 $$\vec{v}^E_B = \begin{bmatrix}u\\v\\w\end{bmatrix}$$
 $$\vec{\omega}^B_B = \begin{bmatrix}p\\q\\r\end{bmatrix}$$
-$$\vec{\omega}^E_B = \begin{bmatrix}p^E_B\\q^E_B\\r^E_B\end{bmatrix} =
-L_{BV}\begin{pmatrix}\cos{\lambda}\\0\\-\sin{\lambda}\end{pmatrix}\omega^E$$
+$$\vec{\omega}^E_B = \begin{bmatrix}p^E_B\\q^E_B\\r^E_B\end{bmatrix} = L_{BV}\begin{bmatrix}\cos{\lambda}\\0\\-\sin{\lambda}\end{bmatrix}\omega^E$$
 
 and matrix notation of angular velocity
 
-$$\tilde{\omega}^B_B =
-\begin{bmatrix}0&-r&q\\r&0&-p\\q&p&0\end{bmatrix}$$
+$$\tilde{\omega}^B_B = \begin{bmatrix}0&-r&q\\r&0&-p\\q&p&0\end{bmatrix}$$
 
-$$\tilde{\omega}^E_B =
-\begin{bmatrix}0&-r^E_B&q^E_B\\r^E_B&0&-p^E_B\\q^E_B&p^E_B&0\end{bmatrix}$$
+$$\tilde{\omega}^E_B = \begin{bmatrix}0&-r^E_B&q^E_B\\r^E_B&0&-p^E_B\\q^E_B&p^E_B&0\end{bmatrix}$$
 
 # Acceleration of vehicle mass center espressed in a spherical coordinate system relative to rotating earth
 
@@ -148,7 +145,9 @@ $$\begin{align*}
                 \omega^2r\cos{\lambda}\sin{\lambda})\vec{e}_\lambda
 \end{align*}$$
 
-which simplify to: $$\begin{align*}
+which simplify to:
+
+$$\begin{align*}
 \vec{a}_C = &   (\ddot{r} - r\dot{\lambda}^2 -
             r(\omega+\dot{\mu})^2\cos^2{\lambda})\vec{e}_r\\ 
             & + ((2\dot{r}\dot{\mu} + r\ddot{\mu})\cos{\lambda} -
@@ -220,8 +219,7 @@ expressed in $F_B$}
 
 $$X - mg\sin{\theta} = m(\dot{u} + c_x + (q^E_B+q)w - (r^E_B+r)v)$$
 $$Y + mg\cos{\theta}\sin{\phi} = m(\dot{v} + c_y + (r^E_B+r)u - (p^E_B+p)w)$$
-$$Z + mg\cos{\theta}\cos{\phi} = m(\dot{w} + c_z + (p^E_B+pvw -
-(q^E_B+q)u)$$
+$$Z + mg\cos{\theta}\cos{\phi} = m(\dot{w} + c_z + (p^E_B+pvw - (q^E_B+q)u)$$
 
 $$\begin{align*}
 L & = I_x\dot{p} - (I_y - I_z)qr\\
@@ -241,11 +239,9 @@ $$\begin{bmatrix}P\\Q\\R\end{bmatrix} =
  \dot{\mu})\cos{\lambda}\\-\dot{\lambda}\\
  -(\omega^E + \dot{\mu})\sin{\lambda}\end{bmatrix}$$
 
-$$\begin{bmatrix}r\dot{\lambda}\\r\dot{\mu}\cos{\lambda}\\\dot{r}
-  \end{bmatrix} = L_{VB}\begin{bmatrix}u\\v\\w\end{bmatrix}$$
+$$\begin{bmatrix}r\dot{\lambda}\\r\dot{\mu}\cos{\lambda}\\\dot{r}\end{bmatrix} = L_{VB}\begin{bmatrix}u\\v\\w\end{bmatrix}$$
 
-$$\vec{\omega}^E_B = \begin{bmatrix}p^E_B\\q^E_B\\r^E_B\end{bmatrix} =
-L_{BV}\begin{pmatrix}\cos{\lambda}\\0\\-\sin{\lambda}\end{pmatrix}\omega^E$$
+$$\vec{\omega}^E_B = \begin{bmatrix}p^E_B\\q^E_B\\r^E_B\end{bmatrix} = L_{BV}\begin{bmatrix}\cos{\lambda}\\0\\-\sin{\lambda}\end{bmatrix}\omega^E$$
 
 $$L_{VB} = \begin{bmatrix}\cos{\theta}\cos{\psi}&
              \sin{\phi}\sin{\theta}\cos{\psi} - \cos{\phi}\sin{\psi}&
