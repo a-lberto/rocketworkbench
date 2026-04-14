@@ -21,14 +21,14 @@ Geoff O'Callaghan <geoff@starbiz.com.au>
 
 ## Goals
 
-- [x] Recover source code history from legacy CVS. See [RECOVERY.md](docs/RECOVERY.md)
-- [x] Restructure project folder to compile with modern CMake
-- [x] Set up Github workflow for automatic compilation and release for Windows, Mac OS, Linux
+- [x] Recover source code history from legacy CVS. See [RECOVERY.md](docs/RECOVERY.md).
+- [x] Restructure project folder to compile with modern CMake.
+- [x] Set up Github workflow for automatic compilation and release for Windows, Mac OS, Linux.
+- [x] Document tools usage instruction (minimal).
+- [x] Document libraries logic and development (minimal).
 - [ ] Create regression tests with input files and expected outputs for known examples.
-- [x] Implement my own `gpcp` as the original one can't be found. See [lib/gpcp](lib/gpcp/)
 - [ ] Find dependencies currently missing to compile remaining applications.
-- [ ] Document tools usage instruction.
-- [ ] Document libraries logic and development.
+- [x] Implement my own `gpcp` as the original one can't be found. See [lib/gpcp](lib/gpcp/).
 - [ ] Clean up git history with atomic, purposeful edits and methodology comments.
 
 ## Future
