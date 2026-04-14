@@ -48,8 +48,7 @@ set_target_properties(libthermo PROPERTIES OUTPUT_NAME thermo)
 
 add_subdirectory(lib/gpcp)
 
-add_library_files(librockflight lib/rockflight)
-set_target_properties(librockflight PROPERTIES OUTPUT_NAME rockflight)
+add_subdirectory(apps/rockflight)
 
 add_library_files(libsimulation lib/simulation)
 set_target_properties(libsimulation PROPERTIES OUTPUT_NAME simulation)
@@ -80,11 +79,6 @@ target_link_libraries(mcp PRIVATE libthermo libcpropep libnum m)
 
 add_app_target(analyser apps/analyser/analyser.c)
 target_link_libraries(analyser PRIVATE libgpcp libnum libconvert libcompat m)
-
-add_app_target(rockflight apps/rockflight/rockflight.c)
-target_sources(rockflight PRIVATE apps/rockflight/check.c apps/rockflight/parser.c apps/rockflight/print.c apps/rockflight/simulate.c)
-target_include_directories(rockflight PRIVATE apps/rockflight lib/rockflight)
-target_link_libraries(rockflight PRIVATE librockflight libgpcp libnum libcpropep libcompat m)
 
 # --- TESTS ---
 
