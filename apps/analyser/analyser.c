@@ -8,7 +8,7 @@
 /* Numerical method library */
 #include "num.h"
 /* Config file parser library */
-#include "gpcp/src/gpcp.h"
+#include "gpcp.h"
 /* Conversion library */
 #include "convert.h"
 

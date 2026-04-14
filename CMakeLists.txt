@@ -47,6 +47,9 @@ set_target_properties(libthermo PROPERTIES OUTPUT_NAME thermo)
 add_library_files(liblrd lib/lrd)
 set_target_properties(liblrd PROPERTIES OUTPUT_NAME lrd)
 
+add_library_files(libgpcp lib/gpcp)
+set_target_properties(libgpcp PROPERTIES OUTPUT_NAME gpcp)
+
 add_library_files(libmcp lib/mcp)
 set_target_properties(libmcp PROPERTIES OUTPUT_NAME mcp)
 
@@ -84,6 +87,14 @@ target_link_libraries(lrd PRIVATE liblrd libthermo libcpropep libnum m)
 add_app_target(mcp apps/mcp/modele.c)
 target_sources(mcp PRIVATE apps/mcp/test.c)
 target_link_libraries(mcp PRIVATE libmcp libthermo libcpropep libnum m)
+
+add_app_target(analyser apps/analyser/analyser.c)
+target_link_libraries(analyser PRIVATE libgpcp libnum libconvert libcompat m)
+add_custom_command(TARGET analyser POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+        ${CMAKE_CURRENT_SOURCE_DIR}/apps/analyser/test.conf
+        $<TARGET_FILE_DIR:analyser>/test.conf
+)
 
 # --- TESTS ---
 enable_testing()

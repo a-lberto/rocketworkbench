@@ -46,6 +46,11 @@
       "targets": ["mcp"]
     },
     {
+      "name": "analyser",
+      "configurePreset": "default",
+      "targets": ["analyser"]
+    },
+    {
       "name": "all",
       "configurePreset": "default"
     }
