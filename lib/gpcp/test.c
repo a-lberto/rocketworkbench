@@ -29,11 +29,12 @@ Options test_options[] = {
     {NULL, 0, NULL}
 };
 
-int main() {
+int main(int argc, char **argv) {
     Data *data;
+    char *filename = (argc > 2 && strcmp(argv[1], "-f") == 0) ? argv[2] : "test.conf";
     GPCP_RegisterOptions(test_options);
     
-    if (GPCP_ReadFile("test_edge.conf", &data) != 0) {
+    if (GPCP_ReadFile(filename, &data) != 0) {
         printf("Error reading config file.\n");
         return -1;
     }

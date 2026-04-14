@@ -25,6 +25,8 @@ macro(add_library_files libname folder)
     target_include_directories(${libname} PUBLIC ${folder})
 endmacro()
 
+enable_testing()
+
 # --- LIBRARIES ---
 
 add_library_files(libcompat lib/compat)
@@ -103,7 +105,6 @@ target_link_libraries(rockflight PRIVATE librockflight libgpcp libnum libcpropep
 
 # --- TESTS ---
 
-enable_testing()
 add_executable(test_convert lib/convert/test_convert.c)
 target_link_libraries(test_convert PRIVATE libconvert m)
 add_test(NAME test_convert COMMAND test_convert)
@@ -114,4 +115,10 @@ add_test(NAME test_num COMMAND test_num)
 
 add_executable(test_gpcp lib/gpcp/test.c)
 target_link_libraries(test_gpcp PRIVATE libgpcp m)
-add_test(NAME test_gpcp COMMAND test_gpcp)
+add_test(NAME test_gpcp COMMAND test_gpcp -f ${CMAKE_CURRENT_SOURCE_DIR}/lib/gpcp/test.conf)
+
+add_custom_command(TARGET test_gpcp POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/gpcp/test.conf
+        $<TARGET_FILE_DIR:test_gpcp>/test.conf
+)
