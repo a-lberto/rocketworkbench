@@ -21,44 +21,58 @@ Transforming this vectorial notation to matrix notation and noting that
 the angular velocity of $F_B$ relative to $F_E$ is
 $\vec{\omega}^B - \vec{\omega}^E$ yield to:
 
-$$\vec{a}_{A_E} = \tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E
-+2\tilde{\omega}^E_E\vec{v}^{rel}_E + \vec{a}^{rel}_E$$
+$$\begin{equation*}
+\vec{a}_{A_E} = \tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E
++2\tilde{\omega}^E_E\vec{v}^{rel}_E + \vec{a}^{rel}_E
+\end{equation*}$$
 
 We could now expressed this equation in term of component in the body
 fixed reference frame.
 
-$$\vec{a}_{A_B} = L_{BE}\vec{a}_{A_E} =
+$$\begin{equation*}
+\vec{a}_{A_B} = L_{BE}\vec{a}_{A_E} =
 L_{BE}(\tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E
-+2\tilde{\omega}^E_E\vec{v}^{rel}_E + \vec{a}^{rel}_E)$$
++2\tilde{\omega}^E_E\vec{v}^{rel}_E + \vec{a}^{rel}_E)
+\end{equation*}$$
 
-$$= L_{BE}\tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E +
+$$\begin{equation*}
+= L_{BE}\tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E +
 2L_{BE}\tilde{\omega}^E_E\vec{v}^{rel}_E + (\tilde{\omega}^B -
-\tilde{\omega}^E)_B\vec{v}^{rel}_B + \vec{a}^{rel}_B$$
+\tilde{\omega}^E)_B\vec{v}^{rel}_B + \vec{a}^{rel}_B
+\end{equation*}$$
 
 We could then transform
 
-$$L_{BE}\tilde{\omega}^E_E\vec{v}^{rel}_E = (L_{BE}\tilde{\omega}^E_E
-L_{EB})(L_{BE}\vec{v}^{rel}_E) = \tilde{\omega}^E_B\vec{v}^{rel}_B$$
+$$\begin{equation*}
+L_{BE}\tilde{\omega}^E_E\vec{v}^{rel}_E = (L_{BE}\tilde{\omega}^E_E
+L_{EB})(L_{BE}\vec{v}^{rel}_E) = \tilde{\omega}^E_B\vec{v}^{rel}_B
+\end{equation*}$$
 
 and
 
-$$L_{BE}\tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E =
+$$\begin{equation*}
+L_{BE}\tilde{\omega}^E_E\tilde{\omega}^E_E\vec{r}^E_E =
 (L_{BE}\tilde{\omega}^E_E L_{EB})(L_{BE}\tilde{\omega}^E_E
 L_{EB})(L_{BE}\vec{r}^E_E) =
-\tilde{\omega}^E_B\tilde{\omega}^E_B\vec{r}^E_B$$
+\tilde{\omega}^E_B\tilde{\omega}^E_B\vec{r}^E_B
+\end{equation*}$$
 
 We now have
 
-$$\vec{a}_{A_B} = \vec{a}^{rel}_B + (\tilde{\omega}^B -
+$$\begin{equation*}
+\vec{a}_{A_B} = \vec{a}^{rel}_B + (\tilde{\omega}^B -
 \tilde{\omega}^E)_B\vec{v}^E_B +
 \tilde{\omega}^E_B\tilde{\omega}^E_B\vec{r}^E_B +
-2\tilde{\omega}^E_B\vec{v}^{rel}_B$$
+2\tilde{\omega}^E_B\vec{v}^{rel}_B
+\end{equation*}$$
 
 which simplify to
 
-$$\vec{a}_{A_B} = \vec{a}^{rel}_B + (\tilde{\omega}^B +
+$$\begin{equation*}
+\vec{a}_{A_B} = \vec{a}^{rel}_B + (\tilde{\omega}^B +
 \tilde{\omega}^E)_B\vec{v}^E_B +
-\tilde{\omega}^E_B\tilde{\omega}^E_B\vec{r}^E_B$$
+\tilde{\omega}^E_B\tilde{\omega}^E_B\vec{r}^E_B
+\end{equation*}$$
 
 Defining vector component in $F_B$
 
@@ -106,9 +120,11 @@ $$\begin{align*}
               + r\dot{\lambda}\vec{e}_\lambda
 \end{align*}$$
 
-$$\vec{a}_C = \vec{a}_O + \vec{\alpha}\times\vec{r} +
-              \vec{\omega}\times(\vec{\omega}\times\vec{r})
-              +2\vec{\omega}\times\vec{v}_{rel} + \vec{a}_{rel}$$
+$$\begin{equation*}
+\vec{a}_C = \vec{a}_O + \vec{\alpha}\times\vec{r} +
+\vec{\omega}\times(\vec{\omega}\times\vec{r})
++2\vec{\omega}\times\vec{v}_{rel} + \vec{a}_{rel}
+\end{equation*}$$
 
 Each term will be evaluate separatly:
 
@@ -162,15 +178,18 @@ frame to the bidy fixed frame with the conversion matrix based on the
 euler angle which define the angular position of $F_B$ relative to
 $F_V$.
 
-$$L_{BV} = \begin{bmatrix} \cos{\theta}\cos{\psi}&
-                         \cos{\theta}\sin{\psi}& -\sin{\theta}\\
-                         \sin{\phi}\sin{\theta}\cos{\psi}-\cos{\phi}\sin{\psi}&
-                         \sin{\phi}\sin{\theta}\sin{\psi}+\cos{\phi}\cos{\psi}&
-                         \sin{\phi}\cos{\theta}\\
-                         \cos{\phi}\sin{\theta}\cos{\psi}+\sin{\phi}\sin{\psi}&
-                         \cos{\phi}\sin{\theta}\sin{\psi}-\sin{\phi}\cos{\psi}&
-                         \cos{\phi}\cos{\theta}
-         \end{bmatrix}$$
+$$\begin{equation*}
+L_{BV} =
+\begin{bmatrix} \cos{\theta}\cos{\psi}&
+                \cos{\theta}\sin{\psi}& -\sin{\theta}\\
+                \sin{\phi}\sin{\theta}\cos{\psi}-\cos{\phi}\sin{\psi}&
+                \sin{\phi}\sin{\theta}\sin{\psi}+\cos{\phi}\cos{\psi}&
+                \sin{\phi}\cos{\theta}\\
+                \cos{\phi}\sin{\theta}\cos{\psi}+\sin{\phi}\sin{\psi}&
+                \cos{\phi}\sin{\theta}\sin{\psi}-\sin{\phi}\cos{\psi}&
+                \cos{\phi}\cos{\theta}
+\end{bmatrix}
+\end{equation*}$$
 
 $$\begin{align*}
 \vec{a}_{C_B} & = L_{BV}\vec{a}_C\\
@@ -227,28 +246,39 @@ M & = I_y\dot{q} - (I_z - I_x)rp\\
 N & = I_z\dot{r} - (I_x - I_y)pq
 \end{align*}$$
 
-$$\begin{bmatrix}\dot{\phi} \\ \dot{\theta} \\ \dot{\psi}\end{bmatrix} = 
-  \begin{bmatrix}1&\sin{\phi}\tan{\theta}&\cos{\phi}\tan{\theta}\\
-                 0&\cos{\phi}&-\sin{\phi}\\
-                 0&\sin{\phi}\sec{\theta}&\cos{\phi}\sec{\theta}\end{bmatrix}
-  \begin{bmatrix}P \\ Q \\ R\end{bmatrix}$$
+$$\begin{equation*}
+\begin{bmatrix}\dot{\phi} \\ \dot{\theta} \\ \dot{\psi}\end{bmatrix} = 
+\begin{bmatrix}1&\sin{\phi}\tan{\theta}&\cos{\phi}\tan{\theta}\\
+               0&\cos{\phi}&-\sin{\phi}\\
+               0&\sin{\phi}\sec{\theta}&\cos{\phi}\sec{\theta}\end{bmatrix}
+\begin{bmatrix}P \\ Q \\ R\end{bmatrix}
+\end{equation*}$$
 
-$$\begin{bmatrix}P \\ Q \\ R\end{bmatrix} =
-  \begin{bmatrix}p \\ q \\ r\end{bmatrix} - 
-  L_{BV}\begin{bmatrix}(\omega^E -
- \dot{\mu})\cos{\lambda} \\ -\dot{\lambda}\\
- -(\omega^E + \dot{\mu})\sin{\lambda}\end{bmatrix}$$
+$$\begin{equation*}
+\begin{bmatrix}P \\ Q \\ R\end{bmatrix} =
+\begin{bmatrix}p \\ q \\ r\end{bmatrix} -
+L_{BV}\begin{bmatrix}
+(\omega^E -\dot{\mu})\cos{\lambda} \\
+-\dot{\lambda} \\
+-(\omega^E + \dot{\mu})\sin{\lambda}
+\end{bmatrix}
+\end{equation*}$$
 
 $$\begin{bmatrix}r\dot{\lambda} \\ r\dot{\mu}\cos{\lambda} \\ \dot{r}\end{bmatrix} = L_{VB}\begin{bmatrix}u \\ v \\ w\end{bmatrix}$$
 
 $$\vec{\omega}^E_B = \begin{bmatrix}p^E_B \\ q^E_B \\ r^E_B\end{bmatrix} = L_{BV}\begin{bmatrix}\cos{\lambda} \\ 0 \\ -\sin{\lambda}\end{bmatrix}\omega^E$$
 
-$$L_{VB} = \begin{bmatrix}\cos{\theta}\cos{\psi}&
-             \sin{\phi}\sin{\theta}\cos{\psi} - \cos{\phi}\sin{\psi}&
-             \cos{\phi}\sin{\theta}\cos{\psi} + \sin{\phi}\sin{\psi}\\
-             \cos{\theta}\sin{\psi}&
-             \sin{\phi}\sin{\theta}\sin{\psi} + \cos{\phi}\cos{\psi}&
-             \cos{\phi}\sin{\theta}\sin{\psi} - \sin{\phi}\cos{\psi}\\
-             -\sin{\theta}&
-             \sin{\phi}\cos{\theta}&
-             \cos{\phi}\cos{\theta}\end{bmatrix}$$
+$$\begin{equation*}
+L_{VB} =
+\begin{bmatrix}
+\cos{\theta}\cos{\psi}&
+\sin{\phi}\sin{\theta}\cos{\psi} - \cos{\phi}\sin{\psi}&
+\cos{\phi}\sin{\theta}\cos{\psi} + \sin{\phi}\sin{\psi}\\
+\cos{\theta}\sin{\psi}&
+\sin{\phi}\sin{\theta}\sin{\psi} + \cos{\phi}\cos{\psi}&
+\cos{\phi}\sin{\theta}\sin{\psi} - \sin{\phi}\cos{\psi}\\
+-\sin{\theta}&
+\sin{\phi}\cos{\theta}&
+\cos{\phi}\cos{\theta}
+\end{bmatrix}
+\end{equation*}$$
