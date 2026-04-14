@@ -194,13 +194,13 @@ int set_state(rocket_t *rocket, double *y, double *time)
   evaluate_function(f, s, *time, &(s->Iz));
   
   f = &(rocket->stage_properties[s->s].Cd);
-  evaluate_function(f, s, *time, &(s->Cd));
+  evaluate_function(f, s, *time, &(s->Cdrag));
 
   f = &(rocket->stage_properties[s->s].CL);
-  evaluate_function(f, s, *time, &(s->CL));
+  evaluate_function(f, s, *time, &(s->Clift));
 
   f = &(rocket->stage_properties[s->s].CB);
-  evaluate_function(f, s, *time, &(s->CB));
+  evaluate_function(f, s, *time, &(s->Cbeta));
   
   /* compute rocket mass */
   if (mass(rocket, time))

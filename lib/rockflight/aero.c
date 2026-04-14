@@ -83,9 +83,9 @@ int aero(rocket_t *r, double *y, double *t)
 
   q = 0.5 * air.rho * V * V;
     
-  FD = - s->Cd * q * s->A;
-  FL = - s->CL * q * s->A * alpha;
-  FB = - s->CB * q * s->A * beta;
+  FD = - s->Cdrag * q * s->A;
+  FL = - s->Clift * q * s->A * alpha;
+  FB = - s->Cbeta * q * s->A * beta;
 
   /*printf("FD = %f, FL = %f\n", FD, FL);*/
   

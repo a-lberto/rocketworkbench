@@ -58,9 +58,9 @@ typedef struct state
   scalar_t mach;
   
   /* aerodynamic coefficients */
-  scalar_t Cd;
-  scalar_t CL;
-  scalar_t CB;
+  scalar_t Cdrag;
+  scalar_t Clift;
+  scalar_t Cbeta;
   scalar_t Cspin;
   scalar_t Cmoment;
   scalar_t Cdamping;
