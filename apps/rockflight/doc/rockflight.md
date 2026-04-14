@@ -62,15 +62,15 @@ $$\vec{a}_{A_B} = \vec{a}^{rel}_B + (\tilde{\omega}^B +
 
 Defining vector component in $F_B$
 
-$$\vec{v}^E_B = \begin{bmatrix}u\\v\\w\end{bmatrix}$$
-$$\vec{\omega}^B_B = \begin{bmatrix}p\\q\\r\end{bmatrix}$$
-$$\vec{\omega}^E_B = \begin{bmatrix}p^E_B\\q^E_B\\r^E_B\end{bmatrix} = L_{BV}\begin{bmatrix}\cos{\lambda}\\0\\-\sin{\lambda}\end{bmatrix}\omega^E$$
+$$\vec{v}^E_B = \begin{bmatrix}u \\ v \\ w\end{bmatrix}$$
+$$\vec{\omega}^B_B = \begin{bmatrix}p \\ q \\ r\end{bmatrix}$$
+$$\vec{\omega}^E_B = \begin{bmatrix}p^E_B \\ q^E_B \\ r^E_B\end{bmatrix} = L_{BV}\begin{bmatrix}\cos{\lambda} \\ 0 \\ -\sin{\lambda}\end{bmatrix}\omega^E$$
 
 and matrix notation of angular velocity
 
-$$\tilde{\omega}^B_B = \begin{bmatrix}0&-r&q\\r&0&-p\\q&p&0\end{bmatrix}$$
+$$\tilde{\omega}^B_B = \begin{bmatrix}0&-r&q \\ r&0&-p \\ q&p&0\end{bmatrix}$$
 
-$$\tilde{\omega}^E_B = \begin{bmatrix}0&-r^E_B&q^E_B\\r^E_B&0&-p^E_B\\q^E_B&p^E_B&0\end{bmatrix}$$
+$$\tilde{\omega}^E_B = \begin{bmatrix}0&-r^E_B&q^E_B \\ r^E_B&0&-p^E_B \\ q^E_B&p^E_B&0\end{bmatrix}$$
 
 # Acceleration of vehicle mass center espressed in a spherical coordinate system relative to rotating earth
 
@@ -185,8 +185,8 @@ $$\begin{align*}
                   -r\cos^2{\lambda}\end{bmatrix}\omega^2  +
                 \vec{a}_{rel_B} + (\vec{\omega}^B +
                 \vec{\omega}^E)_B\times\vec{v}^E_B\\
-              & = \begin{bmatrix}\dot{u}\\\dot{v}\\\dot{w}\end{bmatrix} + 
-                  \begin{bmatrix}c_x\\c_y\\c_z\end{bmatrix} + 
+              & = \begin{bmatrix}\dot{u} \\ \dot{v} \\ \dot{w}\end{bmatrix} + 
+                  \begin{bmatrix}c_x \\ c_y \\ c_z\end{bmatrix} + 
                   \begin{bmatrix}(q + q^E_B)w - (r + r^E_B)v\\
                                  (r + r^E_B)u - (p + p^E_B)w\\
                                  (p + p^E_B)v - (q + q^E_B)u\end{bmatrix}
@@ -227,21 +227,21 @@ M & = I_y\dot{q} - (I_z - I_x)rp\\
 N & = I_z\dot{r} - (I_x - I_y)pq
 \end{align*}$$
 
-$$\begin{bmatrix}\dot{\phi}\\\dot{\theta}\\\dot{\psi}\end{bmatrix} = 
+$$\begin{bmatrix}\dot{\phi} \\ \dot{\theta} \\ \dot{\psi}\end{bmatrix} = 
   \begin{bmatrix}1&\sin{\phi}\tan{\theta}&\cos{\phi}\tan{\theta}\\
                  0&\cos{\phi}&-\sin{\phi}\\
                  0&\sin{\phi}\sec{\theta}&\cos{\phi}\sec{\theta}\end{bmatrix}
-  \begin{bmatrix}P\\Q\\R\end{bmatrix}$$
+  \begin{bmatrix}P \\ Q \\ R\end{bmatrix}$$
 
-$$\begin{bmatrix}P\\Q\\R\end{bmatrix} =
-  \begin{bmatrix}p\\q\\r\end{bmatrix} - 
+$$\begin{bmatrix}P \\ Q \\ R\end{bmatrix} =
+  \begin{bmatrix}p \\ q \\ r\end{bmatrix} - 
   L_{BV}\begin{bmatrix}(\omega^E -
- \dot{\mu})\cos{\lambda}\\-\dot{\lambda}\\
+ \dot{\mu})\cos{\lambda} \\ -\dot{\lambda}\\
  -(\omega^E + \dot{\mu})\sin{\lambda}\end{bmatrix}$$
 
-$$\begin{bmatrix}r\dot{\lambda}\\r\dot{\mu}\cos{\lambda}\\\dot{r}\end{bmatrix} = L_{VB}\begin{bmatrix}u\\v\\w\end{bmatrix}$$
+$$\begin{bmatrix}r\dot{\lambda} \\ r\dot{\mu}\cos{\lambda} \\ \dot{r}\end{bmatrix} = L_{VB}\begin{bmatrix}u \\ v \\ w\end{bmatrix}$$
 
-$$\vec{\omega}^E_B = \begin{bmatrix}p^E_B\\q^E_B\\r^E_B\end{bmatrix} = L_{BV}\begin{bmatrix}\cos{\lambda}\\0\\-\sin{\lambda}\end{bmatrix}\omega^E$$
+$$\vec{\omega}^E_B = \begin{bmatrix}p^E_B \\ q^E_B \\ r^E_B\end{bmatrix} = L_{BV}\begin{bmatrix}\cos{\lambda} \\ 0 \\ -\sin{\lambda}\end{bmatrix}\omega^E$$
 
 $$L_{VB} = \begin{bmatrix}\cos{\theta}\cos{\psi}&
              \sin{\phi}\sin{\theta}\cos{\psi} - \cos{\phi}\sin{\psi}&
