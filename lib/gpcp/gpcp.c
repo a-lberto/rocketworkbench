@@ -146,7 +146,7 @@ int GPCP_NumParent(char *name) {
     int count = 0;
     while (child) {
         if (strcmp(child->key, name) == 0) count++;
-        child = child->children;
+        child = child->next_sibling;
     }
     return count;
 }
