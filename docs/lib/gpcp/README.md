@@ -80,7 +80,7 @@ Integrating GPCP into your application involves four main steps.
 Define an array of `Options` to map keys to their expected types. This allows GPCP to handle type conversion automatically.
 
 ```c
-#include "gpcp.h"
+#include <gpcp/gpcp.h>
 
 Options my_options[] = {
     {"datafile", STRING,  NULL},

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "gpcp.h"
+#include <gpcp/gpcp.h>
 
 static Options *registered_options = NULL;
 static Data *global_data = NULL;

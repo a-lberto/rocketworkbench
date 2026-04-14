@@ -22,6 +22,7 @@ int eom(int neq, double time, double *y, double *dy, void *data);
 int read_file(char *config_file, rocket_t *rocket, float *init_cond,
               solution_t *solution);
 extern int simulate(rocket_t *r, solution_t *s, float *ic, double **ans);
+extern int check(rocket_t *r, double tf, double dt);
 
 int main(int argc, char *argv[])
 {

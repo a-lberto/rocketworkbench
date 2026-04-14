@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "gpcp.h"
+#include <gpcp/gpcp.h>
 
 void print_level(int depth) {
     char indent[16];

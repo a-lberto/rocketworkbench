@@ -2,7 +2,7 @@
 #include <string.h>
 #include <math.h>
 
-#include "gpcp.h"
+#include <gpcp/gpcp.h>
 #include "getopt.h"
 
 #include "profiler.h"

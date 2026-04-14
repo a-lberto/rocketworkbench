@@ -8,7 +8,7 @@
  *
  */
 
-#include "gpcp.h"
+#include <gpcp/gpcp.h>
 
 #include <stdlib.h>
 #include <string.h>

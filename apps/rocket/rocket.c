@@ -19,7 +19,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "gpcp.h"
+#include <gpcp/gpcp.h>
 
 #include "thermo.h"
 

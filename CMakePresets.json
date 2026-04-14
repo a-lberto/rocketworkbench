@@ -1,21 +1,13 @@
 {
   "version": 3,
-  "cmakeMinimumRequired": {
-    "major": 3,
-    "minor": 19,
-    "patch": 0
-  },
   "configurePresets": [
     {
       "name": "default",
-      "displayName": "Default MinGW",
-      "description": "Default configuration for MinGW-w64",
-      "generator": "MinGW Makefiles",
       "binaryDir": "${sourceDir}/build",
+      "generator": "Ninja",
       "cacheVariables": {
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_CXX_COMPILER": "g++",
-        "CMAKE_BUILD_TYPE": "Release"
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BUILD_TESTING": "ON"
       }
     }
   ],
@@ -56,6 +48,12 @@
       "targets": ["rockflight"]
     },
     {
+      "name": "gpcp",
+      "configurePreset": "default",
+      "description": "Compiles only the libgpcp library and its test executable",
+      "targets": [ "libgpcp", "test_gpcp" ]
+    },
+    {
       "name": "all",
       "configurePreset": "default"
     }
@@ -71,6 +69,12 @@
         "noTestsAction": "error",
         "stopOnFailure": false
       }
+    },
+    {
+      "name": "test-gpcp",
+      "configurePreset": "default",
+      "description": "Run gpcp tests (automatically builds if using IDEs)",
+      "filter": { "include": { "name": "gpcp" } }
     }
   ]
 }

@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.19)
 project(RocketWorkbench C CXX)
 
+# This generates build/compile_commands.json
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 11)
 
@@ -46,14 +49,7 @@ add_library_files(libthermo lib/thermo)
 target_link_libraries(libthermo PUBLIC libcpropep)
 set_target_properties(libthermo PROPERTIES OUTPUT_NAME thermo)
 
-add_library_files(liblrd lib/lrd)
-set_target_properties(liblrd PROPERTIES OUTPUT_NAME lrd)
-
-add_library_files(libgpcp lib/gpcp)
-set_target_properties(libgpcp PROPERTIES OUTPUT_NAME gpcp)
-
-add_library_files(libmcp lib/mcp)
-set_target_properties(libmcp PROPERTIES OUTPUT_NAME mcp)
+add_subdirectory(lib/gpcp)
 
 add_library_files(librockflight lib/rockflight)
 set_target_properties(librockflight PROPERTIES OUTPUT_NAME rockflight)
@@ -69,11 +65,6 @@ endmacro()
 
 add_app_target(cpropep apps/cpropep/cpropep.c)
 target_link_libraries(cpropep PRIVATE libthermo libcpropep libnum libcompat m)
-add_custom_command(TARGET cpropep POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy
-        ${CMAKE_CURRENT_SOURCE_DIR}/apps/cpropep/cpropep.conf
-        $<TARGET_FILE_DIR:cpropep>/cpropep.conf
-)
 
 add_app_target(prop apps/prop/prop.c)
 target_link_libraries(prop PRIVATE libthermo libcpropep libcompat m)
@@ -83,23 +74,18 @@ target_sources(grain PRIVATE apps/gba/grain.c apps/gba/shape.c apps/gba/output.c
 target_link_libraries(grain PRIVATE m)
 
 add_app_target(lrd apps/lrd/main.c)
-target_sources(lrd PRIVATE apps/lrd/lrd_load.c)
-target_link_libraries(lrd PRIVATE liblrd libthermo libcpropep libnum m)
+target_sources(lrd PRIVATE apps/lrd/lrd_load.c apps/lrd/lrd.c)
+target_link_libraries(lrd PRIVATE libthermo libcpropep libnum m)
 
 add_app_target(mcp apps/mcp/modele.c)
 target_sources(mcp PRIVATE apps/mcp/test.c)
-target_link_libraries(mcp PRIVATE libmcp libthermo libcpropep libnum m)
+target_link_libraries(mcp PRIVATE libthermo libcpropep libnum m)
 
 add_app_target(analyser apps/analyser/analyser.c)
 target_link_libraries(analyser PRIVATE libgpcp libnum libconvert libcompat m)
-add_custom_command(TARGET analyser POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy
-        ${CMAKE_CURRENT_SOURCE_DIR}/apps/analyser/test.conf
-        $<TARGET_FILE_DIR:analyser>/test.conf
-)
 
 add_app_target(rockflight apps/rockflight/rockflight.c)
-target_sources(rockflight PRIVATE apps/rockflight/aero.c apps/rockflight/atmos.c apps/rockflight/check.c apps/rockflight/engine.c apps/rockflight/eom.c apps/rockflight/parser.c apps/rockflight/print.c apps/rockflight/simulate.c)
+target_sources(rockflight PRIVATE apps/rockflight/check.c apps/rockflight/parser.c apps/rockflight/print.c apps/rockflight/simulate.c)
 target_include_directories(rockflight PRIVATE apps/rockflight lib/rockflight)
 target_link_libraries(rockflight PRIVATE librockflight libgpcp libnum libcpropep libcompat m)
 
@@ -112,13 +98,3 @@ add_test(NAME test_convert COMMAND test_convert)
 add_executable(test_num lib/num/test.c)
 target_link_libraries(test_num PRIVATE libnum m)
 add_test(NAME test_num COMMAND test_num)
-
-add_executable(test_gpcp lib/gpcp/test.c)
-target_link_libraries(test_gpcp PRIVATE libgpcp m)
-add_test(NAME test_gpcp COMMAND test_gpcp -f ${CMAKE_CURRENT_SOURCE_DIR}/lib/gpcp/test.conf)
-
-add_custom_command(TARGET test_gpcp POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib/gpcp/test.conf
-        $<TARGET_FILE_DIR:test_gpcp>/test.conf
-)
