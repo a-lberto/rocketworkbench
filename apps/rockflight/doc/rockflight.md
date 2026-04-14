@@ -151,7 +151,6 @@ $$
 $$
 
 $$
-\begin{equation*}
 \begin{align*}
 \vec{a}_{rel} = & (\ddot{r} - r\dot{\lambda}^2 -
                   r\dot{\mu}^2\cos^2{\lambda})\vec{e}_r+\\ 
@@ -160,13 +159,11 @@ $$
                 &  (2\dot{r}\dot{\lambda} + r\ddot{\lambda} +
                   r\dot{\mu}^2\sin{\lambda}\cos{\lambda})\vec{e}_\lambda
 \end{align*}
-\end{equation*}
 $$
 
 We can now derive the inertial velocity and acceleration of C:
 
 $$
-\begin{equation*}
 \begin{align*}
 \vec{v}_C & = \vec{v}_O + \vec{v}_{rel} + \vec{\omega}\times\vec{r}\\
           & = \dot{r}\vec{e}_r+ r\dot{\mu}\cos{\lambda}\vec{e}_\mu+
@@ -174,7 +171,6 @@ $$
           & = \dot{r}\vec{e}_r+ r\cos{\lambda}(\dot{\mu} + \omega)\vec{e}_\mu
               + r\dot{\lambda}\vec{e}_\lambda
 \end{align*}
-\end{equation*}
 $$
 
 $$
@@ -188,7 +184,6 @@ $$
 Each term will be evaluate separatly:
 
 $$
-\begin{equation*}
 \begin{align*}
 \vec{\omega}\times(\vec{\omega}\times\vec{r}) & =
       \omega\vec{k}\times(\omega\vec{k}\times r\vec{e}_r)\\
@@ -196,11 +191,9 @@ $$
     & = \omega^2r\cos{\lambda}(-\cos{\lambda}\vec{e}_r+\sin{\lambda}\vec{e}_\lambda)\\
     & = -\omega^2r\cos^2{\lambda}\vec{e}_r+ \omega^2r\cos{\lambda}\sin{\lambda}\vec{e}_\lambda
 \end{align*}
-\end{equation*}
 $$
 
 $$
-\begin{equation*}
 \begin{align*}
 \vec{\omega}\times\vec{v}_{rel} & = \omega\vec{k}\times(\dot{r}\vec{e}_r+
     r\dot{\mu}\cos{\lambda}\vec{e}_\mu+ r\dot{\lambda}\vec{e}_\lambda)\\
@@ -210,13 +203,11 @@ $$
  & = \omega\cos{\lambda}(\dot{r}-r\dot{\lambda})\vec{e}_\mu- \omega
  r\dot{\mu}\cos^2{\lambda}\vec{e}_r+ \omega r\dot{\mu}\cos{\lambda}\sin{\lambda}\vec{e}_\lambda
 \end{align*}
-\end{equation*}
 $$
 
 The inertial acceleration of C is then:
 
 $$
-\begin{equation*}
 \begin{align*}
 \vec{a}_C = &   (\ddot{r} - r\dot{\lambda}^2 -
                 r\dot{\mu}^2\cos^2{\lambda} - 2\omega
@@ -229,11 +220,10 @@ $$
                 r\dot{\mu}\cos{\lambda}\sin{\lambda} +
                 \omega^2r\cos{\lambda}\sin{\lambda})\vec{e}_\lambda
 \end{align*}
-\end{equation*}
 $$
 
 which simplify to: $$
-\begin{equation*}
+\begin{equatio
 \begin{align*}
 \vec{a}_C = &   (\ddot{r} - r\dot{\lambda}^2 -
             r(\omega+\dot{\mu})^2\cos^2{\lambda})\vec{e}_r\\ 
@@ -243,7 +233,6 @@ which simplify to: $$
             & + (2\dot{r}\dot{\lambda} + r\ddot{\lambda} +
             r\sin{\lambda}\cos{\lambda}(\omega+\dot{\mu})^2)\vec{e}_\lambda
 \end{align*}
-\end{equation*}
 $$
 
 We must now project the inertial acceleration from this vehicled carried
@@ -266,7 +255,6 @@ L_{BV} = \begin{bmatrix} \cos{\theta}\cos{\psi}&
 $$
 
 $$
-\begin{equation*}
 \begin{align*}
 \vec{a}_{C_B} & = L_{BV}\vec{a}_C\\
               & = L_{BV}(\vec{\omega}\times(\vec{\omega}\times\vec{r})
@@ -286,19 +274,16 @@ $$
                                  (r + r^E_B)u - (p + p^E_B)w\\
                                  (p + p^E_B)v - (q + q^E_B)u\end{bmatrix}
 \end{align*}
-\end{equation*}
 $$
 
 We will also use the moment equation:
 
 $$
-\begin{equation*}
 \begin{align*}
 L & = I_x\dot{p} - (I_y - I_z)qr\\
 M & = I_y\dot{q} - (I_z - I_x)rp\\
 N & = I_z\dot{r} - (I_x - I_y)pq
 \end{align*}
-\end{equation*}
 $$
 
 # System of equation
@@ -306,7 +291,6 @@ $$
 ## Independant variable
 
 $$
-\begin{equation*}
 \begin{align*}
 (\phi, \theta, \psi)\quad & \text{Euler angle defining orientation of the
 vehicle relative to $F_V$}\\
@@ -317,7 +301,6 @@ vehicle relative to $F_V$}\\
 (P, Q, R) \quad & \text{Relative angular velocity of body relative ro $F_V$
 expressed in $F_B$}
 \end{align*}
-\end{equation*}
 $$
 
 ## List of equations
@@ -340,13 +323,11 @@ Z + mg\cos{\theta}\cos{\phi} = m(\dot{w} + c_z + (p^E_B+pvw -
 $$
 
 $$
-\begin{equation*}
 \begin{align*}
 L & = I_x\dot{p} - (I_y - I_z)qr\\
 M & = I_y\dot{q} - (I_z - I_x)rp\\
 N & = I_z\dot{r} - (I_x - I_y)pq
 \end{align*}
-\end{equation*}
 $$
 
 $$
