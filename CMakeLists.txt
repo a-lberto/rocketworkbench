@@ -49,9 +49,7 @@ set_target_properties(libthermo PROPERTIES OUTPUT_NAME thermo)
 add_subdirectory(lib/gpcp)
 
 add_subdirectory(apps/rockflight)
-
-add_library_files(libsimulation lib/simulation)
-set_target_properties(libsimulation PROPERTIES OUTPUT_NAME simulation)
+add_subdirectory(apps/simulator)
 
 # --- APPLICATIONS ---
 

@@ -1,4 +1,4 @@
-﻿/* cpropep.c  -  Calculation of Complex Chemical Equilibrium           */
+﻿/* rk4.h   -  Simulation of rocket flight                              */
 /* Copyright (C) 2000                                                  */
 /* Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                      */
 
@@ -16,29 +16,45 @@
 /* along with this program; if not, write to the Free Software         */
 /* Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.           */
 
-#include <iostream>
-#include "simulation.h"
+#if !defined (rk4_h)
+#define rk4_h 1
 
-using namespace std;
+#include "c++rocket.h"
 
-//extern int model_1(const int& neq, const double& time, 
-//		   double* z, double* dy, 
-//		   int& ierr);
+extern int model_1(int neq, double time, 
+		   double* z, double* dy, 
+		   int ierr);
 
-extern simulation *simptr;
+extern int model_2(int neq, double time, 
+		   double* z, double* dy, 
+		   int ierr);
 
-simulation::simulation(Model_t model) : rk4_solver(model)
+typedef int (*ModelFunc_t) (int, double,
+			    double*, double*, int);
+
+class rk4_solver
 {
-  simptr = this;
-  sim_name = new char[128];
-  //model = model_1;
-}
-     
 
-simulation::~simulation() 
-{
-  //delete rocket.prop;
-  delete [] sim_name;
-  cout << "Destroying simulation\n";
+ private:
+  ModelFunc_t md;   // pointer to the model function
+  int  memory;
+
+  double time;
+
+  int    neq;
+  int    length;
+  double **ans;
+
+ public:
+  rk4_solver(Model_t model);
+  ~rk4_solver();
+
+  void print();
+  void export_octave(char *filename);
+
+  int solve(double *st, double duration, double step);
 };
+
+
+#endif
 
