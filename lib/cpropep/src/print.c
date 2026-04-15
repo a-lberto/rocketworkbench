@@ -8,13 +8,13 @@
 
 #include <stdio.h>
 
-#include "print.h"
-#include "performance.h"
-#include "equilibrium.h"
-#include "conversion.h"
-#include "const.h"
+#include <cpropep/print.h>
+#include <cpropep/performance.h>
+#include <cpropep/equilibrium.h>
+#include <cpropep/conversion.h>
+#include <cpropep/const.h>
 
-#include "thermo.h"
+#include <thermo/thermo.h>
 
 char header[][32] = {
   "CHAMBER",

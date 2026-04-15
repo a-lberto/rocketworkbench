@@ -2,13 +2,13 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "equilibrium.h"
+#include <cpropep/equilibrium.h>
 
-#include "load.h"
-#include "thermo.h"
+#include <thermo/load.h>
+#include <thermo/thermo.h>
 
-#include "conversion.h"
-#include "return.h"
+#include <cpropep/conversion.h>
+#include <cpropep/return.h>
 
 
 /***************************************************************************

@@ -5,10 +5,10 @@
 #include <stdio.h>
 #include <math.h>
 
-#include "print.h"
-#include "type.h"
-#include "thermo.h"
-#include "conversion.h"
+#include <cpropep/print.h>
+#include <cpropep/type.h>
+#include <thermo/thermo.h>
+#include <cpropep/conversion.h>
 
 #include "lrd.h"
 

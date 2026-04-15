@@ -38,13 +38,7 @@ set_target_properties(libconvert PROPERTIES OUTPUT_NAME convert)
 add_subdirectory(lib/num)
 set_target_properties(libnum PROPERTIES OUTPUT_NAME num)
 
-add_library_files(libcpropep lib/cpropep)
-target_link_libraries(libcpropep PUBLIC libcompat libnum)
-set_target_properties(libcpropep PROPERTIES OUTPUT_NAME cpropep)
-
-add_library_files(libthermo lib/thermo)
-target_link_libraries(libthermo PUBLIC libcpropep)
-set_target_properties(libthermo PROPERTIES OUTPUT_NAME thermo)
+add_subdirectory(lib/cpropep)
 
 add_subdirectory(lib/gpcp)
 
@@ -58,10 +52,10 @@ macro(add_app_target appname source)
 endmacro()
 
 add_app_target(cpropep apps/cpropep/cpropep.c)
-target_link_libraries(cpropep PRIVATE libthermo libcpropep libnum libcompat m)
+target_link_libraries(cpropep PRIVATE libcpropep libnum libcompat m)
 
 add_app_target(prop apps/prop/prop.c)
-target_link_libraries(prop PRIVATE libthermo libcpropep libcompat m)
+target_link_libraries(prop PRIVATE libcpropep libcompat m)
 
 add_app_target(grain apps/gba/gba.c) # Note: assumes common object handling if needed
 target_sources(grain PRIVATE apps/gba/grain.c apps/gba/shape.c apps/gba/output.c)
@@ -69,11 +63,11 @@ target_link_libraries(grain PRIVATE m)
 
 add_app_target(lrd apps/lrd/main.c)
 target_sources(lrd PRIVATE apps/lrd/lrd_load.c apps/lrd/lrd.c)
-target_link_libraries(lrd PRIVATE libthermo libcpropep libnum m)
+target_link_libraries(lrd PRIVATE libcpropep libnum m)
 
 add_app_target(mcp apps/mcp/modele.c)
 target_sources(mcp PRIVATE apps/mcp/test.c)
-target_link_libraries(mcp PRIVATE libthermo libcpropep libnum m)
+target_link_libraries(mcp PRIVATE libcpropep libnum m)
 
 add_app_target(analyser apps/analyser/analyser.c)
 target_link_libraries(analyser PRIVATE libgpcp libnum libconvert libcompat m)

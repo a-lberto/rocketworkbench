@@ -14,13 +14,13 @@
 
 #include <num/num.h> /* matrix solution */
 
-#include "print.h"
-#include "equilibrium.h"
-#include "conversion.h"
-#include "return.h"
+#include <cpropep/print.h>
+#include <cpropep/equilibrium.h>
+#include <cpropep/conversion.h>
+#include <cpropep/return.h>
 
-#include "compat.h"
-#include "thermo.h" /* thermodynamics function */
+#include <compat.h>
+#include <thermo/thermo.h> /* thermodynamics function */
 
 /* Initial temperature estimate for problem with not-fixed temperature */
 #define ESTIMATED_T 3800

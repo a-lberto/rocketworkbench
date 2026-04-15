@@ -11,8 +11,8 @@
 /*
 #endif
 */
-#include "thermo.h"
-#include "load.h"
+#include <thermo/thermo.h>
+#include <thermo/load.h>
 
 #define MAX_LINE 500
 #define ARG_LENGTH 32

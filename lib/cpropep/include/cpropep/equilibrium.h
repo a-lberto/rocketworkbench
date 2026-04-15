@@ -8,8 +8,8 @@
 /*                                                                     */
 /* Licensed under the GPLv2                                            */
 
-#include "compat.h"
-#include "type.h"
+#include <compat.h>
+#include <cpropep/type.h>
 
 #define GRAM_TO_MOL(g, sp)   g/propellant_molar_mass(sp)
 

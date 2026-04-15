@@ -1,11 +1,11 @@
 ﻿#ifndef print_h
 #define print_h
 
-#include "type.h"
+#include <cpropep/type.h>
 
-#include "equilibrium.h"
-#include "derivative.h"
-#include "performance.h"
+#include <cpropep/equilibrium.h>
+#include <cpropep/derivative.h>
+#include <cpropep/performance.h>
 
 #define PROPELLANT_NAME(sp) (propellant_list + sp)->name
 

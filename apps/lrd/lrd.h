@@ -1,7 +1,7 @@
 ﻿#ifndef lrd_h
 #define lrd_h
 
-#include "type.h"
+#include <cpropep/type.h>
 
 typedef struct _design_param_t
 {

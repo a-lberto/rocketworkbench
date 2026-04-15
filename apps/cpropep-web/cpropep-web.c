@@ -27,12 +27,12 @@
 #include <cgi.h>
 
 
-#include "equilibrium.h"
-#include "performance.h"
-#include "thermo.h"
+#include <cpropep/equilibrium.h>
+#include <cpropep/performance.h>
+#include <thermo/thermo.h>
 
-#include "load.h"
-#include "print.h"
+#include <thermo/load.h>
+#include <cpropep/print.h>
 
 
 s_cgi *cgi;

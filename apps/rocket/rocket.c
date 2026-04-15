@@ -21,7 +21,7 @@
 
 #include <gpcp/gpcp.h>
 
-#include "thermo.h"
+#include <thermo/thermo.h>
 
 #define DEFAULT_THERMO_FILE "thermo.dat"
 #define DEFAULT_PROP_FILE "propellant.dat"

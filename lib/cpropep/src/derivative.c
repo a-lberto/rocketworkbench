@@ -14,15 +14,15 @@
 
 #include <num/num.h>
 
-#include "derivative.h"
-#include "equilibrium.h"
-#include "performance.h"
+#include <cpropep/derivative.h>
+#include <cpropep/equilibrium.h>
+#include <cpropep/performance.h>
 
-#include "print.h"
-#include "return.h"
+#include <cpropep/print.h>
+#include <cpropep/return.h>
 
-#include "compat.h"
-#include "thermo.h"
+#include <compat.h>
+#include <thermo/thermo.h>
 
 int fill_temperature_derivative_matrix(double *matrix, equilibrium_t *e);
 int fill_pressure_derivative_matrix(double *matrix, equilibrium_t *e);

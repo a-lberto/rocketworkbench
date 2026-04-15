@@ -1,7 +1,7 @@
 ﻿#ifndef derivative_h
 #define derivative_h
 
-#include "equilibrium.h"
+#include <cpropep/equilibrium.h>
 
 int derivative(equilibrium_t *e);
 

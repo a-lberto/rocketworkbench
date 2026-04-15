@@ -4,12 +4,12 @@
 
 
 #include <num/num.h>
-#include "equilibrium.h"
-#include "thermo.h"
+#include <cpropep/equilibrium.h>
+#include <thermo/thermo.h>
 
 #include "mcp.h"
-#include "load.h"
-#include "print.h"
+#include <thermo/load.h>
+#include <cpropep/print.h>
 
 #define NEQ 2
 

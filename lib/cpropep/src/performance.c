@@ -11,15 +11,15 @@
 #include <stdio.h>
 #include <math.h>
 
-#include "performance.h"
-#include "derivative.h"
-#include "print.h"
-#include "equilibrium.h"
-#include "const.h"
-#include "return.h"
+#include <cpropep/performance.h>
+#include <cpropep/derivative.h>
+#include <cpropep/print.h>
+#include <cpropep/equilibrium.h>
+#include <cpropep/const.h>
+#include <cpropep/return.h>
 
-#include "compat.h"
-#include "thermo.h"
+#include <compat.h>
+#include <thermo/thermo.h>
 
 #define TEMP_ITERATION_MAX  8
 #define PC_PT_ITERATION_MAX 5

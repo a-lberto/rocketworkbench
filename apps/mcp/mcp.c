@@ -5,11 +5,11 @@
 #include <math.h>
 
 
-#include "load.h"
-#include "print.h"
-#include "type.h"
-#include "thermo.h"
-#include "conversion.h"
+#include <thermo/load.h>
+#include <cpropep/print.h>
+#include <cpropep/type.h>
+#include <thermo/thermo.h>
+#include <cpropep/conversion.h>
 
 #define THERMO_FILE     "../cpropep/data/thermo.dat"
 #define PROPELLANT_FILE "../cpropep/data/propellant.dat"

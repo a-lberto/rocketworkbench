@@ -1,8 +1,8 @@
 ﻿#ifndef thermo_h
 #define thermo_h
 
-#include "equilibrium.h"
-#include "const.h"
+#include <cpropep/equilibrium.h>
+#include <cpropep/const.h>
 
 /* MACRO: Number of symbol in the symbol table */
 #define N_SYMB      102

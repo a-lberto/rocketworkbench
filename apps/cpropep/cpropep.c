@@ -21,15 +21,15 @@
 /*#endif
 */
 
-#include "load.h"
-#include "thermo.h"
+#include <thermo/load.h>
+#include <thermo/thermo.h>
 
-#include "equilibrium.h"
-#include "performance.h"
-#include "derivative.h"
-#include "print.h"
-#include "conversion.h"
-#include "return.h"
+#include <cpropep/equilibrium.h>
+#include <cpropep/performance.h>
+#include <cpropep/derivative.h>
+#include <cpropep/print.h>
+#include <cpropep/conversion.h>
+#include <cpropep/return.h>
 
 #include "compat.h"
 

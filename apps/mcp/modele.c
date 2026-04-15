@@ -4,11 +4,11 @@
 
 #include "mcp.h"
 
-#include "equilibrium.h"
-#include "performance.h"
+#include <cpropep/equilibrium.h>
+#include <cpropep/performance.h>
 
-#include "conversion.h"
-#include "const.h"
+#include <cpropep/conversion.h>
+#include <cpropep/const.h>
 
 int modele(int neq, double time, double *y, double *dy, void *data)
 {

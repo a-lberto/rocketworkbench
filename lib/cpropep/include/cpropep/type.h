@@ -6,7 +6,7 @@
 #define MAX_COMP     20 /* Maximum different ingredient in
                            composition */
 
-#include "compat.h"
+#include <compat.h>
 
 /****************************************************************
 TYPE:  Enumeration of the possible state of a substance

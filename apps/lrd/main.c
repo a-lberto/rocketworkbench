@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <math.h>
 
-#include "load.h"
-#include "print.h"
-#include "thermo.h"
+#include <thermo/load.h>
+#include <cpropep/print.h>
+#include <thermo/thermo.h>
 
 #include "lrd_load.h"
 #include "lrd.h"

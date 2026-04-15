@@ -4,13 +4,13 @@
 #include <cgi.h>
 
 
-#include "equilibrium.h"
-#include "performance.h"
-#include "thermo.h"
-#include "conversion.h"
+#include <cpropep/equilibrium.h>
+#include <cpropep/performance.h>
+#include <thermo/thermo.h>
+#include <cpropep/conversion.h>
 
-#include "load.h"
-#include "print.h"
+#include <thermo/load.h>
+#include <cpropep/print.h>
 
 #include "lrd.h"
 

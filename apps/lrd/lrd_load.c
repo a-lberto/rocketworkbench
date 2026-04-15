@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "conversion.h"
+#include <cpropep/conversion.h>
 
 #include "lrd.h"
 
