@@ -3,6 +3,7 @@ file(GLOB SRCS "src/*.c")
 
 # Collect all production source files
 add_library(libgpcp STATIC ${SRCS})
+set_target_properties(libgpcp PROPERTIES OUTPUT_NAME gpcp)
 
 # PUBLIC: So apps linking to libgpcp can use <gpcp/gpcp.h>
 # PRIVATE: So internal .c files can see headers in the src directory

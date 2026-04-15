@@ -3,6 +3,7 @@
 file(GLOB SRCS "src/aero.c" "src/atmos.c" "src/engine.c" "src/eom.c" "src/evaluate_function.c" "src/mass.c" "src/rocket.c" "src/stage.c")
 
 add_library(librockflight STATIC ${SRCS})
+set_target_properties(librockflight PROPERTIES OUTPUT_NAME rockflight)
 
 target_link_libraries(librockflight PUBLIC libgpcp)
 target_include_directories(librockflight PUBLIC 

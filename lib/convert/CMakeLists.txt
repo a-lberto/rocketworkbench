@@ -1,6 +1,7 @@
 ﻿
 file(GLOB SRCS "src/*.c")
 add_library(libconvert STATIC ${SRCS})
+set_target_properties(libconvert PROPERTIES OUTPUT_NAME convert)
 target_include_directories(libconvert PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 if(BUILD_TESTING)

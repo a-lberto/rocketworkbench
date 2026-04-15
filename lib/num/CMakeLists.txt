@@ -1,6 +1,7 @@
 ﻿
 file(GLOB SRCS "src/*.c")
 add_library(libnum STATIC ${SRCS})
+set_target_properties(libnum PROPERTIES OUTPUT_NAME num)
 target_include_directories(libnum PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 if(BUILD_TESTING)

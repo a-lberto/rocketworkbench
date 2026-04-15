@@ -34,14 +34,9 @@ enable_testing()
 
 add_subdirectory(lib/compat)
 add_subdirectory(lib/convert)
-set_target_properties(libconvert PROPERTIES OUTPUT_NAME convert)
 add_subdirectory(lib/num)
-set_target_properties(libnum PROPERTIES OUTPUT_NAME num)
-
 add_subdirectory(lib/cpropep)
-
 add_subdirectory(lib/gpcp)
-
 add_subdirectory(apps/rockflight)
 add_subdirectory(apps/simulator)
 

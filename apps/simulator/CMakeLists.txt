@@ -7,6 +7,7 @@ FLEX_TARGET(MotorParser src/motor.l ${CMAKE_CURRENT_BINARY_DIR}/motor_lexer.cc)
 file(GLOB SRCS "src/*.cc")
 
 add_library(libsimulation STATIC ${SRCS} ${FLEX_MotorParser_OUTPUTS})
+set_target_properties(libsimulation PROPERTIES OUTPUT_NAME simulation)
 
 target_link_libraries(libsimulation PUBLIC libnum)
 target_include_directories(libsimulation PUBLIC 
