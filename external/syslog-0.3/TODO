@@ -1,0 +1,11 @@
+Charset conversion between various sources and destinations.
+Currently only global conversion is possible.
+Add "encoding" attribute to "source" and "destination" elements.
+Convert message when it has been assigned to destination.
+If source encoding is not specified, assume UTF-8.
+Similarly, assume UTF-8 for destination encoding if not specified.
+But do not attempt to convert if both encodings are not specified.
+
+GUI configuration utility
+
+GUI log viewer

@@ -1,0 +1,81 @@
+Internet Cookies
+================
+
+This gives a short overview about cookies in general and their
+implementation in the CGI library in detail.  The use of cookies is
+described in two partially different ways.  Netscape has released
+their standard and an RFC (2109) has been filed from Bell Labs.  Both
+documents are found through "More Information".
+
+Server Side
+-----------
+
+  The server initiates a session by sending a cookie to the client.
+  The server may transmit one or more cookies by using the additional
+  HTTP header "Set-Cookie" like
+
+     Set-Cookie: foo=bar; Version=1; Path=/foo; Domain=.foo.org
+
+  This cookie would only be available within any host that matches
+  *.foo.org.  According to RFC 2109 * may not contain a dot, according
+  to Netscape's documentation it may.  The client would only send the
+  cookie back to the server if the URL is within /foo on that server.
+
+  When more than one cookie are to be transmitted they are separated
+  with a comma.  Attributes are separated with a semicolon.
+
+  If the current URL doesn't match the Path attribute or the hostname
+  doesn't match the Domain attribute, the client will ignore the
+  cookie.
+
+Client Side
+-----------
+
+  When the client requests a web page, it checks if the location is
+  within the scope of one or more cookies.  If so it sends them, ordered
+  by the most matching one, like:
+
+     Cookie: $Version=1; foo=bar; $path=/; bar=foo; $path=/foo
+
+  Attributes belong to the most left name=value pair.  Attributes
+  specified before such a pair are valid for all subsequent cookies.
+
+Syntax
+------
+
+     Cookie        ::= <header> ":" <attr> *( ";" <attr> )
+     <header>      ::= "Cookie" | "Set-Cookie"
+     <attr>        ::= <attr-name> [ "=" <value> ]
+     <attr-name>   ::= <token>
+     <value>       ::= <token> | <quoted-string>
+     <token>       ::= sequence of non-special, non-white space characters
+
+  Attribut names (<attr-name>) are case-insensitive.  Spaces may be
+  used between tokens and within attribute values.  Some attributes
+  don't require a value.
+
+  The Set-Cookie header uses these attributes:
+
+     <cookie>        ::= NAME "=" VALUE *( ";" <attr> )   # required
+     <attr>          ::= "Comment" "=" value              # optional
+		       | "Domain" "=" value               # optional
+		       | "Max-Age" "=" value              # optional
+		       | "Path" "=" value                 # optional
+		       | "Secure"                         # optional
+		       | "Version" "=" 1*DIGIT            # required
+
+  Apart from the cookie itself as NAME "=" VALUE the Cookie header as
+  sent by the client uses only $Version, $Path and $Domain which are
+  both optional.  The value of the Version attribute must be the value
+  from the Version attribute, if any, of the corresponding Set-Cookie
+  response header.
+
+     <cookie>        ::= <version> *( ( ";" | "," ) <cookie-value> )
+     <cookie-value>  ::= NAME "=" VALUE [";" <path>] [";" <domain>]
+     <path>	     ::= "$Path" "=" value
+     <domain>	     ::= "$Domain" "=" value
+
+   Note: For backward compatibility, the separator in the Cookie
+   header is semi-colon (;) everywhere.  A server should also accept
+   comma (,) as the separator between cookie-values for future
+   compatibility.

@@ -1,0 +1,268 @@
+2005-11-18 17:01  yaworsky
+
+	* TODO: Added encoding conversion task.
+
+2005-11-18 15:45  yaworsky
+
+	* daemon/: dest_file.c, string.c, syslogd.h: Use the right
+	  comparsion function and rename string_compare to string_equal
+
+2005-11-18 15:37  yaworsky
+
+	* daemon/dest_file.c: Fixed race condition
+
+2005-11-17 10:49  yaworsky
+
+	* daemon/dest_file.c: Described race condition.
+
+2005-11-17 10:32  yaworsky
+
+	* version.m4: Bumped version to 0.3.
+
+2005-11-17 10:31  yaworsky
+
+	* doc/src/intro.xml: Changed slightly.
+
+2005-11-16 14:21  yaworsky
+
+	* doc/: book/syslog-win32.xml, src/compiling.xml,
+	  website/logger.xml, website/syslogd.xml, website/test.xml:
+	  Corrected DocBook structure
+
+2005-11-15 18:36  yaworsky
+
+	* daemon/syslogd.c: Optimized for speed parsing the month field
+
+2005-11-15 17:59  yaworsky
+
+	* daemon/: Makefile.am, dest_file.c, dest_relay.c, main.c,
+	  string.c, syslogd.c, syslogd.h: Replaced 0-terminated strings
+	  with reference counted ones
+
+2005-11-10 08:39  yaworsky
+
+	* daemon/: dest_file.c, syslogd.c, syslogd.h, udp_listener.c:
+	  Improved performance.
+
+2005-11-10 08:39  yaworsky
+
+	* daemon/fifo.c: Simplified.
+
+2005-11-03 10:33  yaworsky
+
+	* daemon/dest_file.c: Avoid race
+
+2005-10-31 20:06  yaworsky
+
+	* daemon/syslogd.c: Clear disposed data
+
+2005-10-31 19:52  yaworsky
+
+	* daemon/Makefile.am, daemon/listener.c[DEAD], daemon/syslogd.c,
+	  daemon/syslogd.h, daemon/udp_listener.c, doc/src/internals.xml:
+	  Refactored listener
+
+2005-10-31 19:20  yaworsky
+
+	* daemon/dest_file.c: Clarified loop.
+
+2005-10-26 14:05  yaworsky
+
+	* doc/src/internals.xml: Shown different destinations on the
+	  diagram.
+
+2005-10-26 14:04  yaworsky
+
+	* daemon/conf.c: Fixed default value of 'ifempty'.  Fixed compiler
+	  warning.
+
+2005-10-26 11:59  yaworsky
+
+	* daemon/Makefile.am, daemon/conf.c, daemon/dest_relay.c,
+	  daemon/syslogd.h, doc/src/configuration.xml: Implemented
+	  relaying.
+
+2005-10-26 11:36  yaworsky
+
+	* daemon/syslogd.c: Fixed defaults for message facility and
+	  priority in the parser.
+
+2005-10-26 10:32  yaworsky
+
+	* daemon/dest_file.c: Fixed comment.
+
+2005-10-24 20:00  yaworsky
+
+	* daemon/: Makefile.am, dest_file.c, writer.c[DEAD]: Renamed
+	  writer.c to dest_file.c.
+
+2005-10-24 19:55  yaworsky
+
+	* daemon/: conf.c, logrotate.c, syslogd.c, syslogd.h, writer.c:
+	  Prepared for various destination types.
+
+2005-10-24 11:57  yaworsky
+
+	* daemon/conf.c: Cut xml_start_element into little functions.
+
+2005-10-18 15:38  yaworsky
+
+	* ChangeLog: Release 0.2.
+
+2005-10-18 15:32  yaworsky
+
+	* setup.iss: Added ChangeLog.
+
+2005-10-18 14:20  yaworsky
+
+	* doc/book/Makefile.am: Added to CVS.
+
+2005-10-18 14:10  yaworsky
+
+	* Makefile.am, configure.ac: Added doc.
+
+2005-10-18 14:07  yaworsky
+
+	* doc/: Makefile.am, website/Makefile.am: Added to CVS.
+
+2005-10-18 12:12  yaworsky
+
+	* version.m4: Bumped version number to 0.2.
+
+2005-10-18 12:06  yaworsky
+
+	* doc/src/compiling.xml: Changed instructions how to build binary
+	  distribution.
+
+2005-10-18 12:05  yaworsky
+
+	* setup.iss: Added documentation and start menu folder with icons.
+
+2005-10-18 11:46  yaworsky
+
+	* README: Added official website URL.
+
+2005-10-18 11:45  yaworsky
+
+	* doc/src/test.xml: Spelling/typo fix.
+
+2005-10-18 11:15  yaworsky
+
+	* doc/src/compiling.xml: Added book compiling instructions.
+
+2005-10-18 11:10  yaworsky
+
+	* doc/book/syslog-win32.xml: Added to CVS.
+
+2005-10-18 10:51  yaworsky
+
+	* doc/src/logger.xml: Added description of -s option.
+
+2005-10-18 10:50  yaworsky
+
+	* README: Leave brief description. Moved all content to doc/src.
+
+2005-10-18 10:49  yaworsky
+
+	* doc/website/layout.xml: Added "internals" page.
+
+2005-10-18 10:46  yaworsky
+
+	* doc/: src/internals.xml, website/internals.xml: Added to CVS.
+
+2005-10-18 09:25  yaworsky
+
+	* doc/website/robots.txt: Added to CVS.
+
+2005-10-18 02:30  yaworsky
+
+	* doc/website/: compiling.xml, configuration.xml,
+	  documentation.xml, layout.xml, logger.xml, style.css,
+	  syslogd.xml, test.xml, website.xml, graphics/blank.gif,
+	  graphics/created-with-libxslt.png,
+	  graphics/created-with-website.png, graphics/logo.png,
+	  graphics/spacer.gif, graphics/navicons/triangle/current/leaf.gif,
+	  graphics/navicons/triangle/current/pointer.gif,
+	  graphics/navicons/triangle/other/closed.gif,
+	  graphics/navicons/triangle/other/leaf.gif,
+	  graphics/navicons/triangle/other/open.gif,
+	  stylesheets/chunk-tabular.xsl: Added to CVS.
+
+2005-10-18 02:22  yaworsky
+
+	* doc/src/: compiling.xml, configuration.xml, intro.xml,
+	  logger.xml, syslogd.xml, test.xml: Added to CVS.
+
+2005-10-17 18:03  yaworsky
+
+	* COPYING: Fixed legal issues.
+
+2005-10-17 17:52  yaworsky
+
+	* daemon/names.c: Fixed facility name resolution by number.
+
+2005-09-16 18:20  yaworsky
+
+	* README: Follow-up.
+
+2005-09-16 18:20  yaworsky
+
+	* README: Fixed misspelling.
+
+2005-09-16 17:39  yaworsky
+
+	* ChangeLog: Release 0.1.
+
+2005-09-16 17:23  yaworsky
+
+	* daemon/writer.c: Fixed file creation date workaround.
+
+2005-09-16 17:22  yaworsky
+
+	* daemon/main.c: Added #ifdef for machine type in exception
+	  handler.
+
+2005-09-16 17:20  yaworsky
+
+	* daemon/logrotate.c: Fixed daily and weekly conditions.
+
+2005-09-16 16:26  yaworsky
+
+	* daemon/: conf.c, pathnames.c: Fixed locale issues.
+
+2005-09-16 16:06  yaworsky
+
+	* setup.iss: Added AUTHORS and NEWS files.
+
+2005-09-16 15:42  yaworsky
+
+	* ChangeLog: Added to repository.
+
+2005-09-16 15:38  yaworsky
+
+	* test/dropcount.c, test/test.c, client/Makefile.am, Makefile.am,
+	  README, autogen.sh, build.sh, configure.ac, setup.iss,
+	  version.m4, daemon/Makefile.am, etc/Makefile.am,
+	  extras/Makefile.am, test/Makefile.am: Added to repository.
+
+2005-09-16 15:36  yaworsky
+
+	* client/logger.c, include/syslog.h: Modified for native win32.
+
+2005-09-16 15:33  yaworsky
+
+	* client/syslog-client.c, daemon/conf.c, daemon/fifo.c,
+	  daemon/listener.c, daemon/logrotate.c, daemon/main.c,
+	  daemon/names.c, daemon/pathnames.c, daemon/purger.c,
+	  daemon/syslogd.c, daemon/syslogd.h, daemon/writer.c, AUTHORS,
+	  COPYING, NEWS, TODO, etc/syslog.conf, extras/cross-compile-libs,
+	  extras/glib-static-win32.patch: Added to repository.
+
+2005-09-16 10:18  yaworsky
+
+	* client/logger.c: Original source from util-linux-2.12
+
+2005-09-16 10:17  yaworsky
+
+	* include/syslog.h: Taken from Slackware 9.1
+

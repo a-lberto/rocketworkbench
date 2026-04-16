@@ -1,0 +1,31 @@
+This is a list of people who have helped me working on this CGI
+library.
+
+Martin Schulze <joey@infodrom.org>
+
+	- Design, Implementation, Maintenance
+
+Mikko Torni <mtorni@mail.freenet.hut.fi>
+
+	- Cookie support (abandoned though)
+	- Bugfixes and improvements
+
+Laszlo Zavaleta <wry@kopu.org>
+
+	- Support for ';' as delimiter
+
+Stephen Uitti <suitti@olde.com>
+
+	- Spelling corrections
+
+Neil Spring <nspring@zarathustra.saavie.org>
+
+	- Declare some arguments const
+
+Phil Brooke <pjb@scm.tees.ac.uk>
+
+	- Allow cookies without regular CGI POST/GET variables
+
+Michael Petullo <mike@flyn.org>
+
+	- Convert to GNU autotools and wrap strncpy() accordingly

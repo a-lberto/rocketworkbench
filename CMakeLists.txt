@@ -23,6 +23,8 @@ include_directories(
 enable_testing()
 
 # --- LIBRARIES ---
+add_subdirectory(external/syslog-0.3)
+add_subdirectory(external/cgilib-0.7)
 add_subdirectory(lib/compat)
 add_subdirectory(lib/convert)
 add_subdirectory(lib/num)

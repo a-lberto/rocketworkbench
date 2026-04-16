@@ -12,7 +12,7 @@
 #include <thermo/load.h>
 #include <cpropep/print.h>
 
-#include "lrd.h"
+#include <lrd/lrd.h>
 
 s_cgi *cgi;
 

@@ -12,3 +12,10 @@ target_include_directories(liblrd PUBLIC
 # Build the main lrd app
 add_executable(lrd src/main.c)
 target_link_libraries(lrd PRIVATE liblrd libcpropep libnum libcompat m)
+
+# Build lrd-web
+add_executable(lrd-web src/lrdcgi.c)
+target_link_libraries(lrd-web PRIVATE liblrd libcpropep libnum libcompat cgilib syslog)
+if(WIN32)
+    target_link_libraries(lrd-web PRIVATE ws2_32)
+endif()

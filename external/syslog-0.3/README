@@ -1,0 +1,6 @@
+This is an implementation of syslog daemon and client for native win32.
+This stuff is intented for those who is writing portable software or
+porting unix software to native win32.
+
+The official website
+http://syslog-win32.sourceforge.net
