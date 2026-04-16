@@ -7,7 +7,7 @@
 #include <cpropep/equilibrium.h>
 #include <thermo/thermo.h>
 
-#include "mcp.h"
+#include <mcp/mcp.h>
 #include <thermo/load.h>
 #include <cpropep/print.h>
 

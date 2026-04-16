@@ -18,7 +18,6 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 # Include library directories
 include_directories(
     lib/compat lib/convert lib/num lib/cpropep lib/thermo
-    lib/lrd lib/mcp lib/rockflight lib/simulation
 )
 
 # --- HELPER MACROS ---
@@ -39,6 +38,7 @@ add_subdirectory(lib/cpropep)
 add_subdirectory(lib/gpcp)
 add_subdirectory(apps/rockflight)
 add_subdirectory(apps/simulator)
+add_subdirectory(apps/mcp)
 
 # --- APPLICATIONS ---
 
@@ -59,10 +59,6 @@ target_link_libraries(grain PRIVATE m)
 add_app_target(lrd apps/lrd/main.c)
 target_sources(lrd PRIVATE apps/lrd/lrd_load.c apps/lrd/lrd.c)
 target_link_libraries(lrd PRIVATE libcpropep libnum m)
-
-add_app_target(mcp apps/mcp/modele.c)
-target_sources(mcp PRIVATE apps/mcp/test.c)
-target_link_libraries(mcp PRIVATE libcpropep libnum m)
 
 add_app_target(analyser apps/analyser/analyser.c)
 target_link_libraries(analyser PRIVATE libgpcp libnum libconvert libcompat m)

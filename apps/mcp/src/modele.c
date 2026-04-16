@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 
-#include "mcp.h"
+#include <mcp/mcp.h>
 
 #include <cpropep/equilibrium.h>
 #include <cpropep/performance.h>
