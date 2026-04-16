@@ -17,6 +17,8 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include <ctype.h>
 
 #include <gpcp/gpcp.h>
@@ -79,11 +81,6 @@ Options rocket_options[] = {
      {"chamber_pressure",    STRING,  "problem"},
      {"exit_pressure",       STRING,  "problem"},
      {NULL,                  0,        NULL}
-};
-
-Functions rocket_functions[] = {
-     {"compute_density", FLOAT},
-     {NULL,              0}
 };
 
 
@@ -273,7 +270,7 @@ int get_composition(ing_t *ing)
           return -1;
      }
      
-     if ((n = GPCP_NumEntry("ing")) == 0)
+     if ((n = GPCP_NumParent("ing")) == 0)
      {
          printf("No ing field found\n");
      }
@@ -284,23 +281,28 @@ int get_composition(ing_t *ing)
      
      for (i = 0; i < n; i++)
      {
-          if (GPCP_GetValue_n("ing", &string, i) != 0)
+          if (GPCP_EnterLevel("ing", i) != 0)
                printf("Can't read ingrediant.\n");
           else
           {
-               ing->n_elem++;
-               ing->elem = (int *) realloc(ing->elem,
-                                           sizeof(int) * ing->n_elem);
-               ing->coef = (int *) realloc(ing->coef,
-                                           sizeof(int) * ing->n_elem);
+               if (GPCP_GetValue("ing", &string) != 0)
+                    printf("Can't read ingrediant.\n");
+               else
+               {
+                    GPCP_ExitLevel();
+                    ing->n_elem++;
+                    ing->elem = (int *) realloc(ing->elem,
+                                                sizeof(int) * ing->n_elem);
+                    ing->coef = (int *) realloc(ing->coef,
+                                                sizeof(int) * ing->n_elem);
 
-               ing->coef[i] = atoi(string);
+                    ing->coef[i] = atoi(string);
 
-               tmpstr = string;
-               while (*tmpstr != ' ')
-                    tmpstr++;
+                    tmpstr = string;
+                    while (*tmpstr != ' ')
+                         tmpstr++;
 
-               elem[0] = *(tmpstr+1);
+                    elem[0] = *(tmpstr+1);
                elem[1] = *(tmpstr+2);
                elem[2] = '\0';
                if (!(isalpha(elem[1])))
@@ -313,6 +315,7 @@ int get_composition(ing_t *ing)
                
                free(string);
           }
+     }
      }
 
      if (GPCP_ExitLevel() != 0)
