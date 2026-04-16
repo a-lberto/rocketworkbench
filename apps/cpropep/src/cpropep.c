@@ -17,7 +17,7 @@
 #include <unistd.h>
 #else
 */
-#include "getopt.h"
+#include <getopt.h>
 /*#endif
 */
 
@@ -31,7 +31,7 @@
 #include <cpropep/conversion.h>
 #include <cpropep/return.h>
 
-#include "compat.h"
+#include <compat.h>
 
 #define version "1.1"
 #define date    "25/10/2001"

@@ -45,15 +45,9 @@ add_subdirectory(apps/gba)
 add_subdirectory(apps/analyser)
 add_subdirectory(apps/prop)
 add_subdirectory(apps/grainanalysis)
+add_subdirectory(apps/cpropep)
 
 # --- APPLICATIONS ---
-
-macro(add_app_target appname source)
-    add_executable(${appname} ${source})
-endmacro()
-
-add_app_target(cpropep apps/cpropep/cpropep.c)
-target_link_libraries(cpropep PRIVATE libcpropep libnum libcompat m)
 
 # --- TESTS ---
 
