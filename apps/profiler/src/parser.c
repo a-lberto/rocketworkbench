@@ -1,7 +1,9 @@
 ﻿#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 #include <gpcp/gpcp.h>
-#include "profiler.h"
+#include <profiler/profiler.h>
 
 double mass_convert;   /* factor to convert user units to SI (kg) */
 double length_convert; /* factor to convert user units to SI (m) */

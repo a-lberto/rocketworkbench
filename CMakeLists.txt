@@ -39,6 +39,7 @@ add_subdirectory(lib/gpcp)
 add_subdirectory(apps/rockflight)
 add_subdirectory(apps/simulator)
 add_subdirectory(apps/mcp)
+add_subdirectory(apps/profiler)
 
 # --- APPLICATIONS ---
 
