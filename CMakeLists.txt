@@ -43,6 +43,7 @@ add_subdirectory(apps/profiler)
 add_subdirectory(apps/lrd)
 add_subdirectory(apps/gba)
 add_subdirectory(apps/analyser)
+add_subdirectory(apps/prop)
 
 # --- APPLICATIONS ---
 
@@ -52,9 +53,6 @@ endmacro()
 
 add_app_target(cpropep apps/cpropep/cpropep.c)
 target_link_libraries(cpropep PRIVATE libcpropep libnum libcompat m)
-
-add_app_target(prop apps/prop/prop.c)
-target_link_libraries(prop PRIVATE libcpropep libcompat m)
 
 # --- TESTS ---
 

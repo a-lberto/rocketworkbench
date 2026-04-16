@@ -7,7 +7,7 @@
 #include <unistd.h>
 #else
 */
-#include "getopt.h"
+#include <getopt.h>
 /*
 #endif
 */

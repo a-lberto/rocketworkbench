@@ -70,6 +70,7 @@ typedef enum
 
 #endif /* define BORLAND */
     
+char *strsep(char **stringp, const char *delim);
 
 #endif	/* !defined(COMPAT_H) */
 
