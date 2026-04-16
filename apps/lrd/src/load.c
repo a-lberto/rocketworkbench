@@ -5,7 +5,7 @@
 
 #include <cpropep/conversion.h>
 
-#include "lrd.h"
+#include <lrd/lrd.h>
 
 int load_input(char *filename, design_param_t *d, liquid_propellant_t *p)
 {

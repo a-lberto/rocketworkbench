@@ -40,6 +40,7 @@ add_subdirectory(apps/rockflight)
 add_subdirectory(apps/simulator)
 add_subdirectory(apps/mcp)
 add_subdirectory(apps/profiler)
+add_subdirectory(apps/lrd)
 
 # --- APPLICATIONS ---
 
@@ -56,10 +57,6 @@ target_link_libraries(prop PRIVATE libcpropep libcompat m)
 add_app_target(grain apps/gba/gba.c) # Note: assumes common object handling if needed
 target_sources(grain PRIVATE apps/gba/grain.c apps/gba/shape.c apps/gba/output.c)
 target_link_libraries(grain PRIVATE m)
-
-add_app_target(lrd apps/lrd/main.c)
-target_sources(lrd PRIVATE apps/lrd/lrd_load.c apps/lrd/lrd.c)
-target_link_libraries(lrd PRIVATE libcpropep libnum m)
 
 add_app_target(analyser apps/analyser/analyser.c)
 target_link_libraries(analyser PRIVATE libgpcp libnum libconvert libcompat m)

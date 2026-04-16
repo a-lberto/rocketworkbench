@@ -6,8 +6,8 @@
 #include <cpropep/print.h>
 #include <thermo/thermo.h>
 
-#include "lrd_load.h"
-#include "lrd.h"
+#include <lrd/load.h>
+#include <lrd/lrd.h>
 
 #define THERMO_FILE     "../../data/thermo.dat"
 #define PROPELLANT_FILE "../../data/propellant.dat"
