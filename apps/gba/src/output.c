@@ -1,6 +1,6 @@
 ﻿
 #include <stdio.h>
-#include "grain.h"
+#include <gba/grain.h>
 
 int output_matlab(point_t *h, char *filename, int id)
 {

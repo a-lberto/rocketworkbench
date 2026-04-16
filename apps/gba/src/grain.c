@@ -4,10 +4,9 @@
 
 #include <math.h>
 
-#include "shape.h"
-#include "grain.h"
-
-#include "output.h"
+#include <gba/shape.h>
+#include <gba/grain.h>
+#include <gba/output.h>
 
 int burn_surface(point_t **h, double qt, double radius)
 {

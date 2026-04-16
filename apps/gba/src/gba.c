@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "shape.h"
-#include "output.h"
-#include "grain.h"
+#include <gba/shape.h>
+#include <gba/output.h>
+#include <gba/grain.h>
 
 #define STRING_LEN 64
 
