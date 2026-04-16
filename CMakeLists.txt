@@ -44,6 +44,7 @@ add_subdirectory(apps/lrd)
 add_subdirectory(apps/gba)
 add_subdirectory(apps/analyser)
 add_subdirectory(apps/prop)
+add_subdirectory(apps/grainanalysis)
 
 # --- APPLICATIONS ---
 
