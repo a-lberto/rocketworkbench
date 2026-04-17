@@ -15,7 +15,7 @@ target_link_libraries(lrd PRIVATE liblrd libcpropep libnum libcompat m)
 
 # Build lrd-web
 add_executable(lrd-web src/lrdcgi.c)
-target_link_libraries(lrd-web PRIVATE liblrd libcpropep libnum libcompat cgilib)
+target_link_libraries(lrd-web PRIVATE liblrd libcpropep libnum libcompat cgilib m)
 if(WIN32)
     target_link_libraries(lrd-web PRIVATE syslog-win ws2_32)
 endif()

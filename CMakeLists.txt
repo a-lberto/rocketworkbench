@@ -2,6 +2,13 @@
 project(RocketWorkbench C CXX)
 add_compile_options(-Wall -Wextra -Werror -O3)
 
+if(NOT MSVC)
+    add_compile_options(
+        -Wformat-truncation=2
+        -Wunused-result
+    )
+endif()
+
 # This generates build/compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_C_STANDARD 99)
