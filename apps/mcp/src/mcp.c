@@ -164,6 +164,7 @@ int load_input(FILE *fd, motor_t *motor, equilibrium_t *e)
     }
   }
   return 0;
+  (void) n_case;
 }
 
 int main(int argc, char *argv[])
