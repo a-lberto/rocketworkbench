@@ -86,6 +86,10 @@ int main(int argc, char *argv[])
     }
   }
 
+  if (debug) {
+      printf("Debug mode enabled.\n");
+  }
+
   if (! (Lfileread))
   {
     printf("Error: A config file must be specified.\n");
@@ -105,7 +109,7 @@ int main(int argc, char *argv[])
     /* solve the model */
     n = simulate(&rocket, &solution, init_cond, &ans);
     
-  fprintf(stderr, "Memory used: %d kB\n", n*(neq+1)*sizeof(double)/1024);
+  fprintf(stderr, "Memory used: %llu kB\n", (unsigned long long)n*(neq+1)*sizeof(double)/1024);
 
   print_octave_results(ans, neq, n);
   

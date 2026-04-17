@@ -141,7 +141,7 @@ double propulseur::T(double time)
   if (!(check()))
     return 0; // no thrust
   
-  double pousse;
+  double pousse = 0.0;
   
   // there is file with no data at time 0
   if (time < thrust[0][0])

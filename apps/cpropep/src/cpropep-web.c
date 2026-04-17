@@ -67,21 +67,21 @@ int eval_cgi(equilibrium_t *e, double *exit_condition,
   
   printf ("<h1>Results</h1>\n\n");
     
-  strncpy(buffer, cgiGetValue(cgi, "temp"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "temp"), 63); buffer[63] = '\0';
   
   if ( ((tmp = atof(buffer)) != 0) && tmp > 298.15 && tmp < 6000 )
     e->properties.T = tmp;
   else 
     return -1;
   
-  strncpy(buffer, cgiGetValue(cgi, "pressure"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "pressure"), 63); buffer[63] = '\0';
 
   if ((tmp = atof(buffer)) != 0)
     e->properties.P = tmp;
   else
     return -1;
 
-  strncpy(buffer, cgiGetValue(cgi, "exit_cond_type"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "exit_cond_type"), 63); buffer[63] = '\0';
 
   if (!(strcmp(buffer, "Pressure")))
     *exit_type = PRESSURE;
@@ -92,7 +92,7 @@ int eval_cgi(equilibrium_t *e, double *exit_condition,
   else
     return -1;
 
-  strncpy(buffer, cgiGetValue(cgi, "exit_cond"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "exit_cond"), 63); buffer[63] = '\0';
 
   if ((tmp = atof(buffer)) != 0)
     *exit_condition = tmp;
@@ -152,6 +152,9 @@ int eval_cgi(equilibrium_t *e, double *exit_condition,
 
 int main (int argc, char **argv, char **env)
 {
+  (void)argc;
+  (void)argv;
+  (void)env;
   short i;
   
   char *path_info = NULL;  
@@ -297,7 +300,7 @@ int main (int argc, char **argv, char **env)
     {
       cgiHeader();
       printf("<pre>");
-      strncpy(buffer, cgiGetValue(cgi, "propellant"), 32);
+      strncpy(buffer, cgiGetValue(cgi, "propellant"), 31); buffer[31] = '\0';
 
       if ( print_propellant_info (atoi (buffer)))
         printf("Request out of range\n");
@@ -310,14 +313,14 @@ int main (int argc, char **argv, char **env)
       
       cgiHeader();
       printf("<pre>");
-      strncpy(buffer, cgiGetValue(cgi, "product"), 32);
+      strncpy(buffer, cgiGetValue(cgi, "product"), 31); buffer[31] = '\0';
       val = atoi (buffer);
       
       if ( print_thermo_info (val))
         printf("Request out of range\n");
       else
       {
-        strncpy(buffer, cgiGetValue(cgi, "temp"), 32);
+        strncpy(buffer, cgiGetValue(cgi, "temp"), 31); buffer[31] = '\0';
         value = atof(buffer);
 
         printf("Thermodynamics properties at temperature %.2f K\n", value);

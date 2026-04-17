@@ -4,6 +4,9 @@ on:
   push:
     tags:
       - 'v*'
+    paths:
+      - 'apps/**'
+      - 'lib/**'
   workflow_dispatch:
 
 jobs:
@@ -48,7 +51,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p staging
-          APPS=("cpropep" "prop" "grain" "lrd" "mcp")
+          APPS=("analyser" "cpropep" "gba" "grainanalysis" "lrd" "mcp" "profiler" "prop" "rocket" "rockflight" "simulator")
           
           for app in "${APPS[@]}"; do
             APP_DIR="staging/$app"

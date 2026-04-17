@@ -35,6 +35,16 @@ using namespace std;
 static int ModelNeq[MODEL_LAST] = { 7, 5 };
 
 
+static int model_1_wrapper(int neq, double time, double *y, double *dy, void *data) {
+  (void)data;
+  return model_1(neq, time, y, dy, 0);
+}
+
+static int model_2_wrapper(int neq, double time, double *y, double *dy, void *data) {
+  (void)data;
+  return model_2(neq, time, y, dy, 0);
+}
+
 rk4_solver::rk4_solver(Model_t model) 
 {
   neq = ModelNeq[model];
@@ -44,17 +54,16 @@ rk4_solver::rk4_solver(Model_t model)
   switch (model)
   {
   case AERO_MODEL:
-    md = (ModelFunc_t)model_1;
+    md = model_1_wrapper;
     break;
   case SIMPLE_MODEL:
-    md = (ModelFunc_t)model_2;
+    md = model_2_wrapper;
     break;
   default:
     exit(-1);
   }
 }
  
-
 rk4_solver::~rk4_solver() 
 {  
   if (memory) {
@@ -79,7 +88,7 @@ int rk4_solver::solve(double *st, double duration, double step)
   memory = 1; 
 
   // fill the ans array
-  NUM_rk4 ( (int (*)(int, double, double*, double*, void*))md, neq, step, duration, (float*)st, ans, NULL);
+  NUM_rk4 ( md, neq, step, duration, (float*)st, ans, NULL);
  
   return length;
 }

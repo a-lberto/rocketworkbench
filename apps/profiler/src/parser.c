@@ -10,7 +10,9 @@ double length_convert; /* factor to convert user units to SI (m) */
 
 int read_value(Data *d, rocket_t *r)
 {
-  int i, j, k, l, m, n;
+  (void)d;
+  (void)r;
+  int i, j, l, m;
 
   body_part_t *part;
   fin_t *fin;

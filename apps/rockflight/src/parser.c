@@ -90,6 +90,7 @@ Options rockflight_options[] = {
 int load_config(Data *data, rocket_t *rocket, float *init_cond,
                 solution_t *solution)
 {
+  (void)data;
   int i, j;
   int n, m;
 

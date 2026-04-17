@@ -20,6 +20,8 @@ int evaluate_function(function_t *f, state_t *s, double time, double *ans);
 
 int eom(int neq, double time, double *y, double *dy, void *data)
 {
+  (void)neq;
+  (void)time;
 
   state_t *s;
   rocket_t *rocket = (rocket_t *) data;

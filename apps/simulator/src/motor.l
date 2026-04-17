@@ -1,4 +1,5 @@
 /* motor.l  -  Simulation of rocket flight                             */
+%option noinput nounput
 /* Copyright (C) 2000                                                  */
 /* Antoine Lefebvre <antoine.lefebvre@polymtl.ca>                      */
 

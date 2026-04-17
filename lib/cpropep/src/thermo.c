@@ -347,7 +347,7 @@ int thermo_search(char *str)
   int i;
   int last = -1;
   
-  for (i = 0; i < num_thermo; i++)
+  for (i = 0; i < (int)num_thermo; i++)
   {
     if (!(STRNCASECMP(str, (thermo_list + i)->name, strlen(str))))
     {
@@ -363,7 +363,7 @@ int propellant_search(char *str)
   int i;
   int last = -1;
   
-  for (i = 0; i < num_propellant; i++)
+  for (i = 0; i < (int)num_propellant; i++)
   {
     if (!(STRNCASECMP(str, (propellant_list + i)->name, strlen(str))))
     {
@@ -437,7 +437,7 @@ int propellant_search_by_formula(char *str)
   
   ptr = str; /* beginning of the string */
 
-  while ( (i < 6) && ((ptr - str) < strlen(str)) )
+  while ( (i < 6) && ((ptr - str) < (long long)strlen(str)) )
   {    
     if (isupper(*ptr) && islower(*(ptr+1)) && (isupper(*(ptr+2)) ||
                                                iscntrl(*(ptr+2))) )
@@ -513,7 +513,7 @@ int propellant_search_by_formula(char *str)
   }
   */
 
-  for (i = 0; i < num_propellant; i++)
+  for (i = 0; i < (int)num_propellant; i++)
   {
     for (j = 0; j < 6; j++)
     {

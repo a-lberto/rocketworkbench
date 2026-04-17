@@ -15,7 +15,7 @@ int load_input(char *filename, design_param_t *d, liquid_propellant_t *p)
  
   double sp;
   
-  char buffer[128], keyword[64], num[10], qt[10], unit[10];
+  char buffer[128], keyword[64], num[10], unit[10];
   
   char *bufptr;
 

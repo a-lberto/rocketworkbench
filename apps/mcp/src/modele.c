@@ -12,6 +12,8 @@
 
 int modele(int neq, double time, double *y, double *dy, void *data)
 {
+  (void)neq;
+  (void)time;
 
   data_t *d; /* structure containing the data */
   
@@ -22,7 +24,7 @@ int modele(int neq, double time, double *y, double *dy, void *data)
   double s; /* linear distance already burned (m) */
   double p; /* pressure (atm) */
 
-  double t; /* thrust in Newton */
+  // double t; /* thrust in Newton */
   
   d = (data_t *) data;
 

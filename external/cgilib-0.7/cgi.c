@@ -67,9 +67,9 @@ int cgiSetHeader (const char *name, const char *value)
 	pivot = cgiHeaderString;
     }
     strncpy (pivot, name, cp-name);
-    strncat (pivot, ": ", 2);
+    strncat (pivot, ": ", 3);
     strncat (pivot, value, vp-value);
-    strncat (pivot, "\r\n", 2);
+    strncat (pivot, "\r\n", 3);
 
     return 1;
 }
@@ -789,7 +789,7 @@ s_file *cgiGetFile (s_cgi *parms, const char *name)
 void cgiRedirect (const char *url)
 {
     if (url && strlen(url)) {
-	printf ("Content-type: text/html\r\nContent-length: %d\r\n", 77+(strlen(url)*2));
+	printf ("Content-type: text/html\r\nContent-length: %llu\r\n", (unsigned long long)(77+(strlen(url)*2)));
 	printf ("Status: 302 Temporal Relocation\r\n");
 	printf ("Location: %s\r\n\r\n", url);
 	printf ("<html>\n<body>\nThe page has been moved to <a href=\"%s\">%s</a>\n</body>\n</html>\n", url, url);

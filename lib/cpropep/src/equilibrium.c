@@ -117,7 +117,7 @@ int list_product(equilibrium_t *e)
   prod->n[GAS]       = 0;
   prod->n[CONDENSED] = 0;
   
-  for (j = 0; j < num_thermo; j++)
+  for (j = 0; j < (int)num_thermo; j++)
   {
     /* for each of the five possible element of a species */
     for (k = 0; k < 5; k++)
@@ -679,6 +679,7 @@ int fill_matrix(double *matrix, equilibrium_t *e, problem_t P)
 
 int remove_condensed(short *size, short *n, equilibrium_t *e)
 {
+  (void)size;
 
   int i, j, k, pos;
   int r = 0; /* something have been replace, 0=false, 1=true */
@@ -735,8 +736,7 @@ int remove_condensed(short *size, short *n, equilibrium_t *e)
                   (thermo_list + p->species[CONDENSED][j])->coef[k] ) &&
                  ((thermo_list + p->species[CONDENSED][i])->elem[k] ==
                   (thermo_list + p->species[CONDENSED][j])->elem[k] ) &&
-                 (p->species[CONDENSED][i] != p->species[CONDENSED][j])));
-          /*temperature_check(p->species[CONDENSED][j], pr->T) ))*/
+                 (p->species[CONDENSED][i] != p->species[CONDENSED][j])))
           {
             ok = 0;
           }
@@ -802,6 +802,7 @@ int remove_condensed(short *size, short *n, equilibrium_t *e)
 int include_condensed(short *size, short *n, equilibrium_t *e, 
                       double *sol)
 {
+  (void)size;
   double tmp;
   double temp;
   int    i, j, k;

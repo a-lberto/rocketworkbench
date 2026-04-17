@@ -44,7 +44,7 @@ int print_propellant_info(int sp)
 {
   int j;
 
-  if (sp > num_propellant || sp < 0)
+  if (sp > (int)num_propellant || sp < 0)
     return -1;
   
   fprintf(outputfile, "Code %-35s Enthalpy  Density  Composition\n", "Name");
@@ -71,7 +71,7 @@ int print_thermo_info(int sp)
   int   i, j;
   thermo_t *s;
 
-  if (sp > num_thermo || sp < 0)
+  if (sp > (int)num_thermo || sp < 0)
     return -1;
 
   s = (thermo_list + sp);
@@ -124,7 +124,7 @@ int print_thermo_info(int sp)
 int print_thermo_list(void)
 {
   int i;
-  for (i = 0; i < num_thermo; i++)
+  for (i = 0; i < (int)num_thermo; i++)
     fprintf(outputfile, "%-4d %-15s % .2f\n", i, (thermo_list + i)->name,
             (thermo_list + i)->heat);
   
@@ -134,7 +134,7 @@ int print_thermo_list(void)
 int print_propellant_list(void)
 {
   int i;
-  for (i = 0; i < num_propellant; i++)
+  for (i = 0; i < (int)num_propellant; i++)
     fprintf(outputfile, "%-4d %-30s %5f\n", i, (propellant_list + i)->name,
             (propellant_list +i)->heat);
  

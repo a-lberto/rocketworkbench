@@ -91,11 +91,12 @@ command_t command_list[] = {
   {"bye",             0, (void*)exit, "Exit the program.\n", ""},
   {"exit",            0, (void*)exit, "Exit the program.\n", ""},
   {"help",            0, (void*)help, "Display help message.\n", ""},
-  {"\0",              0,  NULL, "\0"}
+  {"\0",              0,  NULL, "\0", "\0"}
 };
 
 void help(char **arg)
 {
+  (void)arg;
   int i = 0;
   printf("\n");
   printf("%-36s %s\n", "Command", "Description");
@@ -138,8 +139,9 @@ void List(char **arg)
 #endif
   
   char formula[128];
-  strncpy(formula, arg[0], 128);
-  for (i = 0; i <  num_thermo; i++)
+  strncpy(formula, arg[0], 127);
+  formula[127] = '\0';
+  for (i = 0; i < (int)num_thermo; i++)
   {
     if ((STRNCASECMP(NAME(i), formula, strlen(formula)-1)) == 0)
     {
@@ -506,7 +508,8 @@ int main(int argc, char *argv[])
     switch (c)
     {
       case 'd':
-          strncpy(thermo_file, optarg, FILENAME_MAX);
+          strncpy(thermo_file, optarg, FILENAME_MAX - 1);
+          thermo_file[FILENAME_MAX - 1] = '\0';
           break;
       case 'f':
           msg = false;

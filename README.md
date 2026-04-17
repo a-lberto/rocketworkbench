@@ -28,15 +28,16 @@ Geoff O'Callaghan <geoff@starbiz.com.au>
 - [x] Document tools usage instruction (minimal).
 - [x] Document libraries logic and development (minimal).
 - [x] Move static docs and example files from source folders into `docs/<app>/`.
-- [ ] Move local app source files to local include subdir or promote to lib, except endpoint.
-- [ ] Check if libs should be downgraded to local includes.
-- [ ] Add [`cgilib`](https://www.infodrom.org/projects/cgilib/) dependency via `CPM.cmake`.
+- [x] Move local app source files to local include subdir or promote to lib, except endpoint.
+- [x] Check if libs should be downgraded to local includes.
+- [x] Add [`cgilib`](https://www.infodrom.org/projects/cgilib/) and `syslog` dependencies.
+- [x] Make `cgilib` compatible with Windows by renaming `aux.c` and `aux.h` to `cgiaux.*`.
+- [x] Compile em all. 
 - [ ] Create regression tests with input files and expected outputs for known examples.
-- [ ] Clean up git history with atomic, purposeful edits and methodology comments.
 
 ## Future
 
-- [ ] Fork only `cpropep` logic into dedicated directory.
+- [ ] Fork only `cpropep` logic into dedicated repository.
 - [ ] Export `cpropep` libraries as bindings for Python, C++, Matlab or others needed, like [pypropep](https://github.com/jonnydyer/pypropep) for example into [mpropep](https://github.com/thrust-team/mpropep).
 - [ ] Compare results with other tools like [nasa/cea](https://github.com/nasa/cea).
 - [ ] Create regression tests based on examples from NASA RP-1311.

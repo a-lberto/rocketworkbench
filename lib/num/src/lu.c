@@ -153,7 +153,7 @@ int NUM_matscale(double *matrix, int neq)
     /* find the highest value */
     for (j = 0; j < neq; j++)
     {
-      tmp = abs(matrix[i + neq*j]);
+      tmp = fabs(matrix[i + neq*j]);
       val = (tmp > val) ? tmp : val;
     }
 

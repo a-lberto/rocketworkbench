@@ -1,12 +1,11 @@
 ﻿cmake_minimum_required(VERSION 3.19)
 project(RocketWorkbench C CXX)
+add_compile_options(-Wall -Wextra -Werror -O3)
 
 # This generates build/compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 11)
-
 cmake_policy(SET CMP0079 NEW)
 add_definitions(-DGCC)
 

@@ -136,5 +136,5 @@ typedef struct _rocket_t
 
 } rocket_t;
 
-#endif  __profiler_h__
+#endif /* __profiler_h__ */
 

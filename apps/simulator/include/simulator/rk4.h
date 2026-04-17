@@ -30,7 +30,7 @@ extern int model_2(int neq, double time,
 		   int ierr);
 
 typedef int (*ModelFunc_t) (int, double,
-			    double*, double*, int);
+			    double*, double*, void*);
 
 class rk4_solver
 {

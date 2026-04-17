@@ -63,7 +63,8 @@ int main(int argc, char *argv[])
     switch (c)
     {
       case 'f':
-          strncpy(filename, optarg, FILENAME_MAX);
+          strncpy(filename, optarg, FILENAME_MAX - 1);
+          filename[FILENAME_MAX - 1] = '\0';
           break;
     }
   }

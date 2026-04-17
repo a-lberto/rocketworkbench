@@ -77,6 +77,7 @@ int build_nuclear(point_t *h, int nb_point, double r1, double r2, int n)
 
 int build_rectangular(point_t *h, int nb_point, double width, double height)
 {
+  (void)nb_point;
   point_t *ptr;
 
   ptr = h;
@@ -109,6 +110,7 @@ int build_rectangular(point_t *h, int nb_point, double width, double height)
 
 int build_cross(point_t *h, int nb_point, double width, double height)
 {
+  (void)nb_point;
   point_t *ptr;
 
   ptr = h;

@@ -43,10 +43,12 @@ double f(double x) {
   return pow(x-1, 3); 
 }
 
-int function(int neq, double time, double *y, double *dy, 
+int function(int neq, double time, double *y, double *dy,
              void *data)
 {
-  
+  (void)neq;
+  (void)time;
+  (void)data;
   dy[0] = y[1];
   dy[1] = -9.8;
   dy[2] = y[3];
@@ -81,6 +83,7 @@ double dr1_dx1(double *x)
 }
 double dr1_dx2(double *x)
 {
+  (void)x;
   return -1;
 }
 double dr2_dx1(double *x)
@@ -185,7 +188,7 @@ int test_sysnewton(void)
 
 int test_lu(void)
 {
-  int i;
+  // int i;
   double *matrix;
   double *solution;
   int size = 8;

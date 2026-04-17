@@ -24,6 +24,8 @@ int output_info(grain_info_t *info, int n, char *filename);
 
 int main(int argc, char *argv[])
 {
+  (void)argc;
+  (void)argv;
   FILE *octscript;
   
   int i;
@@ -34,7 +36,7 @@ int main(int argc, char *argv[])
   char string[STRING_LEN];
   char filename[STRING_LEN];
   
-  char c[2];
+  // char c[2];
   int d;
   
   grain_info_t info[NBURN+1];

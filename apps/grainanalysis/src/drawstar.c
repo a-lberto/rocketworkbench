@@ -16,6 +16,8 @@ double torad(double deg);
 
 int main(int argc, char *argv[])
 {
+  (void)argc;
+  (void)argv;
   
   star_t star;
 

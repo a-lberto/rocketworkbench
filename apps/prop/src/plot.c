@@ -85,10 +85,10 @@ int main(int argc, char *argv[])
   char thermo_file[FILENAME_MAX] = "../data/thermo.dat";
   char propellant_file[FILENAME_MAX] = "../data/propellant.dat";
 
-  value_t val;
-  units_t units;
+  value_t val = CP;
+  units_t units = DIMENSIONLESS;
 
-  double Ti, Tf, step;
+  double Ti = 0.0, Tf = 0.0, step = 0.0;
 
   char temp[128];
   
@@ -237,7 +237,7 @@ int main(int argc, char *argv[])
   return 0;
   */
 
-  if (!(_molec == _value == _units == _range == true))
+  if (!(_molec && _value && _units && _range))
   {
     printf("Missing arguments. Aborted.\n");
     return -1;

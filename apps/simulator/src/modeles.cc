@@ -53,6 +53,9 @@ COMMENTS: I will eventually explain the theory in some documentation
 int model_1(int neq, double time,
 	    double *z, double *dy, int ierr)
 {
+  (void)neq;
+  (void)time;
+  (void)ierr;
 
 //double s     = z[0];     not use
   double x     = z[1];     // position in the x coordinate
@@ -96,7 +99,7 @@ int model_1(int neq, double time,
 
 double Atan(double x, double y) 
 {
-  double angle;
+  double angle = 0.0;
   if ((x == 0)&&(y > 0))
     angle = PI/2;
   else if ((x == 0)&&(y < 0))
@@ -189,9 +192,12 @@ MODEL_2: Simple model that do not take care of aerodynamic parameter
 
 **********************************************************************/
 
-int model_2(int neq, double time, 
-	    double* z, double* dy, int ierr) 
+int model_2(int neq, double time,
+	    double* z, double* dy, int ierr)
 {
+  (void)neq;
+  (void)time;
+  (void)ierr;
 //double s     = z[0];
   double x     = z[1];
   double y     = z[2];

@@ -88,8 +88,8 @@ int load_thermo(char *filename)
 		fflush(stdout);
 	}
 
-	for (i = 0; i < num_thermo; i++)
-	{
+	for (i = 0; i < (int)num_thermo; i++)
+		{
 		/* Read in the next line and check for EOF */
 		if (!fgets(buf_ptr, 88, fd))
 		{
@@ -384,8 +384,8 @@ int load_propellant(char *filename)
 	}
 
   
-	for (i = 0; i < num_propellant; i++)
-	{
+	for (i = 0; i < (int)num_propellant; i++)
+		{
 		/* Skip commented code */
 		do
 		{

@@ -15,6 +15,8 @@
 
 int main(int argc, char *argv[])
 {
+  (void)argc;
+  (void)argv;
   int i;
 
   liquid_propellant_t p;

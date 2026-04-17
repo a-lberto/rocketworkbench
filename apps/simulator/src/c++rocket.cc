@@ -9,6 +9,8 @@
 
 
 int main(int argc, char *argv[]) {
+  (void)argc;
+  (void)argv;
  
   simulation muty(AERO_MODEL);
   
@@ -16,8 +18,8 @@ int main(int argc, char *argv[]) {
   
   //simptr = &muty;
   
-  muty.set_propulseurs(1,"/home/antoine/debian/rocketsim-0.3/thrust/AEJ125.edx");
-  muty.set_propulseurs(2,"/home/antoine/debian/rocketsim-0.3/thrust/AEJ180T.eng");
+  muty.set_propulseurs(1,const_cast<char*>("/home/antoine/debian/rocketsim-0.3/thrust/AEJ125.edx"));
+  muty.set_propulseurs(2,const_cast<char*>("/home/antoine/debian/rocketsim-0.3/thrust/AEJ180T.eng"));
   //     muty.set_propulseurs(3,"/home/antoine/debian/rocketsim-0.3/thrust/AEK250W.eng");
   
   

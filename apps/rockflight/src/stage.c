@@ -11,7 +11,7 @@
 /* this routine should be optimized ! */
 int stage(rocket_t *r, double *t)
 {
-  int i, j;
+  int i;
   state_t *s;
   double time = 0.0;
   

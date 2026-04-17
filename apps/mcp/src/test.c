@@ -23,13 +23,15 @@ extern int modele(int neq, double time, double *y, double *dy, void *data);
 
 int main(int argc, char *argv[])
 {
+  (void)argc;
+  (void)argv;
   int i;
   
   data_t data;
 
-  double temp;
-  double tmp2[2];
-  
+  // double temp;
+  // double tmp2[2];
+
   double **ans;
   float *ic; /* initial conditions */
 

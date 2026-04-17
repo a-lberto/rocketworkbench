@@ -168,6 +168,8 @@ int load_input(FILE *fd, motor_t *motor, equilibrium_t *e)
 
 int main(int argc, char *argv[])
 {
+  (void)argc;
+  (void)argv;
   int i;
 
   FILE *fd;

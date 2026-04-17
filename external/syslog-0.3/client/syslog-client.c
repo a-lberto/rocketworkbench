@@ -220,7 +220,7 @@ void openlog( char* ident, int option, int facility )
         goto done;
     if( datagramm_size - strlen(local_hostname) - (ident? strlen(ident) : 0) < 64 )
         goto done;
-    if( datagramm_size > sizeof(datagramm) )
+    if( datagramm_size > (int)sizeof(datagramm) )
         datagramm_size = sizeof(datagramm);
 
     if( atexit( closelog ) )

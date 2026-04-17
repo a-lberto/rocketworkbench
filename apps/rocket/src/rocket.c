@@ -86,6 +86,8 @@ Options rocket_options[] = {
 
 int main(int argc, char *argv[])
 {
+     (void)argc;
+     (void)argv;
      int i;
      int n;
 
@@ -246,7 +248,7 @@ int get_ingrediant(prop_t *p)
 
 int get_qty(char *str, float *qty)
 {
-     char *token;
+     // char *token;
 
      *qty = atof(str);
      return 0;
@@ -256,7 +258,7 @@ int get_composition(ing_t *ing)
 {
      int i, n;
 
-     float tmp;
+     // float tmp;
 
      char *tmpstr;
      

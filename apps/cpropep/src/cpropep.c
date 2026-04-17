@@ -123,7 +123,8 @@ void usage(void)
 
 
 int load_input(FILE *fd, equilibrium_t *e, case_t *t, double *pe)
-{ 
+{
+  (void)pe; 
   double m;
   
   int sp;
@@ -602,7 +603,7 @@ int main(int argc, char *argv[])
     }
     
     i = 0;
-    while ((case_list[i].p != -1) && (i <= MAX_CASE))
+    while (((int)case_list[i].p != -1) && (i <= MAX_CASE))
     {
       /*
       printf("Type : %d\n", case_list[i].p);

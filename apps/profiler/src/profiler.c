@@ -403,7 +403,7 @@ int profile_body(rocket_t *r)
 {
   int i, n;
 
-  float fn;
+  // float fn;
   float dp; /* diameter of the previous part */
 
   body_part_t *previous_part = NULL;
@@ -422,7 +422,7 @@ int profile_body(rocket_t *r)
     {
 
       case OGIVE_NOSE:
-          fn = part->l / part->d;
+          /* fn = part->l / part->d; */
 
           part->A = 0;
           part->V = 0;

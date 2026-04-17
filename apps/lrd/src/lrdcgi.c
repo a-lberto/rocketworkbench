@@ -47,28 +47,27 @@ int eval_cgi(liquid_propellant_t *p, design_param_t *d)
   
   char   buffer[64];
   double tmp;
-  double tmp1;
 
   
-  strncpy(buffer, cgiGetValue(cgi, "oxidant"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "oxidant"), 63); buffer[63] = '\0';
   sp = atoi(buffer);
 
-  if ((sp >= 0) && (sp < num_propellant))
+  if ((sp >= 0) && (sp < (int)num_propellant))
   {
     p->oxidant = sp;
   }
   
   
-  strncpy(buffer, cgiGetValue(cgi, "fuel"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "fuel"), 63); buffer[63] = '\0';
   sp = atoi(buffer);
 
   
-  if ((sp >= 0) && (sp < num_propellant))
+  if ((sp >= 0) && (sp < (int)num_propellant))
   {
     p->fuel = sp;
   }
   
-  strncpy(buffer, cgiGetValue(cgi, "ratio"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "ratio"), 63); buffer[63] = '\0';
   tmp = atof(buffer);
 
   if (tmp >= 0.0)
@@ -76,10 +75,10 @@ int eval_cgi(liquid_propellant_t *p, design_param_t *d)
     p->o_f_ratio = tmp;
   }
   
-  strncpy(buffer, cgiGetValue(cgi, "pressure"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "pressure"), 63); buffer[63] = '\0';
   tmp = atof(buffer);
 
-  strncpy(buffer, cgiGetValue(cgi, "pressure_unit"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "pressure_unit"), 63); buffer[63] = '\0';
 
   if (tmp > 0.0)
   {
@@ -93,10 +92,10 @@ int eval_cgi(liquid_propellant_t *p, design_param_t *d)
     }
   }
   
-  strncpy(buffer, cgiGetValue(cgi, "thrust"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "thrust"), 63); buffer[63] = '\0';
   tmp = atof(buffer);
 
-  strncpy(buffer, cgiGetValue(cgi, "thrust_unit"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "thrust_unit"), 63); buffer[63] = '\0';
 
   if (tmp > 0.0)
   {
@@ -110,10 +109,10 @@ int eval_cgi(liquid_propellant_t *p, design_param_t *d)
     }
   }
   
-  strncpy(buffer, cgiGetValue(cgi, "lstar"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "lstar"), 63); buffer[63] = '\0';
   tmp = atof(buffer);
 
-  strncpy(buffer, cgiGetValue(cgi, "length_unit"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "length_unit"), 63); buffer[63] = '\0';
 
   if (tmp > 0.0)
   {
@@ -128,17 +127,17 @@ int eval_cgi(liquid_propellant_t *p, design_param_t *d)
   }
   
   
-  strncpy(buffer, cgiGetValue(cgi, "dc_dt"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "dc_dt"), 63); buffer[63] = '\0';
   tmp = atof(buffer);
 
   d->Dc_Dt = tmp;
 
-  strncpy(buffer, cgiGetValue(cgi, "r_rt"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "r_rt"), 63); buffer[63] = '\0';
   tmp = atof(buffer);
   
   d->R_Rt = tmp;
 
-  strncpy(buffer, cgiGetValue(cgi, "theta"), 64);
+  strncpy(buffer, cgiGetValue(cgi, "theta"), 63); buffer[63] = '\0';
   tmp = atof(buffer);
   
   d->theta = tmp;
@@ -149,15 +148,18 @@ int eval_cgi(liquid_propellant_t *p, design_param_t *d)
 
 int main (int argc, char **argv, char **env)
 {
+  (void)argc;
+  (void)argv;
+  (void)env;
   short i;
   
   char *path_info = NULL;  
   
-  char buffer[32];
+  // char buffer[32];
 
-  double value;
-  int val;
-
+  // double value;
+  // int val;
+  
   liquid_propellant_t p;
   design_param_t      param;
   motor_t             motor_frozen,

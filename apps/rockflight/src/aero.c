@@ -14,6 +14,7 @@
 /* Compute aerodynamic forces and moments */
 int aero(rocket_t *r, double *y, double *t)
 {
+  (void)t;
 
   state_t *s;
 
