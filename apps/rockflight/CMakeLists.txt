@@ -14,10 +14,13 @@ target_include_directories(librockflight PUBLIC
 add_executable(rockflight src/rockflight.c src/check.c src/parser.c src/print.c src/simulate.c)
 target_link_libraries(rockflight PRIVATE librockflight libcpropep libnum libcompat m)
 
-# Build the GUI viewer app if X11 is found
-find_package(X11)
-if(X11_FOUND)
-    add_executable(viewer src/viewer.c)
-    target_link_libraries(viewer PRIVATE librockflight ${X11_LIBRARIES} m)
+# Build the GUI viewer app if X11 is found and we are on Linux
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    find_package(X11)
+    if(X11_FOUND)
+        add_executable(viewer src/viewer.c)
+        target_include_directories(viewer PRIVATE ${X11_INCLUDE_DIR})
+        target_link_libraries(viewer PRIVATE librockflight ${X11_LIBRARIES} m)
+    endif()
 endif()
 
