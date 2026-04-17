@@ -5,12 +5,12 @@
 int output_matlab(point_t *h, char *filename, int id)
 {
   FILE *fd;
-  char header[10];
+  char header[32];
   point_t *ptr;
-  
+
   ptr = h;
-  
-  sprintf(header, "S%d = [\n", id);
+
+  snprintf(header, sizeof(header), "S%d = [\n", id);
   fd = fopen(filename, "w");
   fprintf(fd, "%s", header);
 

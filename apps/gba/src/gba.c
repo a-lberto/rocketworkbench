@@ -7,7 +7,7 @@
 #include <gba/output.h>
 #include <gba/grain.h>
 
-#define STRING_LEN 64
+#define STRING_LEN 512
 
 #define STRIDE 0.3
 
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
   point_t *beginning; /* pointer to the first point in the structure */
 
   char string[STRING_LEN];
-  char filename[STRING_LEN];
+  char filename[STRING_LEN + 32];
   
   // char c[2];
   int d;
@@ -59,12 +59,11 @@ int main(int argc, char *argv[])
 
   d = 0;
 
-  snprintf(filename, sizeof(filename), "Z%s.m", string);
   if (snprintf(filename, sizeof(filename), "Z%s.m", string) >= (int)sizeof(filename)) {
       fprintf(stderr, "Error: Filename truncated\n");
   }
   octscript = fopen(filename, "w");
-  if (octscript) perror(filename);
+  if (!octscript) perror(filename);
 
   create_list(&beginning, nb_point);
 
