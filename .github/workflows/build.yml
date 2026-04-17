@@ -31,6 +31,10 @@ jobs:
       - name: Set up CMake
         uses: jwlawson/actions-setup-cmake@v2
 
+      - name: Install Flex (Windows)
+        if: runner.os == 'Windows'
+        run: choco install winflexbison --no-progress
+
       - name: Configure CMake (Windows MinGW)
         if: runner.os == 'Windows'
         run: cmake -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
