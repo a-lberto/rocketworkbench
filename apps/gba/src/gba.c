@@ -7,7 +7,7 @@
 #include <gba/output.h>
 #include <gba/grain.h>
 
-#define STRING_LEN 64
+#define STRING_LEN 128
 
 #define STRIDE 0.3
 
