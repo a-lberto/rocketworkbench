@@ -55,14 +55,14 @@ int main(int argc, char *argv[])
   /*nb_point = 20;*/
   
   /* generate a random file name */
-  snprintf(string, STRING_LEN, "%s", "patate");
+  snprintf(string, sizeof(string), "patate");
 
   d = 0;
-  
-  snprintf(filename, STRING_LEN, "%s%s%s", "Z", string, ".m");
+
+  snprintf(filename, sizeof(filename), "Z%s.m", string);
   octscript = fopen(filename, "w");
-  perror(filename);
-            
+  if (octscript) perror(filename);
+
   create_list(&beginning, nb_point);
 
   /* fill the shape with a triangular form */
@@ -72,16 +72,16 @@ int main(int argc, char *argv[])
   build_cross(beginning, nb_point, 1.0, 7.0);
   /* build_round(beginning, nb_point, 1.0);*/
 
-  
+
   properties(beginning, &(info[0].perimeter), &(info[0].surface));
   info[0].depth = 0.0;
- 
- 
-  snprintf(filename, STRING_LEN, "%s%d%s", string, d, ".m");
-          
+
+
+  snprintf(filename, sizeof(filename), "%s%d.m", string, d);
+
   output_matlab(beginning, filename, d);
 
-  snprintf(filename, STRING_LEN, "%s%d", string, d);
+  snprintf(filename, sizeof(filename), "%s%d", string, d);
 
   fprintf(octscript, "gset nokey\n");
   fprintf(octscript, "%s;\n", filename);
@@ -90,27 +90,27 @@ int main(int argc, char *argv[])
 
   /*c[0]++;*/
   d++;
-  
+
   for (i = 0; i < NBURN; i++)
   {
     burn_surface(&beginning, STRIDE, 5);
 
-    snprintf(filename, STRING_LEN, "%s%d%s", string, d, ".m");
-        
+    snprintf(filename, sizeof(filename), "%s%d.m", string, d);
+
     output_matlab(beginning, filename, d);
 
-    snprintf(filename, STRING_LEN, "%s%d", string, d);
+    snprintf(filename, sizeof(filename), "%s%d", string, d);
     fprintf(octscript, "%s;\n", filename);
     fprintf(octscript, "plot(S%d(:,1),S%d(:,2))\n", d, d);
-    
+
     properties(beginning, &(info[i+1].perimeter), &(info[i+1].surface));
 
     info[i+1].depth = info[i].depth + STRIDE;
-    
+
     /*c[0]++;*/
     d++;
     
-  }  
+  }
 
   output_info(info, NBURN+1, "info.m");
   
