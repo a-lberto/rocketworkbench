@@ -110,10 +110,12 @@ int load_thermo(char *filename)
 		}
 
 		/* Read in the name and the comments */
-		snprintf((thermo_list + i)->name, 18, "%s", buf_ptr);
+		memcpy((thermo_list + i)->name, buf_ptr, 17);
+		(thermo_list + i)->name[17] = '\0';
 		trim_spaces((thermo_list + i)->name, 18);
 
-		snprintf((thermo_list + i)->comments, 55, "%s", buf_ptr + 18);
+		memcpy((thermo_list + i)->comments, buf_ptr + 18, 54);
+		(thermo_list + i)->comments[54] = '\0';
 		trim_spaces((thermo_list + i)->comments, 55);
 
 		/* Read in the next line and check for EOF */
@@ -401,9 +403,10 @@ int load_propellant(char *filename)
 		/* Check for a continued name */
 		while (*buf_ptr == '+')
 		{
-			/* Copy up to 70 chars and always add a null terminator */
-			/* Requirement: tmp_ptr must be at least 71 bytes large */
-			snprintf(tmp_ptr, 71, "%.70s", buf_ptr + 9);
+			/* Copy up to 69 chars and always add a null terminator */
+			/* Requirement: tmp_ptr must be at least 70 bytes large */
+			strncpy(tmp_ptr, buf_ptr + 9, 69);
+			tmp_ptr[69] = '\0';
 
  
 			/* Find the end of the whitespaces.  name_start + 1 is used to leave

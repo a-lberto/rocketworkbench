@@ -225,7 +225,7 @@ char *cgiReadFile (FILE *stream, char *boundary)
     }
 
     if (!feof (stream))
-	fgets (buf, boundarylen, stream);
+	if (fgets (buf, boundarylen, stream) == NULL) { /* handle error */ }
 
     fclose (tmpfile);
 
@@ -518,7 +518,7 @@ s_cgi *cgiReadVariables ()
 		return NULL;
 	    if ((line = (char *)malloc (length+2)) == NULL)
 		return NULL;
-	    fgets(line, length+1, stdin);
+	    if (fgets(line, length+1, stdin) == NULL) { /* handle error */ }
 	} else
 	    return NULL;
     } else if (cp && !strcmp(cp, "GET")) {
