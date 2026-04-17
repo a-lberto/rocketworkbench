@@ -6,6 +6,9 @@ if(NOT MSVC)
     add_compile_options(
         -Wformat-truncation=2
         -Wunused-result
+        -Wformat
+        -Wformat-security
+        -Werror=format-security
     )
 endif()
 

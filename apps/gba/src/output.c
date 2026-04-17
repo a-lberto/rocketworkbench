@@ -12,7 +12,7 @@ int output_matlab(point_t *h, char *filename, int id)
   
   sprintf(header, "S%d = [\n", id);
   fd = fopen(filename, "w");
-  fprintf(fd, header);
+  fprintf(fd, "%s", header);
 
   do
   {
