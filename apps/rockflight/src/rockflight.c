@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
   /* hold the rocket properties */
   rocket_t rocket;
   solution_t solution;
-  double *ans;
+  double *ans = NULL;
   float *init_cond;
 
 
