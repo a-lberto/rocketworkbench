@@ -57,7 +57,9 @@ static void parse_node(FILE *f, GPCP_Node *parent) {
                 parse_node(f, node);
             } else {
                 ungetc(c, f);
-                fscanf(f, "%255[^,)\n\r]", buf);
+                if (fscanf(f, "%255[^,)\n\r]", buf) != 1) {
+                    /* handle error */
+                }
                 node->value = strdup(buf);
                 node->type = FLOAT;
             }
