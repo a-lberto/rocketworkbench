@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
-project(syslog C)
+project(syslog-win C)
 
 include_directories(include)
 
-add_library(syslog STATIC
+add_library(syslog-win STATIC
     client/syslog-client.c
 )

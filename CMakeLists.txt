@@ -22,7 +22,9 @@ include_directories(
 enable_testing()
 
 # --- LIBRARIES ---
-add_subdirectory(external/syslog-0.3)
+if(WIN32)
+    add_subdirectory(external/syslog-win-0.3)
+endif()
 add_subdirectory(external/cgilib-0.7)
 add_subdirectory(lib/compat)
 add_subdirectory(lib/convert)

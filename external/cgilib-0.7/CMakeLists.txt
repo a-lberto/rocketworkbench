@@ -9,5 +9,5 @@ add_library(cgilib STATIC
 
 target_include_directories(cgilib PUBLIC 
     ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}/../syslog-0.3/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/../syslog-win-0.3/include
 )
