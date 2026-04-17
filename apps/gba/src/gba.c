@@ -7,7 +7,7 @@
 #include <gba/output.h>
 #include <gba/grain.h>
 
-#define STRING_LEN 256
+#define STRING_LEN 64
 
 #define STRIDE 0.3
 
@@ -60,6 +60,9 @@ int main(int argc, char *argv[])
   d = 0;
 
   snprintf(filename, sizeof(filename), "Z%s.m", string);
+  if (snprintf(filename, sizeof(filename), "Z%s.m", string) >= (int)sizeof(filename)) {
+      fprintf(stderr, "Error: Filename truncated\n");
+  }
   octscript = fopen(filename, "w");
   if (octscript) perror(filename);
 
@@ -77,11 +80,15 @@ int main(int argc, char *argv[])
   info[0].depth = 0.0;
 
 
-  snprintf(filename, sizeof(filename), "%s%d.m", string, d);
+  if (snprintf(filename, sizeof(filename), "%s%d.m", string, d) >= (int)sizeof(filename)) {
+      fprintf(stderr, "Error: Filename truncated\n");
+  }
 
   output_matlab(beginning, filename, d);
 
-  snprintf(filename, sizeof(filename), "%s%d", string, d);
+  if (snprintf(filename, sizeof(filename), "%s%d", string, d) >= (int)sizeof(filename)) {
+      fprintf(stderr, "Error: Filename truncated\n");
+  }
 
   fprintf(octscript, "gset nokey\n");
   fprintf(octscript, "%s;\n", filename);
@@ -95,11 +102,15 @@ int main(int argc, char *argv[])
   {
     burn_surface(&beginning, STRIDE, 5);
 
-    snprintf(filename, sizeof(filename), "%s%d.m", string, d);
+    if (snprintf(filename, sizeof(filename), "%s%d.m", string, d) >= (int)sizeof(filename)) {
+        fprintf(stderr, "Error: Filename truncated\n");
+    }
 
     output_matlab(beginning, filename, d);
 
-    snprintf(filename, sizeof(filename), "%s%d", string, d);
+    if (snprintf(filename, sizeof(filename), "%s%d", string, d) >= (int)sizeof(filename)) {
+        fprintf(stderr, "Error: Filename truncated\n");
+    }
     fprintf(octscript, "%s;\n", filename);
     fprintf(octscript, "plot(S%d(:,1),S%d(:,2))\n", d, d);
 
