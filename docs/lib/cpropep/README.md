@@ -17,7 +17,7 @@ Core library for calculating complex chemical equilibrium compositions and rocke
 The `equilibrium_t` structure holds all state and composition data.
 
 ```c
-#include "equilibrium.h"
+#include <cpropep/equilibrium.h>
 
 equilibrium_t equil;
 initialize_equilibrium(&equil);
@@ -47,7 +47,7 @@ compute_thermo_properties(&equil);
 Compute performance for frozen or shifting equilibrium.
 
 ```c
-#include "performance.h"
+#include <cpropep/performance.h>
 
 // Shifting equilibrium performance
 shifting_performance(&equil, PRESSURE, 1.0); // Exit at 1 atm
@@ -61,5 +61,5 @@ shifting_performance(&equil, PRESSURE, 1.0); // Exit at 1 atm
 
 ## Dependencies
 
-- `libthermo`: For species data and base thermodynamic properties.
+- `libthermo`: For species data and base thermodynamic properties (merged into libcpropep).
 - `libnum`: For solving the underlying linear systems (LU decomposition).
